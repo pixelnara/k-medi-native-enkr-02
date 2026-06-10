@@ -1507,7 +1507,8 @@ ul {
   color: var(--body2);
   font-size: 15.5px;
   line-height: 1.9;
-  max-width: 64ch;
+  /* max-width: 64ch; */
+  width: 100%;
 }
 
 /* ============================================================
