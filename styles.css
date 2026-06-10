@@ -432,7 +432,7 @@ ul {
 }
 .hero__desc {
   margin-top: 30px;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
   max-width: 80ch;
   line-height: 1.65;
@@ -442,7 +442,7 @@ ul {
 }
 .hero__desc--strong {
   font-weight: 800;
-  color: #fff;
+  color: var(--white);
 }
 .hero__cta {
   display: none;
