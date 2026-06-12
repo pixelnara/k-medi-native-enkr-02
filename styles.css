@@ -1738,7 +1738,7 @@ ul {
 
   /* Section titles */
   .h-lg {
-    font-size: clamp(38px, 7vw, 60px);
+    font-size: clamp(28px, 6vw, 38px);
   }
 
   /* Feature caption */
