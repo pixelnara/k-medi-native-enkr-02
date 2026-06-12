@@ -1573,7 +1573,7 @@ ul {
   transition: background 0.3s, color 0.3s;
 }
 .acc-item.is-open {
-  background: var(--white);
+  background: var(--gray-150);
 }
 .acc-head {
   width: 100%;
