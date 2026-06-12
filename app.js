@@ -243,4 +243,15 @@
     { threshold: 0.14 },
   );
   document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+
+  /* ---------- Mobile CTA: hide when footer is visible ---------- */
+  const heroCta = document.querySelector(".hero__cta");
+  const footer  = document.querySelector(".footer");
+  if (heroCta && footer) {
+    const footerIO = new IntersectionObserver(
+      ([e]) => heroCta.classList.toggle("is-hidden", e.isIntersecting),
+      { threshold: 0 }
+    );
+    footerIO.observe(footer);
+  }
 })();
