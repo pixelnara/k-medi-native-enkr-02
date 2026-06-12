@@ -1398,17 +1398,17 @@ ul {
   width: 56px;
   height: 56px;
   border-radius: var(--radius-full);
-  background: var(--gray-950);
-  color: var(--white);
+  background: var(--white);
+  color: var(--gray-950);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 850;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .chat-btn:hover {
-  background: var(--gray-800);
+  background: var(--gray-50);
   transform: scale(1.08);
 }
 .chat-btn svg {
