@@ -2177,7 +2177,7 @@ ul {
     font-weight: 600;
     letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 1);
     margin-bottom: 0;
     opacity: 0;
     transform: translateY(20px);
@@ -2199,15 +2199,23 @@ ul {
     line-height: 1.75;
     max-width: 100%;
   }
-  .hero__cta { display: none; }
-  .hero__counter { display: none; }
-  .hero__scroll { display: none; }
+  .hero__cta {
+    display: none;
+  }
+  .hero__counter {
+    display: none;
+  }
+  .hero__scroll {
+    display: none;
+  }
 
   /* Mobile bottom bar */
   .mobile-bar {
     display: flex;
     position: fixed;
-    bottom: 0; left: 0; right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 500;
     height: 72px;
     background: var(--white);
@@ -2273,7 +2281,9 @@ ul {
   }
   .lang-sheet__inner {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: var(--white);
     border-radius: 20px 20px 0 0;
     padding: var(--space-7) var(--space-6) calc(72px + var(--space-8));
@@ -2307,14 +2317,18 @@ ul {
     font-size: 22px;
     line-height: 1;
   }
-  .lang-sheet__opt:hover { background: var(--surface); }
+  .lang-sheet__opt:hover {
+    background: var(--surface);
+  }
   .lang-sheet__opt.is-active {
     font-weight: 700;
     color: var(--accent-dark);
     background: var(--surface);
   }
   /* Hide chat-btn on mobile */
-  .chat-btn { display: none; }
+  .chat-btn {
+    display: none;
+  }
 
   /* Section titles */
   .h-lg {
