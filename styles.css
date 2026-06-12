@@ -654,15 +654,15 @@ ul {
 .stay-card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 5px;
   margin-top: 22px;
 }
 .stay-card__tags span {
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-normal);
-  padding: 7px 15px;
+  padding: 5px 15px;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-1px);
   backdrop-filter: blur(2px);
   transition:
     background 0.3s,
