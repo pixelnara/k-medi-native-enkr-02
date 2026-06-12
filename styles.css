@@ -1591,7 +1591,7 @@ ul {
   transition: background 0.3s, color 0.3s;
 }
 .acc-item.is-open .acc-head {
-  background: var(--gray-950);
+  background: var(--blue-700);
   color: var(--white);
 }
 .acc-icon {
@@ -1633,7 +1633,7 @@ ul {
   transition: max-height 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .acc-body__inner {
-  padding: 0 30px var(--space-7);
+  padding: var(--space-8) 30px var(--space-10);
   color: var(--text-heading);
   font-size: var(--text-18);
   letter-spacing: var(--tracking-tight);
