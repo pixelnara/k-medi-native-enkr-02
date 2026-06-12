@@ -666,7 +666,7 @@ ul {
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: var(--tracking-normal);
-  padding: 5px 12px 4px;
+  padding: 5px 10px 4px;
   background: var(--white);
   color: var(--gray-900);
   border: 1px solid rgba(255, 255, 255, 0.45);
@@ -1878,7 +1878,8 @@ ul {
     font-size: 17px;
     margin-bottom: 0;
   }
-  .cta-dark__inner .btn--primary2 {
+  .cta-dark__inner .btn--primary2,
+  .cta-dark .btn {
     display: none;
   }
 
@@ -1941,6 +1942,12 @@ ul {
   }
   .footer {
     padding-bottom: var(--space-10);
+  }
+  .footer__top {
+    gap: var(--space-2) var(--space-5);
+  }
+  .footer dl {
+    grid-template-columns: 110px 1fr;
   }
 
   /* Top button */
