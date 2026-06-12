@@ -1488,7 +1488,7 @@ ul {
   gap: 11px;
 }
 .gnb-col a {
-  color: var(--text-body2);
+  color: var(--gray-900);
   font-size: var(--text-md);
   letter-spacing: var(--tracking-tight);
   transition: 0.3s;
@@ -1522,7 +1522,7 @@ ul {
 .gnb-sub-list li a {
   font-size: var(--text-base);
   font-weight: 400;
-  color: var(--text-body);
+  color: var(--gray-900);
   line-height: 2;
   letter-spacing: 0;
 }
