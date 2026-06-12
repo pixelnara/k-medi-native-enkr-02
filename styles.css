@@ -908,7 +908,7 @@ ul {
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 .feature__title {
   font-family: var(--font-sans);
@@ -1096,7 +1096,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-1-5);
+  gap: var(--space-1);
   margin-bottom: var(--space-13);
 }
 .filter {
@@ -1866,7 +1866,7 @@ ul {
   /* Feature caption */
   .feature__caption {
     grid-template-columns: 1fr;
-    gap: var(--space-5);
+    gap: var(--space-6);
   }
 
   /* Services intro */
