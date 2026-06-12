@@ -8,18 +8,18 @@
 
   /* Gray — Cool Gray + Deep Dark (스케일 규칙: 번호↑ = 명도↓) */
   --white: #ffffff;
-  --gray-20: #f9fafa;   /* 미사용(예약) */
+  --gray-20: #f9fafa; /* 미사용(예약) */
   --gray-50: #f6f7f8;
-  --gray-100: #eeeff1;  /* styles.css 직접 사용 */
+  --gray-100: #eeeff1; /* styles.css 직접 사용 */
   --gray-200: #e3e5e8;
   --gray-400: #838995;
   --gray-500: #6c727f;
-  --gray-600: #505662;  /* 미사용(예약) */
-  --gray-700: #3e434d;  /* 2026-06-12 수정: 구 #22252b(800보다 어두운 역전) → 스케일 정렬 */
+  --gray-600: #505662; /* 미사용(예약) */
+  --gray-700: #3e434d; /* 2026-06-12 수정: 구 #22252b(800보다 어두운 역전) → 스케일 정렬 */
   --gray-800: #2d3139;
   --gray-900: #1a1d23;
   --gray-950: #16181d;
-  --black: #000000;     /* 예약: 순수 블랙. 오버레이는 rgba(0,0,0,…) 직접 사용 */
+  --black: #000000; /* 예약: 순수 블랙. 오버레이는 rgba(0,0,0,…) 직접 사용 */
 
   /* Beige — 따뜻한 베이지 톤 */
   --beige-100: #ece5df;
@@ -31,61 +31,61 @@
   --teal-100: #dee3e3;
 
   /* Red */
-  --red-500: #e03c3c;   /* 예약: 에러/경고 상태 */
+  --red-500: #e03c3c; /* 예약: 에러/경고 상태 */
 
   /* ─── Primitive: Typography ─── */
 
   --font-sans: Optima, Candara, "Pretendard", source-sans-pro, sans-serif;
 
-  --text-10:   10px;
-  --text-xs:   11px;
-  --text-12:   12.5px;
-  --text-sm:   13px;
-  --text-14:   14px;
+  --text-10: 10px;
+  --text-xs: 11px;
+  --text-12: 12.5px;
+  --text-sm: 13px;
+  --text-14: 14px;
   --text-base: 15px;
-  --text-md:   17px;
-  --text-18:   18px;
-  --text-lg:   19px;
-  --text-24:   24px;
-  --text-xl:   25px;
-  --text-2xl:  28px;
-  --text-30:   30px;
-  --text-3xl:  clamp(24px, 2.4vw, 34px);
-  --text-4xl:  clamp(30px, 3.4vw, 46px);
-  --text-5xl:  clamp(38px, 5.4vw, 76px);
-  --text-6xl:  clamp(56px, 5vw, 80px);
+  --text-md: 17px;
+  --text-18: 18px;
+  --text-lg: 19px;
+  --text-24: 24px;
+  --text-xl: 25px;
+  --text-2xl: 28px;
+  --text-30: 30px;
+  --text-3xl: clamp(24px, 2.4vw, 34px);
+  --text-4xl: clamp(30px, 3.4vw, 46px);
+  --text-5xl: clamp(38px, 5.4vw, 76px);
+  --text-6xl: clamp(56px, 5vw, 80px);
   --text-hero: clamp(44px, 6.6vw, 104px);
 
   /* ─── Primitive: Letter Spacing ─── */
 
   --tracking-tighter: -0.02em;
-  --tracking-tight:   -0.01em;
-  --tracking-snug:     0.01em;
-  --tracking-normal:   0.02em;
-  --tracking-wide:     0.1em;
-  --tracking-wider:    0.22em;
+  --tracking-tight: -0.01em;
+  --tracking-snug: 0.01em;
+  --tracking-normal: 0.02em;
+  --tracking-wide: 0.1em;
+  --tracking-wider: 0.22em;
 
   /* ─── Primitive: Spacing ─── */
 
-  --space-1:      4px;
-  --space-1-5:    6px;
-  --space-2:      8px;
-  --space-2-5:   10px;
-  --space-3:     12px;
-  --space-4:     16px;
-  --space-5:     20px;
-  --space-6:     24px;
-  --space-7:     28px;
-  --space-8:     32px;
-  --space-9:     36px;
-  --space-10:    40px;
-  --space-11:    44px;
-  --space-12:    48px;
-  --space-13:    52px;
-  --space-14:    56px;
-  --space-16:    64px;
-  --space-18:    72px;
-  --space-20:    80px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-13: 52px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
   --space-gutter: clamp(16px, 1.6vw, 34px);
 
   /* ─── Primitive: Radius ─── */
