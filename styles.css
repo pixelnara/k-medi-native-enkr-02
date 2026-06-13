@@ -2237,8 +2237,17 @@ ul {
     padding-left: 0;
   }
   .header {
-    background: var(--bg-white);
-    color: var(--text-heading);
+    background: var(--gray-950);
+    color: var(--white);
+    box-shadow: none;
+  }
+  .header-menu-btn,
+  .header-lang-btn,
+  .header-lang-icon,
+  .header-lang-code,
+  .header__main .brand,
+  .brand-sub-mobile {
+    color: var(--white) !important;
   }
   /* 상단바 v2 활성 / v1 숨김 */
   .header-right--v1 {
