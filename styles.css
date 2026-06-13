@@ -323,7 +323,7 @@ ul {
   font-size: var(--text-10);
   font-weight: 700;
   letter-spacing: 0.42em;
-  margin-top: var(--space-2);
+  margin-top: var(--space-2px);
   opacity: 0.8;
   text-transform: uppercase;
 }
@@ -428,6 +428,13 @@ ul {
   border-radius: 50%;
   display: block;
   border: 1.5px solid var(--gray-950);
+}
+.header-lang-code {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gray-950);
+  line-height: 1;
 }
 
 /* v1/v2 toggle — default: v1 visible, v2 hidden */
@@ -2493,6 +2500,14 @@ ul {
   .lang-sheet__opt span {
     font-size: 22px;
     line-height: 1;
+  }
+  .lang-sheet-flag-img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    flex-shrink: 0;
   }
   .lang-sheet__opt:hover {
     background: var(--surface);
