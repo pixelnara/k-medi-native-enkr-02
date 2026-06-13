@@ -2186,9 +2186,9 @@ ul {
 
   /* Hero — 모바일 전면 재설계 */
   .hero__inner {
-    justify-content: center;
+    justify-content: flex-end;
     padding-top: var(--header-h);
-    padding-bottom: 80px;
+    padding-bottom: calc(80px + 100px);
     align-items: center;
     text-align: center;
   }
