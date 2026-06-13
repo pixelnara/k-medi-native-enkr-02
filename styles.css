@@ -1049,7 +1049,7 @@ ul {
 .feature__kicker {
   font-family: var(--font-sans);
   color: var(--text-caption);
-  font-size: var(--text-14);
+  font-size: var(--text-12);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   font-weight: 600;
