@@ -323,7 +323,7 @@ ul {
   font-size: var(--text-10);
   font-weight: 700;
   letter-spacing: 0.42em;
-  margin-top: var(--space-2px);
+  margin-top: var(--space-1px);
   opacity: 0.8;
   text-transform: uppercase;
 }
@@ -425,15 +425,15 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--gray-950);
   flex-shrink: 0;
 }
 .header-lang-flag-img {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -2242,7 +2242,6 @@ ul {
     display: flex;
     color: var(--gray-950);
     gap: 4px;
-    padding-right: 4px;
   }
   /* 하단바 v2 활성 / v1 숨김 */
   .mobile-bar--v1 {
