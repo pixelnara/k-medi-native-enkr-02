@@ -1144,7 +1144,7 @@ ul {
 .compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
 }
 .compare__col {
@@ -1717,7 +1717,7 @@ ul {
 /* Dark theme variant — desktop only (861px+) */
 @media (min-width: 861px) {
   .gnb-overlay--dark {
-    background: var(--blue-900);
+    background: var(--gray-950);
     color: var(--white);
   }
   .gnb-overlay--dark .gnb-overlay__brand,
