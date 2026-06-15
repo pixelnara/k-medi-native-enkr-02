@@ -1754,7 +1754,7 @@ ul {
   color: var(--text-heading);
 }
 .gnb-overlay__brand small {
-  color: var(--text-body);
+  color: var(--gray-900);
   margin-top: 8px;
 }
 .gnb-overlay__close {
