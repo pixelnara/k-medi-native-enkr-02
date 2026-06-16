@@ -478,6 +478,9 @@ ul {
   color: var(--text-heading);
   box-shadow: 0 1px 0 var(--border);
 }
+.header.is-solid .brand {
+  color: var(--gray-950);
+}
 .header.is-solid .header__util {
   border-color: var(--border);
 }
@@ -1364,8 +1367,13 @@ ul {
 }
 .news-card__cat {
   font-family: var(--font-sans);
+<<<<<<< HEAD
   color: var(--text-caption);
   font-size: var(--text-11);
+=======
+  color: var(--gold-600);
+  font-size: var(--text-13);
+>>>>>>> d9a5ea6 (style: brown(gold-600) 컬러 시스템 적용 — violet → gold 전환)
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   font-weight: 700;
@@ -1940,7 +1948,7 @@ ul {
     color 0.3s;
 }
 .acc-item.is-open .acc-head {
-  background: var(--accent-dark);
+  background: var(--gold-600);
   color: var(--white);
 }
 .acc-icon {
