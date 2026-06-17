@@ -498,6 +498,11 @@ ul {
 .gnb a:hover::after {
   width: 100%;
 }
+.gnb-space-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 .header__right {
   display: flex;
   align-items: center;
@@ -2147,7 +2152,25 @@ ul {
   letter-spacing: var(--tracking-tight);
   line-height: 1.9;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
+.acc-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-15);
+  font-weight: 600;
+  color: var(--text-heading);
+  white-space: nowrap;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.acc-detail-link:hover { opacity: 1; }
 
 /* ============================================================
    TREATMENTS (추천 서비스, 뷰티시술)
