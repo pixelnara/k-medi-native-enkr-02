@@ -1801,7 +1801,6 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   padding-top: var(--space-80);
   padding-bottom: var(--space-40);
-  border-top: 1px solid var(--border);
   margin-top: calc(var(--space-80) * -1);
 }
 .gnb-col > h4 {
