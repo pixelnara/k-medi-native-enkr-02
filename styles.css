@@ -2334,7 +2334,7 @@ body:has(.gnb-overlay.is-open) {
 .gnb-col > h4 {
   font-family: var(--font-sans);
   color: var(--text-heading);
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 600;
   padding-bottom: var(--space-16);
   margin-bottom: 18px;
