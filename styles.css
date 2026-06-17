@@ -246,7 +246,9 @@ ul {
   opacity: 0.85;
   transition: opacity 0.2s;
 }
-.util-user-btn:hover { opacity: 1; }
+.util-user-btn:hover {
+  opacity: 1;
+}
 .util-ext-link {
   display: inline-flex;
   align-items: center;
@@ -264,7 +266,9 @@ ul {
   opacity: 0.85;
   transition: opacity 0.2s;
 }
-.util-user-circle:hover { opacity: 1; }
+.util-user-circle:hover {
+  opacity: 1;
+}
 
 /* ── Login Modal ── */
 .login-modal {
@@ -275,11 +279,13 @@ ul {
   align-items: center;
   justify-content: center;
 }
-.login-modal.is-open { display: flex; }
+.login-modal.is-open {
+  display: flex;
+}
 .login-modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
 }
 .login-modal__box {
   position: relative;
@@ -290,7 +296,7 @@ ul {
   width: 100%;
   max-width: 440px;
   margin: 16px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
 }
 .login-modal__close {
   position: absolute;
@@ -303,7 +309,9 @@ ul {
   display: flex;
   padding: 4px;
 }
-.login-modal__close:hover { color: #000; }
+.login-modal__close:hover {
+  color: #000;
+}
 .login-modal__title {
   font-size: 22px;
   font-weight: 700;
@@ -331,7 +339,9 @@ ul {
   cursor: pointer;
   transition: background 0.15s;
 }
-.login-social-btn:hover { background: #f5f5f5; }
+.login-social-btn:hover {
+  background: #f5f5f5;
+}
 .login-modal__divider {
   display: flex;
   align-items: center;
@@ -342,7 +352,7 @@ ul {
 }
 .login-modal__divider::before,
 .login-modal__divider::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
   background: #e8e8e8;
@@ -363,7 +373,9 @@ ul {
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
-.login-modal__input:focus { border-color: #555; }
+.login-modal__input:focus {
+  border-color: #555;
+}
 .login-modal__forgot {
   font-size: 13px;
   color: #555;
@@ -383,14 +395,20 @@ ul {
   margin-top: 4px;
   transition: opacity 0.2s;
 }
-.login-modal__submit:hover { opacity: 0.8; }
+.login-modal__submit:hover {
+  opacity: 0.8;
+}
 .login-modal__join {
   text-align: center;
   font-size: 13px;
   color: #555;
   margin-top: 20px;
 }
-.login-modal__join a { color: #111; font-weight: 600; text-decoration: underline; }
+.login-modal__join a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: underline;
+}
 .lang-select {
   position: relative;
 }
@@ -1991,7 +2009,9 @@ body:has(.gnb-overlay.is-open) {
   letter-spacing: 0.02em;
   text-decoration: none;
   white-space: nowrap;
-  transition: border-color 0.2s, opacity 0.2s;
+  transition:
+    border-color 0.2s,
+    opacity 0.2s;
 }
 .gnb-login-btn:hover {
   opacity: 0.7;
@@ -2032,10 +2052,12 @@ body:has(.gnb-overlay.is-open) {
 .gnb-banner {
   display: none;
 }
-.gnb-col--mobile-only { display: none; }
+.gnb-col--mobile-only {
+  display: none;
+}
 .gnb-cols {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-40);
   padding: 96px 0 var(--space-80);
   border-top: 1px solid var(--border);
@@ -2272,7 +2294,9 @@ body:has(.gnb-overlay.is-open) {
   transition: opacity 0.2s;
   flex-shrink: 0;
 }
-.acc-detail-link:hover { opacity: 1; }
+.acc-detail-link:hover {
+  opacity: 1;
+}
 
 /* ============================================================
    TREATMENTS (추천 서비스, 뷰티시술)
@@ -2823,8 +2847,12 @@ body:has(.gnb-overlay.is-open) {
   .gnb-col.is-open > h4 .gnb-chevron {
     transform: rotate(180deg);
   }
-  .gnb-col--mobile-only { display: block; }
-  .gnb-col--about-desktop { display: none; }
+  .gnb-col--mobile-only {
+    display: block;
+  }
+  .gnb-col--about-desktop {
+    display: none;
+  }
   .gnb-cols {
     display: flex;
     flex-direction: column;
