@@ -771,10 +771,14 @@
     grid-template-columns: 1fr;
     border-top: 1px solid var(--border-gray-1);
   }
-  .why-cta {
+  .why-cta,
+  .treat-cta {
     margin-top: 0;
+    margin-left: calc(-1 * var(--gutter));
+    margin-right: calc(-1 * var(--gutter));
   }
-  #whyus.section {
+  #whyus.section,
+  #treatments.section {
     padding-bottom: 0;
   }
   .why-journey__icon-item,
