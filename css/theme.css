@@ -181,7 +181,7 @@
   /* ─── Semantic: Button ─── */
 
   --btn-primary: var(--gray-950);        /* 기본 버튼 배경 (solid, filter active) */
-  --btn-cta: var(--violet-600);          /* CTA 버튼 호버 배경 (.btn--primary:hover) */
+  --btn-secondary: var(--violet-600);    /* Secondary 버튼 호버 배경 (.btn--primary:hover) */
 
   /* ─── Semantic: Accent ─── */
   --accent-mid: var(--violet-500);      /* UI 아이콘 · 체크마크 · 숫자 원 */

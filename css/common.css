@@ -150,7 +150,7 @@ body {
   background: var(--btn-primary);
 }
 .btn--primary:hover {
-  background: var(--btn-cta);
+  background: var(--btn-secondary);
   color: var(--text-white);
 }
 .btn--primary2:hover {
