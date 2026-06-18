@@ -431,6 +431,144 @@ figure.art-img--center img {
 }
 
 /* ─────────────────────────────────────────────────────
+   INSIDE HUGRO CAROUSEL
+   ───────────────────────────────────────────────────── */
+.ihc {
+  margin-top: clamp(24px, 3vw, 40px);
+  padding-bottom: clamp(40px, 5.5vw, 72px);
+}
+
+/* Stage: image + overlaid controls */
+.ihc__stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Image wrapper */
+.ihc__img-wrap {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.ihc__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+/* Floor tab buttons — 사진 위쪽 (outside), 필터 스타일 */
+.ihc__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(14px, 2vw, 24px);
+  gap: var(--space-2, 8px);
+}
+
+.ihc__tab {
+  padding: var(--space-8, 8px) var(--space-20, 20px);
+  font-size: var(--text-14, 14px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal, 0.01em);
+  background: var(--bg-white, #fff);
+  border: 1px solid var(--border-gray-4, #ccc);
+  color: var(--text-gray-6, #111);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  line-height: 1;
+  border-radius: 0;
+}
+
+.ihc__tab:hover {
+  border-color: var(--text-gray-6, #111);
+}
+
+.ihc__tab.is-active {
+  background: var(--btn-primary, #111);
+  color: var(--text-white, #fff);
+  border-color: var(--btn-primary, #111);
+}
+
+/* Prev / Next arrows — outside the image in side margins */
+.ihc__arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border-gray-1, #e5e5e5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-gray-6, #111);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s, transform 0.15s;
+  margin: 0 clamp(12px, 2vw, 24px);
+}
+
+.ihc__arrow:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  transform: scale(1.06);
+}
+
+/* Info section below image */
+.ihc__infos {
+  margin-top: clamp(20px, 2.5vw, 32px);
+}
+
+.ihc__info {
+  display: none;
+}
+
+.ihc__info.is-active {
+  display: block;
+}
+
+.ihc__level {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-caption);
+  margin-bottom: 10px;
+}
+
+.ihc__title {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-gray-6, #111);
+  margin-bottom: 12px;
+}
+
+.ihc__body {
+  font-size: clamp(14px, 1.3vw, 16px);
+  line-height: 1.85;
+  color: var(--text-gray-5, #555);
+  word-break: keep-all;
+  max-width: 640px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ihc__arrow {
+    width: 36px;
+    height: 36px;
+    margin: 0 8px;
+  }
+  .ihc__tab {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
    LOCATION — premium hotel / gallery style
    ───────────────────────────────────────────────────── */
 .location-section {

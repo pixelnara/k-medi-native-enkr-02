@@ -294,6 +294,73 @@ body.show-prim .sw .h .pm { display: inline; }
 .review__name  { font-size: 14px; font-weight: 700; color: var(--text-gray-6); margin: 0; line-height: 1.4; }
 .review__info  { font-size: 13px; color: var(--text-gray-2); margin-top: 3px; }
 
+/* ─── App Banner ─── */
+.ds-app-banner {
+  background: #1400ff;
+  padding: 36px 48px;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ds-app-banner__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+.ds-app-banner__qr {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+
+/* ─── Related Post Card ─── */
+.ds-rpost-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  background: var(--surface-gray-1);
+  padding: 32px;
+  border-radius: 8px;
+}
+.ds-rpost-card { display: flex; flex-direction: column; }
+.ds-rpost-card__img {
+  aspect-ratio: 1 / 1;
+  background: var(--border-gray-1);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.ds-rpost-card__img-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-400) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-gray-3);
+  letter-spacing: .05em;
+}
+.ds-rpost-card__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-gray-6);
+  line-height: 1.4;
+  margin: 0 0 5px;
+  word-break: keep-all;
+}
+.ds-rpost-card__sub {
+  font-size: 13px;
+  color: var(--text-gray-2);
+  line-height: 1.5;
+}
+
 /* ─── Print ─── */
 @media print {
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -444,7 +511,7 @@ body.show-prim .sw .h .pm { display: inline; }
         → <strong style="color:var(--text-gray-6)">--gray-900</strong> (#1a1e28)<br>
         <code style="background:var(--border-gray-1);padding:1px 6px;border-radius:3px;font-size:11.5px;">--btn</code>
         → <strong style="color:var(--text-gray-6)">--gray-950</strong> (#101219) ·
-        <code style="background:var(--border-gray-1);padding:1px 6px;border-radius:3px;font-size:11.5px;">--accent-dark</code>
+        <code style="background:var(--border-gray-1);padding:1px 6px;border-radius:3px;font-size:11.5px;">--accent-blue2</code>
         → <strong style="color:var(--accent-blue2)">--violet-700</strong> (#2a2287)
       </div>
     </div>
@@ -462,7 +529,7 @@ body.show-prim .sw .h .pm { display: inline; }
   </div>
   <div style="font-size:13px;color:var(--text-gray-3);margin-top:4px;line-height:2.2;">
     treat-card 영문 레이블: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--amber-400 (#d9ad3f)</code> · font-size <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--text-11</code> · opacity 0.9 · letter-spacing 0.18em<br>
-    HIW 아이콘 원형 배경 · eyebrow · btn--primary hover · --text-caption: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-dark (--violet-700 #2a2287)</code>
+    HIW 아이콘 원형 배경 · eyebrow · btn--primary hover · --text-caption: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-blue2 (--violet-700 #2a2287)</code>
   </div>
 
   <h2>Button</h2>
@@ -473,7 +540,7 @@ body.show-prim .sw .h .pm { display: inline; }
   </div>
   <div style="font-size:13px;color:var(--text-gray-3);margin-top:8px;line-height:2.2;">
     Solid: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--btn (--gray-950)</code> · hover 동일 색상 유지<br>
-    Accent: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-dark (--violet-700)</code> hover → <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--violet-800 (직접)</code>
+    Accent: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-blue2 (--violet-700)</code> hover → <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-blue3 (--violet-800)</code>
   </div>
 
   <h2>Filter Chip</h2>
@@ -543,6 +610,19 @@ body.show-prim .sw .h .pm { display: inline; }
     <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.treat-card__desc</code> hover 시 opacity 0→0.9, max-height 0→80px 슬라이드업<br>
     <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.treat-cta .btn</code> display:block · width:100% · padding:32px · font-size:--text-28 · 반응형 @520px → 14px 0 / --text-15<br>
     반응형: @960px → 2열 gap:10px · @520px → 2열 gap:2px, aspect-ratio 2/3
+  </div>
+
+  <h2>Inside Hugro Carousel — Floor Tab</h2>
+  <p class="comp-label">center.html · .ihc__tabs / .ihc__tab — 이미지 위쪽 가운데, 필터 버튼과 동일 스타일</p>
+  <div class="comp-row" style="margin-bottom:8px;">
+    <button style="padding:8px 20px;font-size:14px;font-weight:600;background:var(--btn-primary);color:var(--text-white);border:1px solid var(--btn-primary);border-radius:0;cursor:default;letter-spacing:0.01em;">B1 Floor</button>
+    <button style="padding:8px 20px;font-size:14px;font-weight:600;background:var(--bg-white);color:var(--text-gray-6);border:1px solid var(--border-gray-4);border-radius:0;cursor:default;letter-spacing:0.01em;">1F Floor</button>
+    <button style="padding:8px 20px;font-size:14px;font-weight:600;background:var(--bg-white);color:var(--text-gray-6);border:1px solid var(--border-gray-4);border-radius:0;cursor:default;letter-spacing:0.01em;">2F Floor</button>
+  </div>
+  <div style="font-size:13px;color:var(--text-gray-3);margin-top:4px;line-height:2.2;">
+    Active: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--btn-primary</code> bg · Idle: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--border-gray-4</code> border · border-radius: 0 · justify-content: center<br>
+    화살표: 원형 44px · <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--bg-white</code> bg · <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--border-gray-1</code> · shadow-sm · 이미지 외부 양쪽<br>
+    이미지: <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">aspect-ratio: 4/3</code> · object-fit: cover · opacity 0→1 fade (0.25s) · JS src 교체
   </div>
 
   <h2>Review Card</h2>
@@ -646,9 +726,67 @@ body.show-prim .sw .h .pm { display: inline; }
     </div>
   </div>
   <div style="font-size:13px;color:var(--text-gray-3);margin-top:12px;line-height:2.2;">
-    <strong>데스크탑:</strong> 아이콘 원 <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-dark (--violet-700)</code> · 72×72px · SVG 34px · margin-bottom 40px ·
+    <strong>데스크탑:</strong> 아이콘 원 <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--accent-blue2 (--violet-700)</code> · 72×72px · SVG 34px · margin-bottom 40px ·
     step font-size <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--text-23</code> · prefix <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--gray-400</code> · b italic --gray-900<br>
     <strong>모바일:</strong> 1열 수평 · 아이콘 40×40px, SVG 숨김 · <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">::before</code> data-num 숫자 표시 · step <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--text-18</code> · desc <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--text-13</code>
+  </div>
+
+
+  <h2>App Banner</h2>
+  <p class="comp-label">center.html — CTA 배너 다음, 연관 포스트 앞 배치</p>
+  <div class="ds-app-banner">
+    <p class="ds-app-banner__title">KMEDITOUR 앱으로 더 간편하게 예약하세요</p>
+    <div class="ds-app-banner__qr">
+      <svg viewBox="0 0 100 100" width="72" height="72" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="38" height="38" fill="none" stroke="white" stroke-width="4"/>
+        <rect x="10" y="10" width="22" height="22" fill="white"/>
+        <rect x="60" y="2" width="38" height="38" fill="none" stroke="white" stroke-width="4"/>
+        <rect x="68" y="10" width="22" height="22" fill="white"/>
+        <rect x="2" y="60" width="38" height="38" fill="none" stroke="white" stroke-width="4"/>
+        <rect x="10" y="68" width="22" height="22" fill="white"/>
+        <rect x="60" y="60" width="8" height="8" fill="white"/><rect x="72" y="60" width="8" height="8" fill="white"/>
+        <rect x="84" y="60" width="8" height="8" fill="white"/><rect x="60" y="72" width="8" height="8" fill="white"/>
+        <rect x="60" y="84" width="8" height="8" fill="white"/><rect x="84" y="84" width="8" height="8" fill="white"/>
+      </svg>
+    </div>
+  </div>
+  <div style="font-size:13px;color:var(--text-gray-3);margin-top:12px;line-height:2.2;">
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.app-banner</code> bg <strong style="color:#1400ff;">#1400ff</strong> · margin 좌우 clamp(20px,4vw,72px) · padding clamp(24px,3.5vw,44px)<br>
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.app-banner__inner</code> flex column · align-items center · text-align center · position relative<br>
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.app-banner__qr</code> position absolute · right 0 · top 50% · 860px↓ display:none<br>
+    스토어 버튼(App Store / Play Store) 제거됨 — 제목 텍스트 + QR만 표시
+  </div>
+
+  <h2>Related Posts Card</h2>
+  <p class="comp-label">center.html — 연관 포스트 섹션 · bg: --surface-gray-1</p>
+  <div class="ds-rpost-grid">
+    <div class="ds-rpost-card">
+      <div class="ds-rpost-card__img"><div class="ds-rpost-card__img-inner">1:1</div></div>
+      <p class="ds-rpost-card__title">AI 피부 진단, 처음 받아본 후기</p>
+      <p class="ds-rpost-card__sub">휴그로 센터 퍼스널 스킨 솔루션…</p>
+    </div>
+    <div class="ds-rpost-card">
+      <div class="ds-rpost-card__img"><div class="ds-rpost-card__img-inner">1:1</div></div>
+      <p class="ds-rpost-card__title">서울에서 즐기는 프리미엄 스킨케어</p>
+      <p class="ds-rpost-card__sub">압구정 가로수길, 뷰티 & 웰니스…</p>
+    </div>
+    <div class="ds-rpost-card">
+      <div class="ds-rpost-card__img"><div class="ds-rpost-card__img-inner">1:1</div></div>
+      <p class="ds-rpost-card__title">Hugro Building 완전 정복 가이드</p>
+      <p class="ds-rpost-card__sub">B1부터 2F까지, 층별 공간 안내</p>
+    </div>
+    <div class="ds-rpost-card">
+      <div class="ds-rpost-card__img"><div class="ds-rpost-card__img-inner">1:1</div></div>
+      <p class="ds-rpost-card__title">뷰티 컨시어지 예약하는 법</p>
+      <p class="ds-rpost-card__sub">전담 코디네이터 1:1 케어 시스템…</p>
+    </div>
+  </div>
+  <div style="font-size:13px;color:var(--text-gray-3);margin-top:12px;line-height:2.2;">
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.related-posts</code> bg <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">--surface-gray-1</code> · padding clamp(48px,6vw,80px) side clamp(28px,5vw,72px) · pb 160px<br>
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.related-posts__grid</code> grid 4열 gap clamp(16px,2.5vw,32px) · 860px↓ 2열<br>
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.rpost-card__img</code> aspect-ratio 1/1 · overflow hidden · hover scale(1.04)<br>
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.rpost-card__title</code> 14~16px 700 --text-gray-6 ·
+    <code style="font-size:12px;background:var(--surface-gray-1);padding:2px 7px;border-radius:4px;">.rpost-card__sub</code> 13px --text-gray-2 · line-clamp 2
   </div>
 
 </section>
@@ -736,7 +874,8 @@ body.show-prim .sw .h .pm { display: inline; }
     </div>
     <div style="background:var(--surface-gray-1);border-radius:8px;padding:16px 20px;font-size:13.5px;line-height:2;color:var(--text-gray-3);">
       <strong style="color:var(--text-gray-6);display:block;margin-bottom:4px;">Header / GNB</strong>
-      .header · .gnb · .gnb-overlay · GNB Sub2 아코디언 · .lang-select · .lang-dropdown
+      .header · .gnb · .gnb-overlay · GNB Sub2 아코디언 · .lang-select · .lang-dropdown<br>
+      <span style="color:var(--text-gray-2);font-size:12px;">.gnb-banner height: clamp(200px, 22vh, 360px) · margin-top: clamp(40px, 6vh, 80px) — 대형 화면 비율 대응</span>
     </div>
     <div style="background:var(--surface-gray-1);border-radius:8px;padding:16px 20px;font-size:13.5px;line-height:2;color:var(--text-gray-3);">
       <strong style="color:var(--text-gray-6);display:block;margin-bottom:4px;">Footer / Top Button</strong>

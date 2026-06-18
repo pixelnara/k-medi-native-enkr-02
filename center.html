@@ -422,60 +422,52 @@
       <h2 class="floors-head__title">Inside Hugro</h2>
     </div>
 
+    <!-- Inside Hugro Carousel -->
+    <div class="ihc" data-reveal>
+      <!-- 플로어 탭 — 사진 위쪽 (outside) -->
+      <div class="ihc__tabs">
+        <button class="ihc__tab is-active" data-idx="0">B1 Floor</button>
+        <button class="ihc__tab" data-idx="1">1F Floor</button>
+        <button class="ihc__tab" data-idx="2">2F Floor</button>
+      </div>
+      <div class="ihc__stage">
+        <!-- 이전 화살표 -->
+        <button class="ihc__arrow ihc__arrow--prev" aria-label="이전 공간">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <!-- 이미지 -->
+        <div class="ihc__img-wrap">
+          <img class="ihc__img" id="ihcImg"
+               src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85"
+               alt="B1 Premium Massage &amp; Spa"
+               loading="lazy" />
+        </div>
+        <!-- 다음 화살표 -->
+        <button class="ihc__arrow ihc__arrow--next" aria-label="다음 공간">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <!-- 플로어별 텍스트 정보 -->
+      <div class="ihc__infos">
+        <div class="ihc__info is-active">
+          <p class="ihc__level">B1 Floor</p>
+          <h3 class="ihc__title">Premium Massage &amp; Spa</h3>
+          <p class="ihc__body">깊은 휴식과 완벽한 회복을 위한 공간. 풀바디 마사지부터 아로마테라피, 핫스톤 테라피까지 프리미엄 웰니스 서비스를 경험하세요.</p>
+        </div>
+        <div class="ihc__info">
+          <p class="ihc__level">1F Floor</p>
+          <h3 class="ihc__title">Hugro Center</h3>
+          <p class="ihc__body">AI 피부 분석과 맞춤 스킨케어 상담이 이루어지는 메인 공간. 방문하는 순간부터 당신만을 위한 프리미엄 케어가 시작됩니다.</p>
+        </div>
+        <div class="ihc__info">
+          <p class="ihc__level">2F Floor</p>
+          <h3 class="ihc__title">Exhibition Gallery</h3>
+          <p class="ihc__body">뷰티와 라이프스타일을 주제로 한 큐레이션 전시 공간. 계절마다 바뀌는 기획 전시와 프리미엄 뷰티 브랜드 팝업이 열립니다.</p>
+        </div>
+      </div>
+    </div>
+
   </div><!-- /article-col -->
-
-  <!-- ─ Floors Grid — full-width 3-col outside article-col ─ -->
-  <div class="floors-grid">
-
-    <!-- B1 -->
-    <div class="floors-grid__col" data-reveal>
-      <div class="floors-grid__img">
-        <img
-          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85"
-          alt="B1 Premium Massage & Spa"
-          loading="lazy"
-        />
-      </div>
-      <div class="floors-grid__info">
-        <p class="floors-grid__level">B1 Floor</p>
-        <h3 class="floors-grid__title">Premium Massage &amp; Spa</h3>
-        <p class="floors-grid__body">깊은 휴식과 완벽한 회복을 위한 공간. 풀바디 마사지부터 아로마테라피, 핫스톤 테라피까지 프리미엄 웰니스 서비스를 경험하세요.</p>
-      </div>
-    </div>
-
-    <!-- 1F -->
-    <div class="floors-grid__col" data-reveal>
-      <div class="floors-grid__img">
-        <img
-          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85"
-          alt="1F Hugro Center"
-          loading="lazy"
-        />
-      </div>
-      <div class="floors-grid__info">
-        <p class="floors-grid__level">1F Floor</p>
-        <h3 class="floors-grid__title">Hugro Center</h3>
-        <p class="floors-grid__body">AI 피부 분석과 맞춤 스킨케어 상담이 이루어지는 메인 공간. 방문하는 순간부터 당신만을 위한 프리미엄 케어가 시작됩니다.</p>
-      </div>
-    </div>
-
-    <!-- 2F -->
-    <div class="floors-grid__col" data-reveal>
-      <div class="floors-grid__img">
-        <img
-          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85"
-          alt="2F Exhibition Gallery"
-          loading="lazy"
-        />
-      </div>
-      <div class="floors-grid__info">
-        <p class="floors-grid__level">2F Floor</p>
-        <h3 class="floors-grid__title">Exhibition Gallery</h3>
-        <p class="floors-grid__body">뷰티와 라이프스타일을 주제로 한 큐레이션 전시 공간. 계절마다 바뀌는 기획 전시와 프리미엄 뷰티 브랜드 팝업이 열립니다.</p>
-      </div>
-    </div>
-
-  </div><!-- /floors-grid -->
 
   <!-- Location back in article-col -->
   <div class="article-col">
@@ -764,6 +756,41 @@
 
 <script src="js/image-slot.js"></script>
 <script src="js/app.js"></script>
+<script>
+// Inside Hugro Carousel
+(function(){
+  var ihcSlides = [
+    { src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85', alt: 'B1 Premium Massage & Spa' },
+    { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85', alt: '1F Hugro Center' },
+    { src: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85', alt: '2F Exhibition Gallery' }
+  ];
+  var ihcEl   = document.querySelector('.ihc');
+  if (!ihcEl) return;
+  var ihcImg  = document.getElementById('ihcImg');
+  var ihcTabs = ihcEl.querySelectorAll('.ihc__tab');
+  var ihcInfos= ihcEl.querySelectorAll('.ihc__info');
+  var ihcPrev = ihcEl.querySelector('.ihc__arrow--prev');
+  var ihcNext = ihcEl.querySelector('.ihc__arrow--next');
+  var ihcCur  = 0;
+
+  function ihcGoTo(idx) {
+    idx = (idx + ihcSlides.length) % ihcSlides.length;
+    ihcCur = idx;
+    ihcImg.style.opacity = '0';
+    setTimeout(function(){
+      ihcImg.src = ihcSlides[idx].src;
+      ihcImg.alt = ihcSlides[idx].alt;
+      ihcImg.style.opacity = '1';
+    }, 220);
+    ihcTabs.forEach(function(t, i){ t.classList.toggle('is-active', i === idx); });
+    ihcInfos.forEach(function(info, i){ info.classList.toggle('is-active', i === idx); });
+  }
+
+  ihcTabs.forEach(function(tab, i){ tab.addEventListener('click', function(){ ihcGoTo(i); }); });
+  ihcPrev.addEventListener('click', function(){ ihcGoTo(ihcCur - 1); });
+  ihcNext.addEventListener('click', function(){ ihcGoTo(ihcCur + 1); });
+})();
+</script>
 <script>
 // Treatment carousel
 (function(){
