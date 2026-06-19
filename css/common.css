@@ -1339,6 +1339,14 @@ body:has(.gnb-overlay.is-open) {
 .gnb-col a.gnb-link--bold {
   font-weight: 500;
 }
+.gnb-col a.gnb-link--utility {
+  color: var(--rating);
+  opacity: 1;
+}
+.gnb-overlay--dark .gnb-col a.gnb-link--utility {
+  color: var(--rating);
+  opacity: 1;
+}
 .gnb-sub-head {
   font-size: var(--text-13);
   font-weight: 700;
