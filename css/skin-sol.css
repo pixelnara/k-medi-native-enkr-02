@@ -58,9 +58,9 @@
   color: var(--text-white);
 }
 @media (hover: hover) {
-.pss-sol-tabs .tab-pill__btn:not(.is-active):hover {
-  color: var(--text-gray-6);
-}
+  .pss-sol-tabs .tab-pill__btn:not(.is-active):hover {
+    color: var(--text-gray-6);
+  }
 }
 
 /* ── 경로 (Breadcrumb) ── */
@@ -80,9 +80,9 @@
   transition: color 0.2s;
 }
 @media (hover: hover) {
-.pss-breadcrumb a:hover {
-  color: var(--text-gray-5);
-}
+  .pss-breadcrumb a:hover {
+    color: var(--text-gray-5);
+  }
 }
 .pss-breadcrumb [aria-current="page"] {
   color: var(--text-gray-5);
@@ -317,10 +317,10 @@
 }
 
 @media (hover: hover) {
-.pss-option__card:hover {
-  border-color: var(--accent-gray-1);
-  box-shadow: inset 0 0 0 1px var(--accent-gray-1); /* 2px 효과를 리플로우 없이 (호버 흔들림 방지) */
-}
+  .pss-option__card:hover {
+    border-color: var(--accent-gray-1);
+    box-shadow: inset 0 0 0 1px var(--accent-gray-1); /* 2px 효과를 리플로우 없이 (호버 흔들림 방지) */
+  }
 }
 
 /* Selected state */
@@ -481,7 +481,9 @@
   font-size: var(--text-12);
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 .pss-result__reset-btn:hover {
   border-color: var(--text-gray-3);
@@ -512,9 +514,9 @@
 }
 .pss-result__badges {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
-  gap: var(--space-8);
+  gap: var(--space-2);
 }
 
 /* Type Badges → 에디토리얼 모노크롬 보더 칩 (radius 0, 블랙 헤어라인) */
@@ -591,8 +593,8 @@
 .pss-ai-card__focus-label {
   font-size: var(--text-12);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--text-gray-2);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-5);
   white-space: nowrap;
 }
 .pss-ai-card__focus svg {
@@ -609,15 +611,15 @@
   margin-bottom: var(--space-32);
 }
 .pss-comment-card__label {
-  font-size: var(--text-11);
+  font-size: var(--text-12);
   font-weight: 700;
-  letter-spacing: var(--tracking-wider);
+  letter-spacing: var(--tracking-normal);
   text-transform: uppercase;
   color: var(--blue-500);
   margin-bottom: var(--space-12);
 }
 .pss-comment-card__body {
-  font-size: var(--text-15);
+  font-size: var(--text-16);
   color: var(--text-gray-6);
   line-height: 1.75;
   font-weight: 500;
@@ -625,9 +627,9 @@
 }
 .pss-focus__label {
   display: block;
-  font-size: var(--text-11);
+  font-size: var(--text-12);
   font-weight: 700;
-  letter-spacing: var(--tracking-wider);
+  letter-spacing: var(--tracking-normal);
   text-transform: uppercase;
   color: var(--text-gray-4);
   margin-bottom: var(--space-10);
@@ -635,7 +637,7 @@
 
 .pss-focus-tags {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--space-4);
   flex-wrap: wrap;
 }
 .pss-focus-tag {
@@ -654,7 +656,7 @@
 .pss-section-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--space-8);
   font-size: var(--text-20);
   font-weight: 700;
@@ -681,11 +683,11 @@
   transition: opacity 0.2s;
 }
 @media (hover: hover) {
-.pss-section-title__link:hover {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+  .pss-section-title__link:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
 .pss-ingredients-grid {
   display: grid;
@@ -846,10 +848,10 @@
   letter-spacing: var(--tracking-loose);
 }
 @media (hover: hover) {
-.pss-reset__btn:hover {
-  color: var(--text-gray-6);
-  border-color: var(--border-gray-4);
-}
+  .pss-reset__btn:hover {
+    color: var(--text-gray-6);
+    border-color: var(--border-gray-4);
+  }
 }
 .pss-reset__btn svg {
   width: 15px;
@@ -932,7 +934,7 @@
 @media (max-width: 600px) {
   .pss-options {
     grid-template-columns: 1fr;
-    gap: var(--space-12);
+    gap: var(--space-6);
   }
   /* 가로 row 레이아웃 — 체크 터치 영역 확보 + 텍스트 겹침 방지 */
   .pss-option__card {
@@ -1110,9 +1112,9 @@
   opacity: 0.75;
 }
 @media (hover: hover) {
-.pss-section-title--city .pss-section-title__link:hover {
-  opacity: 1;
-}
+  .pss-section-title--city .pss-section-title__link:hover {
+    opacity: 1;
+  }
 }
 
 /* ── City Guides 카드 스트립 ── */
@@ -1211,15 +1213,15 @@
 }
 /* 에디토리얼 인터랙션: 호버 시 제목 밑줄 + 이미지 확대 (레퍼런스 group-hover) */
 @media (hover: hover) {
-.pss-rec-card:hover .pss-rec-card__name {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+  .pss-rec-card:hover .pss-rec-card__name {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
 @media (hover: hover) {
-.pss-rec-card:hover .pss-rec-card__img img {
-  transform: scale(1.05);
-}
+  .pss-rec-card:hover .pss-rec-card__img img {
+    transform: scale(1.05);
+  }
 }
 
 /* ============================================================
@@ -1265,9 +1267,9 @@
   border-bottom-color: var(--gray-950);
 }
 @media (hover: hover) {
-.pss-hair-tab:not(.is-active):hover {
-  color: var(--text-gray-5);
-}
+  .pss-hair-tab:not(.is-active):hover {
+    color: var(--text-gray-5);
+  }
 }
 
 /* Slider */
@@ -1289,7 +1291,7 @@
 .pss-hair-ings {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-16);
+  gap: var(--space-4);
   margin-bottom: var(--space-40);
 }
 
@@ -1318,10 +1320,10 @@
     background 0.2s;
 }
 @media (hover: hover) {
-.pss-hair-nav__btn:hover {
-  border-color: var(--accent-gray-1);
-  color: var(--accent-gray-1);
-}
+  .pss-hair-nav__btn:hover {
+    border-color: var(--accent-gray-1);
+    color: var(--accent-gray-1);
+  }
 }
 .pss-hair-nav__btn:disabled {
   opacity: 0.3;

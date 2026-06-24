@@ -200,10 +200,13 @@ body {
     padding: calc(var(--header-h) + 64px) 0 40px;
   }
   .page-hero__title {
-    font-size: clamp(40px, 10vw, 56px);
+    font-size: clamp(40px, 6vw, 56px);
+    letter-spacing: var(--tracking-tight);
   }
   .page-hero__sub {
-    font-size: var(--text-14);
+    font-size: var(--text-16);
+    font-weight: 500;
+    line-height: 1.6;
   }
 }
 
@@ -1325,24 +1328,25 @@ image-slot#cert-sgi {
   /* 언어 선택 탭 행 */
   .gnb-lang-tabs {
     display: flex;
-    border-bottom: 1px solid var(--border-gray-1);
+    border-top: 1px solid var(--border-gray-4);
+    border-bottom: 1px solid var(--border-gray-4);
     background: var(--bg-white);
   }
   .gnb-lang-tab {
     flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-6);
-    padding: 14px 0;
+    gap: var(--space-8);
+    padding: 16px 0;
     height: auto;
     font-size: var(--text-16);
     font-weight: 600;
     color: var(--text-gray-3);
     background: none;
     border: none;
-    border-right: 1px solid var(--border-gray-1);
+    border-right: 1px solid var(--border-gray-4);
     cursor: pointer;
     letter-spacing: var(--tracking-snug);
     transition:
@@ -1351,7 +1355,7 @@ image-slot#cert-sgi {
     line-height: 1;
   }
   .gnb-lang-code {
-    font-size: 16px;
+    font-size: 15px;
   }
   .gnb-lang-flag {
     width: 24px;
@@ -1364,15 +1368,15 @@ image-slot#cert-sgi {
     border-right: none;
   }
   @media (hover: hover) {
-    .gnb-lang-tab:hover {
+    .gnb-lang-tab:hover:not(.is-active) {
       background: var(--surface-gray-1);
       color: var(--text-gray-6);
     }
   }
   .gnb-lang-tab.is-active {
-    color: var(--text-gray-7);
+    color: var(--text-white);
     font-weight: 700;
-    background: var(--surface-gray-1);
+    background: var(--blue-500);
   }
 }
 .chat-btn__close {
@@ -1833,7 +1837,7 @@ image-slot#cert-sgi {
   width: 14px;
   height: 14px;
   transition: transform 0.25s ease;
-  stroke-width: 2.5;
+  stroke-width: 2;
 }
 .gnb-has-sub.is-open > .gnb-item-row .gnb-sub-chevron {
   transform: rotate(180deg);
@@ -2047,7 +2051,7 @@ image-slot#cert-sgi {
     width: 16px;
     height: 16px;
     transition: transform 0.25s ease;
-    stroke-width: 3;
+    stroke-width: 2;
     color: var(--text-gray-6);
   }
   .gnb-has-sub.is-open > .gnb-item-row .gnb-sub-chevron {

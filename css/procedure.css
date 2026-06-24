@@ -3,7 +3,9 @@
    Depends on: reset.css · theme.css · common.css
    ============================================================ */
 
-.gnb { display: none; }
+.gnb {
+  display: none;
+}
 
 /* ─────────────────────────────────────────────────────
    HERO — page-hero--navy + page-hero__cta (common.css)
@@ -49,11 +51,11 @@
 .proc-slider-viewport {
   flex: 1;
   overflow: hidden;
-  padding: clamp(48px, 6vw, 80px) 0;
+  padding: clamp(0px, 3vw, 40px) 0;
 }
 .proc-slider-track {
   display: flex;
-  transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .proc-slide {
   flex: 0 0 100%;
@@ -74,7 +76,7 @@
   overflow: hidden;
   aspect-ratio: 4 / 4.5;
   background: var(--bg-gray);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 .proc-slide__img {
   width: 100%;
@@ -84,16 +86,20 @@
   transition: transform 0.6s ease;
 }
 @media (hover: hover) {
-.proc-slide__img-wrap:hover .proc-slide__img { transform: scale(1.03); }
+  .proc-slide__img-wrap:hover .proc-slide__img {
+    transform: scale(1.03);
+  }
 }
 
 /* 카드 콘텐츠 */
-.proc-slide__content { padding: 8px 0; }
+.proc-slide__content {
+  padding: 8px 0;
+}
 .proc-slide__num {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent-gray-1);
-  letter-spacing: var(--tracking-open);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  letter-spacing: var(--tracking-normal);
   display: block;
   margin-bottom: var(--space-10);
 }
@@ -116,7 +122,7 @@
 .proc-slide__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-8);
+  gap: var(--space-3);
   margin-bottom: var(--space-32);
 }
 .proc-slide__tag {
@@ -126,12 +132,14 @@
   font-size: var(--text-12);
   color: var(--text-gray-4);
   background: var(--bg-white);
-  border: 1px solid var(--border-gray-1);
+  border: 2px solid var(--border-gray-1);
   border-radius: 100px;
-  padding: 5px 12px 5px 10px;
-  font-weight: 500;
+  padding: 5px 12px;
+  font-weight: 600;
 }
-.proc-slide__tag svg { opacity: 0.5; }
+.proc-slide__tag svg {
+  opacity: 1;
+}
 .proc-slide__link {
   display: inline-flex;
   align-items: center;
@@ -144,7 +152,9 @@
   transition: gap 0.2s;
 }
 @media (hover: hover) {
-.proc-slide__link:hover { gap: var(--space-12); }
+  .proc-slide__link:hover {
+    gap: var(--space-12);
+  }
 }
 
 /* 도트 인디케이터 */
@@ -152,7 +162,8 @@
   display: flex;
   justify-content: center;
   gap: var(--space-8);
-  padding-bottom: 48px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 .proc-dot {
   width: 6px;
@@ -161,7 +172,9 @@
   background: var(--border-gray-2);
   border: none;
   cursor: pointer;
-  transition: background 0.2s, width 0.2s;
+  transition:
+    background 0.2s,
+    width 0.2s;
   padding: 0;
 }
 .proc-dot.is-active {
@@ -174,18 +187,37 @@
    RESPONSIVE
    ───────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .proc-filter .tab-line__btn { padding: 16px 16px 14px; font-size: var(--text-13); }
+  .proc-filter .tab-line__btn {
+    padding: 16px 16px 14px;
+    font-size: var(--text-13);
+  }
   .proc-slide__card {
     grid-template-columns: 1fr;
     gap: var(--space-24);
   }
-  .proc-slide__img-wrap { aspect-ratio: 4 / 3; }
+  .proc-slide__img-wrap {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 @media (max-width: 600px) {
-  .proc-filter__inner { overflow-x: auto; scrollbar-width: none; padding: 0 4px; }
-  .proc-filter__inner::-webkit-scrollbar { display: none; }
-  .proc-filter { justify-content: flex-start; overflow: hidden; }
-  .proc-filter .tab-line__btn { padding: 16px 14px 14px; font-size: var(--text-13); }
-  .proc-slide { padding: 0 16px; }
+  .proc-filter__inner {
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 4px;
+  }
+  .proc-filter__inner::-webkit-scrollbar {
+    display: none;
+  }
+  .proc-filter {
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .proc-filter .tab-line__btn {
+    padding: 16px 14px 14px;
+    font-size: var(--text-13);
+  }
+  .proc-slide {
+    padding: 0 16px;
+  }
 }

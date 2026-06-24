@@ -83,7 +83,7 @@
   font-weight: 500;
   max-width: 80ch;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.7);
   opacity: 0;
   transform: translateY(20px);
   animation: rise 1s 0.55s forwards;
