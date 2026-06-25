@@ -186,7 +186,7 @@
   top: var(--space-16);
   left: var(--space-16);
   display: flex;
-  gap: var(--space-8);
+  gap: var(--space-4);
   z-index: 4;
   flex-wrap: wrap;
 }
@@ -322,6 +322,7 @@
   font-weight: 600;
   color: var(--text-gray-4);
   margin-bottom: var(--space-10);
+  letter-spacing: var(--tracking-normal);
 }
 .pd-option-item {
   display: flex;
@@ -565,22 +566,22 @@
   text-align: center;
 }
 .pd-detail-hero__label {
-  font-size: var(--text-12);
+  font-size: var(--text-14);
   font-weight: 700;
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: var(--tracking-normal);
   opacity: 0.7;
   margin-bottom: var(--space-12);
   text-transform: uppercase;
 }
 .pd-detail-hero__title {
-  font-size: var(--text-24);
+  font-size: var(--text-32);
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: var(--tracking-tight);
   margin-bottom: var(--space-16);
 }
 .pd-detail-hero__desc {
-  font-size: var(--text-15);
+  font-size: var(--text-20);
   line-height: 1.75;
   opacity: 0.85;
   max-width: 520px;
