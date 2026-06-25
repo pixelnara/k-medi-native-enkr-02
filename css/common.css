@@ -1,5 +1,5 @@
-@import 'components/header.css';
-@import 'components/footer.css';
+@import "components/header.css";
+@import "components/footer.css";
 
 /* ---------- Skip Navigation ---------- */
 .skip-link {
@@ -36,7 +36,7 @@ body {
 }
 
 .section {
-  padding: clamp(64px, 9vw, 132px) 0;
+  padding: clamp(56px, 9vw, 132px) 0;
 }
 .section--surface {
   background: var(--surface-gray-2);
@@ -704,9 +704,7 @@ image-slot#cert-sgi {
 }
 /* ──────────── → components/header.css (GNB Overlay) ──────────── */
 
-   REVEAL ON SCROLL
-   ============================================================ */
-[data-reveal] {
+REVEAL ON SCROLL ============================================================ */ [data-reveal] {
   opacity: 0;
   transform: translateY(34px);
   transition:
@@ -1276,7 +1274,8 @@ image-slot#cert-sgi {
   }
   .mbar-btn.is-active svg {
     fill: currentColor;
-    stroke: none;
+    /* 라인(stroke) 유지 + fill 채움 — stroke-width는 인라인(2) 사용 */
+    stroke: currentColor;
   }
   .mbar-btn--cta {
     position: relative;
@@ -1581,6 +1580,18 @@ image-slot#cert-sgi {
   line-height: 1;
   margin: 0;
 }
+.ed-head__title::before {
+  content: "✦";
+  color: var(--accent-blue);
+  font-size: 0.45em;
+  vertical-align: 0.2em;
+  margin-right: 0.6em;
+}
+@media (max-width: 600px) {
+  .ed-head__title {
+    margin: 0;
+  }
+}
 .ed-head__more {
   flex-shrink: 0;
   font-size: var(--text-12);
@@ -1600,8 +1611,12 @@ image-slot#cert-sgi {
   }
 }
 @media (max-width: 600px) {
+  .ed-head {
+    border-top: none;
+    padding-top: 0;
+  }
   .ed-head__title {
-    font-size: clamp(24px, 7vw, 32px);
+    font-size: clamp(24px, 7vw, 26px);
   }
   .ed-head__more {
     font-size: var(--text-11);

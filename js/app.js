@@ -289,10 +289,20 @@
     const slideCount = fSlides.length;
     let fIndex = 0;
 
+    /* ── mobile pager (2 per page) ── */
+    const fMQ = window.matchMedia("(max-width: 860px)");
+    const fPrev = document.querySelector(".feature__page-prev");
+    const fNext = document.querySelector(".feature__page-next");
+    const fCount = document.querySelector(".feature__page-count");
+    const PER_PAGE = 2;
+    let fPage = 0;
+    const isMobile = () => fMQ.matches;
+    const trackGap = () => parseFloat(getComputedStyle(ftrack).columnGap) || 0;
+    const pageCount = () => Math.ceil(slideCount / PER_PAGE);
+
     function metrics() {
       const w = fSlides[0].getBoundingClientRect().width;
-      const gap = parseFloat(getComputedStyle(ftrack).columnGap) || 0;
-      return { w, step: w + gap };
+      return { w, step: w + trackGap() };
     }
     function baseFor(i) {
       const { w, step } = metrics();
@@ -307,7 +317,24 @@
       setTranslate(baseFor(fIndex), anim !== false);
       fDots.forEach((d, k) => d.classList.toggle("is-active", k === fIndex));
     }
-    fDots.forEach((d, k) => d.addEventListener("click", () => goFeature(k)));
+    function goPage(p, anim) {
+      fPage = Math.max(0, Math.min(pageCount() - 1, p));
+      setTranslate(-fPage * (fvp.clientWidth + trackGap()), anim !== false);
+      if (fCount) fCount.textContent = fPage + 1 + " / " + pageCount();
+      if (fPrev) fPrev.disabled = fPage === 0;
+      if (fNext) fNext.disabled = fPage >= pageCount() - 1;
+    }
+    function layout(anim) {
+      if (isMobile()) goPage(fPage, anim);
+      else goFeature(fIndex, anim);
+    }
+    fDots.forEach((d, k) =>
+      d.addEventListener("click", () => {
+        if (!isMobile()) goFeature(k);
+      }),
+    );
+    if (fPrev) fPrev.addEventListener("click", () => goPage(fPage - 1));
+    if (fNext) fNext.addEventListener("click", () => goPage(fPage + 1));
 
     // pointer drag
     let down = false,
@@ -319,6 +346,7 @@
       base = 0,
       moved = false;
     fvp.addEventListener("pointerdown", (e) => {
+      if (isMobile()) return;
       if (e.pointerType === "mouse" && e.button !== 0) return;
       down = true;
       decided = false;
@@ -380,8 +408,11 @@
     );
     fvp.addEventListener("dragstart", (e) => e.preventDefault());
 
-    window.addEventListener("resize", () => goFeature(fIndex, false));
-    window.requestAnimationFrame(() => goFeature(1, false));
+    window.addEventListener("resize", () => layout(false));
+    window.requestAnimationFrame(() => {
+      if (isMobile()) goPage(0, false);
+      else goFeature(1, false);
+    });
   }
 
   /* ---------- Mobile bar: language sheet ---------- */
