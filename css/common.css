@@ -810,7 +810,7 @@ image-slot#cert-sgi {
 .footer {
   background: var(--bg-dark);
   color: rgba(255, 255, 255, 0.6);
-  padding: clamp(40px, 5vw, 64px) 0 var(--space-32);
+  padding: clamp(28px, 5vw, 18px) 0 var(--space-32);
   font-size: 13.5px;
   border-top: none;
 }
@@ -2770,7 +2770,7 @@ ul.gnb-sub-list.gnb-sub-list--flat {
   text-align: left;
 }
 .ed-head__title {
-  font-size: clamp(26px, 3.4vw, 44px);
+  font-size: clamp(26px, 3.4vw, 48px);
   font-weight: 700;
   letter-spacing: var(--tracking-tighter);
   color: var(--gray-950);

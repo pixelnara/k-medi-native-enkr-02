@@ -156,13 +156,16 @@
 .pd-info__th {
   padding: clamp(14px, 1.8vw, 20px) clamp(16px, 2vw, 32px);
   text-align: left;
-  font-size: var(--text-13);
+  font-size: var(--text-18);
   font-weight: 600;
   color: var(--text-blue);
   white-space: nowrap;
   width: 180px;
   vertical-align: middle;
   letter-spacing: var(--tracking-tight);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .pd-info__icon-inline {
@@ -456,8 +459,8 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-12);
-  font-size: var(--type-body2);
-  line-height: 1.75;
+  font-size: var(--type-body3);
+  line-height: 1.6;
   color: var(--text-gray-3);
   word-break: keep-all;
 }
@@ -535,7 +538,7 @@
   border-top: 1px solid var(--border-gray-1);
 }
 .pd-rel-card__name {
-  font-size: var(--text-13);
+  font-size: var(--text-16);
   font-weight: 600;
   color: var(--text-gray-6);
   letter-spacing: var(--tracking-tight);

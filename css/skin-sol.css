@@ -924,6 +924,7 @@
     /* 2장 완전 노출 + 3번째 약 20px 피킹 */
     width: calc(50% - 22px);
     scroll-snap-align: start;
+    padding: 12px 16px 12px;
   }
   .pss-cta__inner {
     flex-direction: column;

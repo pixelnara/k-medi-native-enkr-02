@@ -19,12 +19,14 @@
 .intro .ed-head {
   border-top: none;
   padding-top: 0;
+  justify-content: center;
 }
 
 .intro {
-  padding-top: clamp(120px, 16vw, 200px);
+  padding-top: clamp(120px, 16vw, 250px);
   padding-bottom: clamp(48px, 6vw, 80px);
   background: var(--bg-white);
+  /* background: red; */
 }
 .intro__header {
   text-align: center;
@@ -217,9 +219,9 @@
   transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 @media (hover: hover) {
-.korea__layout:hover .korea__img > div {
-  transform: scale(1.04);
-}
+  .korea__layout:hover .korea__img > div {
+    transform: scale(1.04);
+  }
 }
 .korea__stats {
   display: flex;
