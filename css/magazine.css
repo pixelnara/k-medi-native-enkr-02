@@ -305,8 +305,12 @@
   .mag-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .mag-card:nth-child(3n-1) {
+  /* Reset all 3-col nth rules before applying 2-col rules */
+  .mag-card:nth-child(3n),
+  .mag-card:nth-child(3n-1),
+  .mag-card:nth-child(3n-2) {
     padding-left: 0;
+    padding-right: clamp(16px, 2vw, 32px);
     border-left: none;
     border-right: none;
   }

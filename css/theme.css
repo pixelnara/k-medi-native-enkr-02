@@ -48,26 +48,26 @@
 
   /* ─── Primitive: Typography ─── */
 
-  --text-10: 10px;
-  --text-11: 11px;
-  --text-12: 12.5px;
-  --text-13: 13px;
-  --text-14: 14px;
-  --text-15: 15px;
-  --text-16: 16px;
-  --text-17: 17px;
-  --text-18: 18px;
-  --text-19: 19px;
-  --text-20: 20px;
-  --text-21: 21px;
-  --text-22: 22px;
-  --text-23: 23px;
-  --text-24: 24px;
-  --text-25: 25px;
-  --text-28: 28px;
-  --text-29: 29px;
-  --text-30: 30px;
-  --text-32: 32px;
+  --text-10: 0.625rem;    /* 10px @ 16px base */
+  --text-11: 0.6875rem;   /* 11px */
+  --text-12: 0.78rem;     /* ~12.5px */
+  --text-13: 0.8125rem;   /* 13px */
+  --text-14: 0.875rem;    /* 14px */
+  --text-15: 0.9375rem;   /* 15px */
+  --text-16: 1rem;        /* 16px */
+  --text-17: 1.0625rem;   /* 17px */
+  --text-18: 1.125rem;    /* 18px */
+  --text-19: 1.1875rem;   /* 19px */
+  --text-20: 1.25rem;     /* 20px */
+  --text-21: 1.3125rem;   /* 21px */
+  --text-22: 1.375rem;    /* 22px */
+  --text-23: 1.4375rem;   /* 23px */
+  --text-24: 1.5rem;      /* 24px */
+  --text-25: 1.5625rem;   /* 25px */
+  --text-28: 1.75rem;     /* 28px */
+  --text-29: 1.8125rem;   /* 29px */
+  --text-30: 1.875rem;    /* 30px */
+  --text-32: 2rem;        /* 32px */
   --text-34: clamp(24px, 2.4vw, 34px);
   --text-46: clamp(30px, 3.4vw, 46px);
   --text-76: clamp(38px, 5.4vw, 76px);

@@ -533,7 +533,7 @@
         }
       });
     },
-    { threshold: 0.14 },
+    { threshold: 0.05 },
   );
   document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
 

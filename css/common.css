@@ -294,7 +294,7 @@ body {
   height: var(--space-48);
   font-size: var(--text-12);
   letter-spacing: var(--tracking-medium);
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.03);
 }
 .util-left,
 .util-right {
@@ -1387,7 +1387,7 @@ image-slot#cert-sgi {
   }
   .gnb-lang-flag {
     width: 22px;
-    height: 24px;
+    height: 22px;
     object-fit: cover;
     border-radius: 50%;
     flex-shrink: 0;

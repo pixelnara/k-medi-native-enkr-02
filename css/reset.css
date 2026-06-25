@@ -11,6 +11,7 @@
 }
 
 html {
+  font-size: clamp(15px, 1.111vw, 16px); /* 16px at ≥1440px, 15px at ≤1350px */
   scroll-behavior: smooth;
   overflow-x: hidden;
   scrollbar-gutter: stable;
