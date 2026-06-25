@@ -312,6 +312,17 @@
   padding: 0 var(--space-24);
   margin-right: 1em;
 }
+.header__right .btn--primary,
+.header__right .btn--primary2 {
+  background: var(--accent-blue);
+  border-color: transparent;
+}
+@media (hover: hover) {
+  .header__right .btn--primary:hover,
+  .header__right .btn--primary2:hover {
+    background: var(--btn-primary);
+  }
+}
 .header .link-arrow {
   color: var(--text-white);
 }
