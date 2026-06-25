@@ -129,6 +129,8 @@ body {
 }
 .page-hero--white .eyebrow {
   color: var(--text-caption);
+  font-size: var(--text-17);
+  font-weight: 700;
 }
 .page-hero--white .eyebrow::before {
   background: var(--gray-950);
