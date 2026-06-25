@@ -5,10 +5,6 @@
    ============================================================ */
 
 /* header: header--solid (common.css) */
-.gnb {
-  display: none;
-}
-
 .eyebrow--light {
   color: rgba(255, 255, 255, 0.42);
 }

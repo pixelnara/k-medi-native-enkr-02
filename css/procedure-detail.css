@@ -3,10 +3,6 @@
    Depends on: reset.css · font.css · theme.css · components/* · common.css
    ============================================================ */
 
-.gnb {
-  display: none;
-}
-
 /* → components/topbar.css */
 @media (max-width: 900px) {
   .topbar {
@@ -613,7 +609,7 @@
     right: 0;
     height: 64px;
     background: var(--blue-pure);
-    color: #fff;
+    color: var(--text-white);
     font-size: var(--text-17);
     font-weight: 700;
     letter-spacing: var(--tracking-tight);

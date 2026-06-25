@@ -1,5 +1,5 @@
-@import "components/header.css";
-@import "components/footer.css";
+/* header.css / footer.css are loaded via <link> in each page (before common.css).
+   Mobile overrides for header/footer remain below in this file. */
 
 /* ---------- Skip Navigation ---------- */
 .skip-link {
@@ -39,7 +39,7 @@ body {
   padding: clamp(56px, 9vw, 132px) 0;
 }
 .section--surface {
-  background: #ededed;
+  background: var(--surface-gray-4);
 }
 /* Eyebrow / section label — the ONLY place --caption is used */
 .eyebrow {
@@ -1228,7 +1228,7 @@ REVEAL ON SCROLL ============================================================ */
     max-width: none;
     z-index: 500;
     height: calc(80px + env(safe-area-inset-bottom, 0px));
-    background: #fff;
+    background: var(--bg-white);
     border-radius: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.09);
     box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);

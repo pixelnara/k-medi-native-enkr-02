@@ -758,27 +758,27 @@
   font-weight: 700;
 }
 [data-cat="offer"] .news-card__cat {
-  color: var(--accent-blue);
+  color: var(--cat-offer);
 }
 [data-cat="dining"] .news-card__cat {
-  color: #b85c38;
+  color: var(--cat-dining);
 }
 [data-cat="event"] .news-card__cat {
-  color: #2e7d4f;
+  color: var(--cat-event);
 }
 
 /* 필터 버튼 active — 카테고리 색상 매핑 */
 .filter.is-active[data-cat="offer"] {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
+  background: var(--cat-offer);
+  border-color: var(--cat-offer);
 }
 .filter.is-active[data-cat="dining"] {
-  background: #b85c38;
-  border-color: #b85c38;
+  background: var(--cat-dining);
+  border-color: var(--cat-dining);
 }
 .filter.is-active[data-cat="event"] {
-  background: #2e7d4f;
-  border-color: #2e7d4f;
+  background: var(--cat-event);
+  border-color: var(--cat-event);
 }
 .news-card__title {
   font-family: var(--font-sans);
@@ -1715,7 +1715,7 @@
 
   /* Mobile bottom bar */
   .mobile-bar {
-    background: #fff;
+    background: var(--bg-white);
     border-top: 1px solid rgba(0, 0, 0, 0.09);
     box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
   }

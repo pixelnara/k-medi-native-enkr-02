@@ -4,6 +4,24 @@
 (function () {
   "use strict";
 
+  /* ---------- Breakpoints — theme.css 토큰(--bp-*)을 단일 소스로 사용 ----------
+     CSS @media 는 var() 를 못 쓰므로 px 값을 직접 쓰지만, JS 는 :root 의
+     --bp-* 토큰을 읽어 같은 값을 공유한다(불일치 방지). 토큰이 없으면 폴백.   */
+  const ROOT_STYLE = getComputedStyle(document.documentElement);
+  function bp(name, fallback) {
+    const v = parseInt(ROOT_STYLE.getPropertyValue("--bp-" + name), 10);
+    return Number.isFinite(v) ? v : fallback;
+  }
+  const BP = {
+    mobile: bp("mobile", 860),
+    small: bp("small", 600),
+    treat: bp("treat", 520),
+  };
+  // 외부(페이지별 스크립트)에서도 공유할 수 있도록 노출
+  window.KMT = window.KMT || {};
+  window.KMT.BP = BP;
+  window.KMT.mqMax = (px) => window.matchMedia("(max-width: " + px + "px)");
+
   /* ---------- applyLang — 언어 코드/국기 동기화 헬퍼 ---------- */
   function applyLang(code, flagImg) {
     document.querySelectorAll(".lang-code, .header-lang-code").forEach((el) => (el.textContent = code));
@@ -152,7 +170,7 @@
   /* ---------- 시술 팝업 시트 (모바일) ---------- */
   const procSheet = document.getElementById("procSheet");
   const procClose = procSheet && procSheet.querySelector(".proc-sheet__close");
-  const isMobile = () => window.matchMedia("(max-width: 860px)").matches;
+  const isMobile = () => window.KMT.mqMax(BP.mobile).matches;
   document.querySelectorAll(".gnb-proc-trigger").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
       if (isMobile() && procSheet) {
@@ -290,7 +308,7 @@
     let fIndex = 0;
 
     /* ── mobile pager (2 per page) ── */
-    const fMQ = window.matchMedia("(max-width: 860px)");
+    const fMQ = window.KMT.mqMax(BP.mobile);
     const fPrev = document.querySelector(".feature__page-prev");
     const fNext = document.querySelector(".feature__page-next");
     const fCount = document.querySelector(".feature__page-count");

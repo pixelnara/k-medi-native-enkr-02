@@ -1,8 +1,4 @@
 /* header: header--light (common.css) */
-.gnb {
-  display: none;
-}
-
 /* ── Shop Section ── */
 .cosm-shop {
   padding: var(--space-52) 0 var(--space-80);
@@ -231,7 +227,7 @@
 }
 @media (hover: hover) {
   .cosm-hbtn:hover {
-    color: #fff;
+    color: var(--text-white);
     background: rgba(255, 255, 255, 0.14);
   }
 }
@@ -265,7 +261,7 @@
 }
 /* 이전/다음 화살표: 클릭 시 */
 .cosm-hbtn.is-nav-clicked {
-  color: #fff;
+  color: var(--text-white);
   background: rgba(255, 255, 255, 0.28);
 }
 

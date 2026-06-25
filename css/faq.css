@@ -1,8 +1,6 @@
 
 
 /* header: header--light (common.css) */
-.gnb { display: none; }
-
 /* ── Body Layout ── */
 .faq-body {
   padding: 72px 0 100px;
@@ -96,8 +94,8 @@
   font-weight: 600;
   letter-spacing: var(--tracking-wide);
   border-radius: 2px;
-  border: 1.5px solid #fff;
-  background: #fff;
+  border: 1.5px solid var(--white);
+  background: var(--bg-white);
   color: var(--accent-gray-2);
   text-decoration: none;
   transition:
@@ -107,7 +105,7 @@
 @media (hover: hover) {
 .faq-cta .faq-cta__btn:hover {
   background: transparent;
-  color: #fff;
+  color: var(--text-white);
 }
 }
 

@@ -1,8 +1,4 @@
 /* header: header--solid (common.css) */
-.gnb {
-  display: none;
-}
-
 /* ── Page ── */
 .pd-page {
   background: var(--surface-gray-1);
@@ -243,7 +239,7 @@
   }
 }
 .pd-gallery__thumb.is-active {
-  border-color: #fff;
+  border-color: var(--white);
 }
 .pd-gallery__thumb img {
   width: 100%;
@@ -607,7 +603,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-36);
-  background: #fff;
+  background: var(--bg-white);
   border: none;
   border-top: 2px solid var(--border-gray-1);
   border-radius: 0;
