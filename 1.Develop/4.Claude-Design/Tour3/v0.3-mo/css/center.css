@@ -56,6 +56,7 @@
 }
 .center-hero__date {
   font-size: var(--text-13);
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.54);
 }
 .center-hero__preview-btn {
@@ -100,6 +101,7 @@
 }
 .art-intro p {
   font-size: clamp(15px, 1.4vw, 17px);
+  font-weight: 450;
   line-height: 1.9;
   color: var(--text-gray-7);
   letter-spacing: var(--tracking-tight);
@@ -118,6 +120,7 @@
 }
 .art-section__kicker {
   font-size: var(--text-13);
+  font-weight: 500;
   color: var(--text-gray-3);
   margin-bottom: var(--space-6);
 }
@@ -132,6 +135,7 @@
 
 .art-section__body {
   font-size: var(--type-body-lg);
+  font-weight: 450;
   line-height: 1.9;
   color: var(--text-gray-7);
   letter-spacing: var(--tracking-tight);
@@ -154,6 +158,7 @@ figure.art-img img {
 }
 figure.art-img figcaption {
   font-size: var(--text-12);
+  font-weight: 400;
   color: var(--text-gray-2);
   text-align: center;
   margin-top: var(--space-24);
@@ -187,6 +192,7 @@ figure.art-img--center img {
 }
 .art-highlight p {
   font-size: clamp(13px, 1.2vw, 15px);
+  font-weight: 450;
   line-height: 1.75;
   color: var(--text-gray-7);
   letter-spacing: var(--tracking-normal);
@@ -220,6 +226,7 @@ figure.art-img--center img {
 }
 .treatment-carousel__slide figcaption {
   font-size: var(--text-12);
+  font-weight: 400;
   color: var(--text-gray-2);
   text-align: center;
   margin-top: 9px;
@@ -312,6 +319,7 @@ figure.art-img--center img {
 }
 .building-dd {
   font-size: var(--text-16);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.7;
   flex: 1;
@@ -327,6 +335,7 @@ figure.art-img--center img {
 }
 .info-box__name {
   font-size: var(--text-13);
+  font-weight: 500;
   color: var(--text-gray-3);
   margin-bottom: var(--space-4);
 }
@@ -357,6 +366,7 @@ figure.art-img--center img {
 }
 .info-dd {
   font-size: var(--text-18);
+  font-weight: 450;
   letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
   line-height: 1.65;
@@ -383,6 +393,7 @@ figure.art-img--center img {
 }
 .floors-head__kicker {
   font-size: var(--text-13);
+  font-weight: 500;
   color: var(--text-gray-3);
   margin-bottom: var(--space-6);
 }
@@ -494,6 +505,7 @@ figure.art-img--center img {
 
 .ihc__body {
   font-size: clamp(14px, 1.3vw, 16px);
+  font-weight: 450;
   line-height: 1.85;
   color: var(--text-gray-5);
   max-width: 640px;
@@ -524,6 +536,7 @@ figure.art-img--center img {
 }
 .location-info .eyebrow {
   font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-caption);
@@ -542,6 +555,7 @@ figure.art-img--center img {
   flex-wrap: wrap;
   gap: 4px 28px;
   font-size: clamp(13px, 1.2vw, 15px);
+  font-weight: 400;
   color: var(--text-gray-3);
   line-height: 1.7;
 }
@@ -700,6 +714,7 @@ figure.art-img--center img {
 }
 .rpost-card__sub {
   font-size: var(--text-17);
+  font-weight: 450;
   letter-spacing: var(--tracking-tight);
   color: var(--text-gray-5);
   line-height: 1.5;

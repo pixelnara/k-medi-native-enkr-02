@@ -72,6 +72,7 @@
 
 .pd-hero__sub {
   font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 450;
   letter-spacing: var(--tracking-tight);
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.72);
@@ -180,6 +181,7 @@
   max-width: 760px;
   margin: 0 auto;
   font-size: var(--type-body-lg);
+  font-weight: 450;
   line-height: 1.9;
   letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
@@ -249,6 +251,7 @@
 .pd-area-panel__caption {
   margin-top: var(--space-16);
   font-size: var(--text-14);
+  font-weight: 400;
   color: var(--text-gray-3);
   text-align: center;
   line-height: 1.6;
@@ -340,6 +343,7 @@
 .pd-process__content {
   padding: var(--space-32) var(--space-28);
   font-size: var(--type-body);
+  font-weight: 450;
   line-height: 1.9;
   letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
@@ -412,6 +416,7 @@
   align-items: flex-start;
   gap: var(--space-12);
   font-size: var(--type-body3);
+  font-weight: 450;
   line-height: 1.6;
   color: var(--text-gray-3);
   word-break: keep-all;

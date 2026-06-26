@@ -30,6 +30,7 @@
 }
 .cosm-count {
   font-size: var(--text-14);
+  font-weight: 450;
   color: var(--text-gray-3);
 }
 .cosm-count strong {
@@ -109,6 +110,7 @@
   gap: var(--space-8);
   padding: var(--space-10) var(--space-16);
   font-size: var(--text-14);
+  font-weight: 450;
   color: var(--text-gray-3);
   cursor: pointer;
   transition: background 0.12s;
@@ -197,6 +199,7 @@
   padding: var(--space-80) 0;
   color: var(--text-gray-2);
   font-size: var(--text-15);
+  font-weight: 400;
 }
 
 /* ── Product Card (shared styles via .prod-card in common.css) ── */

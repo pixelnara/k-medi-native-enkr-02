@@ -72,6 +72,7 @@
 }
 .login-modal__subtitle {
   font-size: 12px;
+  font-weight: 400;
   color: var(--text-gray-2);
   margin-bottom: var(--space-20);
   text-align: center;
@@ -112,6 +113,7 @@
   border-radius: 2px;
   background: var(--bg-white);
   font-size: var(--text-13);
+  font-weight: 450;
   color: var(--text-gray-7);
   outline: none;
   transition: border-color 0.2s;
@@ -154,6 +156,7 @@ input[type="password"].login-modal__input {
   align-items: center;
   gap: var(--space-6);
   font-size: var(--text-11);
+  font-weight: 400;
   color: var(--text-gray-3);
   cursor: pointer;
 }
@@ -165,6 +168,7 @@ input[type="password"].login-modal__input {
 }
 .login-modal__forgot {
   font-size: var(--text-11);
+  font-weight: 500;
   color: var(--text-caption);
   text-decoration: none;
 }
@@ -198,6 +202,7 @@ input[type="password"].login-modal__input {
   margin: 14px 0;
   color: var(--text-gray-1);
   font-size: var(--text-11);
+  font-weight: 400;
 }
 .login-modal__divider::before,
 .login-modal__divider::after {
@@ -240,6 +245,7 @@ input[type="password"].login-modal__input {
 .login-modal__join {
   text-align: center;
   font-size: var(--text-11);
+  font-weight: 400;
   color: var(--text-gray-2);
   margin-top: var(--space-14);
 }
@@ -264,6 +270,7 @@ input[type="password"].login-modal__input {
   align-items: center;
   gap: var(--space-4);
   font-size: var(--text-11);
+  font-weight: 500;
   color: var(--text-gray-2);
   text-decoration: none;
 }
@@ -390,6 +397,7 @@ input[type="password"].login-modal__input {
 }
 .proc-sheet__banner-sub {
   font-size: var(--text-13);
+  font-weight: 450;
   opacity: 0.75;
   line-height: 1.5;
 }

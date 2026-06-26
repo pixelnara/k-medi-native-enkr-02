@@ -37,6 +37,7 @@
 }
 .intro__text {
   font-size: var(--text-17);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.95;
   letter-spacing: var(--tracking-tight);
@@ -80,6 +81,7 @@
 }
 .step__desc {
   font-size: var(--text-15);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.88;
 }
@@ -132,6 +134,7 @@
 }
 .guarantee-col__desc {
   font-size: var(--text-15);
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.85;
 }
@@ -170,6 +173,7 @@
 }
 .review__text {
   font-size: var(--text-15);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.88;
   flex: 1;
@@ -188,6 +192,7 @@
 }
 .review__info {
   font-size: var(--text-13);
+  font-weight: 400;
   color: var(--text-gray-2);
   margin-top: var(--space-3);
 }
@@ -265,6 +270,7 @@
 }
 .stat-row__sub {
   font-size: var(--text-14);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.72;
 }
@@ -302,7 +308,7 @@
     font-size: clamp(15px, 1.4vw, 17px);
     line-height: 1.9;
     letter-spacing: var(--tracking-tight);
-    font-weight: 400;
+    font-weight: 450;
   }
   .intro__text {
     color: var(--text-gray-4);

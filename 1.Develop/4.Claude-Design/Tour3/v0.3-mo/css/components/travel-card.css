@@ -59,6 +59,7 @@
 
 .tv-card__desc {
   font-size: var(--text-13);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.6;
   display: -webkit-box;
@@ -73,6 +74,7 @@
   align-items: flex-start;
   gap: var(--space-5);
   font-size: var(--text-12);
+  font-weight: 400;
   color: var(--text-gray-2);
   line-height: 1.5;
 }
