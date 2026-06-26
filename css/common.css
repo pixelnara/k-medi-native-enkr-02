@@ -304,6 +304,16 @@ body {
   }
 }
 
+/* ─── Editorial Header 이후 첫 콘텐츠 섹션 상단 패딩 (공통 관리) ───
+   여기서만 수정하면 해당 모든 페이지에 반영된다.
+   skin-sol → .pss-sol-nav  /  cosmetic → .cosm-shop
+   명시도 (0,2,0) > 각 페이지 CSS (0,1,0) 이므로 항상 우선 적용
+*/
+.page-head-edito + .pss-sol-nav,
+.page-head-edito + .cosm-shop {
+  padding-top: var(--space-40);
+}
+
 /* 다크 풀-위드 배너. center / procedure / travel / skin-analysis 에서 공유. */
 .cta-banner {
   background: var(--bg-dark);
