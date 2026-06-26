@@ -67,6 +67,7 @@
   gap: var(--space-8);
   margin-bottom: var(--space-28);
   font-size: var(--text-12);
+  font-weight: 400;
   color: var(--text-gray-2);
   letter-spacing: var(--tracking-loose);
 }
@@ -87,6 +88,7 @@
 .pss-breadcrumb__sep {
   opacity: 0.45;
   font-size: var(--text-11);
+  font-weight: 400;
 }
 
 /* Step Indicators */
@@ -255,6 +257,7 @@
 }
 .pss-category__desc {
   font-size: var(--text-13);
+  font-weight: 400;
   color: var(--text-gray-2);
 }
 .pss-category__done {
@@ -361,6 +364,7 @@
 }
 .pss-option__text {
   font-size: var(--text-13);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.65;
   flex: 1;
@@ -510,6 +514,7 @@
 }
 .pss-result__kr {
   font-size: var(--text-16);
+  font-weight: 450;
   color: var(--text-gray-3);
   margin-bottom: var(--space-24);
   letter-spacing: var(--tracking-snug);
@@ -582,6 +587,7 @@
 }
 .pss-ai-card__text {
   font-size: var(--text-16);
+  font-weight: 450;
   color: var(--text-gray-5);
   line-height: 1.85;
   margin-bottom: var(--space-24);
@@ -744,6 +750,7 @@
 }
 .pss-ingredient-card__area {
   font-size: var(--text-11);
+  font-weight: 500;
   color: var(--text-gray-2);
   margin-bottom: var(--space-8);
   letter-spacing: var(--tracking-medium);
@@ -756,6 +763,7 @@
 }
 .pss-ingredient-card__desc {
   font-size: var(--text-12);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.6;
 }
@@ -818,6 +826,7 @@
 }
 .pss-cta__text p {
   font-size: var(--text-13);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.6;
 }

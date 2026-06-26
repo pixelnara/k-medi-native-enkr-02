@@ -73,6 +73,7 @@
 
 .mag-card__excerpt {
   font-size: var(--text-14);
+  font-weight: 450;
   color: var(--text-gray-3);
   line-height: 1.65;
   margin-bottom: var(--space-12);
@@ -84,6 +85,7 @@
 
 .mag-card__meta {
   font-size: var(--text-11);
+  font-weight: 400;
   color: var(--text-gray-2);
   letter-spacing: var(--tracking-open);
 }
