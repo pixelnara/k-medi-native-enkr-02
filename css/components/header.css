@@ -485,17 +485,19 @@
   background: var(--text-gray-6);
 }
 
-/* header__main compact on scroll-down (non-index pages) */
+/* header__main compact on scroll-down (non-index pages) — 데스크탑 전용 */
 .header__main {
   overflow: hidden;
   max-height: 200px;
   transition: max-height 0.32s ease;
 }
-.header.is-compact .header__main {
-  max-height: 0;
-}
-.header.is-compact {
-  box-shadow: none !important;
+@media (min-width: 861px) {
+  .header.is-compact .header__main {
+    max-height: 0;
+  }
+  .header.is-compact {
+    box-shadow: none !important;
+  }
 }
 /* brand injected into util bar when compact */
 .header__util {
