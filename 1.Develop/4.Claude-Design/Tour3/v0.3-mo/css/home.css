@@ -1039,13 +1039,13 @@
 /* PC 전용 — 기존 레이아웃 글씨 크기 유지 (em 17px / desc 18px) */
 @media (min-width: 861px) {
   .acc-em {
-    font-size: var(--text-17);
+    font-size: var(--text-18);
     font-weight: 600;
     letter-spacing: var(--tracking-tight);
   }
   .acc-desc {
     font-size: var(--text-18);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: var(--tracking-tight);
   }
 }
