@@ -100,7 +100,9 @@
   border-bottom: 3px solid transparent;
   margin-bottom: -1px;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
   white-space: nowrap;
 }
 .mag-filter__tab.is-active {
@@ -124,7 +126,7 @@
   .mag-filter__inner {
     justify-content: flex-start;
     /* 왼쪽 시작 패딩 + 오른쪽 여분(peek용) */
-    padding: 0 40px 0 var(--gutter);
+    /* padding: 0 40px 0 var(--gutter); */
     gap: var(--space-8);
   }
   /* pill 칩 — 누르기 편한 사이즈 */
@@ -149,7 +151,7 @@
 
 /* ─── Featured Article (Top) ─── */
 .mag-featured {
-  padding: clamp(40px, 5vw, 72px) 0;
+  padding: clamp(16px, 4vw, 72px) 0;
   border-bottom: 1px solid var(--gray-950);
 }
 .mag-featured__link {
@@ -230,6 +232,9 @@
   background: var(--gray-300);
 }
 @media (max-width: 860px) {
+  .mag-featured {
+    padding: 0;
+  }
   .mag-featured__link {
     grid-template-columns: 1fr;
   }
@@ -313,7 +318,9 @@
   color: var(--gray-950);
   background: none;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 @media (hover: hover) {
   .mag-more__btn:hover {
@@ -517,7 +524,9 @@
   border: 1px solid var(--gray-200);
   padding: 5px 12px;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 @media (hover: hover) {
   .art-sidebar-tag:hover {
@@ -628,12 +637,7 @@
 .art2-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.82) 0%,
-    rgba(0,0,0,0.35) 50%,
-    rgba(0,0,0,0.1) 100%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.1) 100%);
 }
 .art2-hero__inner {
   position: relative;
@@ -646,19 +650,23 @@
   align-items: center;
   gap: var(--space-8);
   font-size: var(--text-12);
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.08em;
   margin-bottom: var(--space-20);
 }
 .art2-hero__breadcrumb a {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   transition: color 0.2s;
 }
 @media (hover: hover) {
-  .art2-hero__breadcrumb a:hover { color: rgba(255,255,255,0.9); }
+  .art2-hero__breadcrumb a:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
-.art2-hero__breadcrumb-sep { color: rgba(255,255,255,0.3); }
+.art2-hero__breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
 .art2-hero__category {
   font-size: var(--text-11);
   font-weight: 700;
@@ -681,15 +689,15 @@
   align-items: center;
   gap: var(--space-20);
   font-size: var(--text-13);
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 .art2-hero__meta-sep {
   width: 1px;
   height: 12px;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 .art2-hero__author {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 /* scroll indicator */
@@ -702,7 +710,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-8);
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   font-size: var(--text-10);
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -711,14 +719,30 @@
 .art2-hero__scroll-line {
   width: 1px;
   height: 48px;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   animation: art2-scroll-line 1.8s ease-in-out infinite;
 }
 @keyframes art2-scroll-line {
-  0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
-  40%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
-  60%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
-  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  40% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .art2-hero__scroll-line {
@@ -727,8 +751,12 @@
   }
 }
 @media (max-width: 600px) {
-  .art2-hero__title { max-width: 100%; }
-  .art2-hero__scroll { display: none; }
+  .art2-hero__title {
+    max-width: 100%;
+  }
+  .art2-hero__scroll {
+    display: none;
+  }
   /* 모바일: 히어로 콘텐츠를 본문 여백(24px)에 맞춰 안쪽으로 */
   .art2-hero__inner {
     padding-left: var(--space-24);
@@ -763,10 +791,15 @@
   border: 1px solid var(--gray-900);
   padding: 4px 10px;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 @media (hover: hover) {
-  .art2-infobar__tag:hover { border-color: var(--gray-950); color: var(--gray-950); }
+  .art2-infobar__tag:hover {
+    border-color: var(--gray-950);
+    color: var(--gray-950);
+  }
 }
 .art2-infobar__share {
   display: flex;
@@ -787,12 +820,20 @@
   height: 34px;
   border: 1px solid var(--gray-900);
   color: var(--text-gray-3);
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 @media (hover: hover) {
-  .art2-share-btn:hover { border-color: var(--gray-950); color: var(--gray-950); }
+  .art2-share-btn:hover {
+    border-color: var(--gray-950);
+    color: var(--gray-950);
+  }
 }
-.art2-share-btn svg { width: 15px; height: 15px; }
+.art2-share-btn svg {
+  width: 15px;
+  height: 15px;
+}
 
 /* ─── v2 Article body: single centered column ─── */
 .art2-body {
@@ -892,8 +933,13 @@
 }
 @media (max-width: 600px) {
   /* 풀블리드 이미지는 유지하되, 캡션은 본문 여백(24px) 안으로 */
-  .art2-figure--full { margin-left: calc(-1 * var(--space-24)); margin-right: calc(-1 * var(--space-24)); }
-  .art2-figure--full img { aspect-ratio: 4/3; }
+  .art2-figure--full {
+    margin-left: calc(-1 * var(--space-24));
+    margin-right: calc(-1 * var(--space-24));
+  }
+  .art2-figure--full img {
+    aspect-ratio: 4/3;
+  }
   /* 풀쿼트: 모바일에선 본문 폭 안으로 (좌우 여백 안쪽 정렬) */
   .art2-pullquote {
     margin-left: 0;
