@@ -2057,6 +2057,9 @@
     font-size: var(--text-13);
     font-weight: 400;
     line-height: 1.7;
+    max-width: 100%;
+    padding: 0 var(--space-20);
+    margin-bottom: var(--space-36);
   }
   /* CTA 다크 */
   .cta-dark__title {
