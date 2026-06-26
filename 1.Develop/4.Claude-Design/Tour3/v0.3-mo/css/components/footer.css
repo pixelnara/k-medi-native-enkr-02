@@ -1,0 +1,251 @@
+/* footer.css — Footer, Foot-Contact
+   Extracted from common.css
+   Mobile overrides → common.css (@media max-width 860px)
+   ─────────────────────────────────────────────────────────── */
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+/* 블랙 에디토리얼 푸터 (magazine 무드) */
+.footer {
+  background: var(--bg-dark);
+  color: rgba(255, 255, 255, 0.6);
+  padding: clamp(28px, 5vw, 18px) 0 var(--space-32);
+  font-size: 13.5px;
+  font-weight: 400;
+  border-top: none;
+}
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+.footer__top a {
+  font-size: var(--text-13);
+  font-weight: 450;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.footer__top a + a::before {
+  content: "|";
+  margin-right: var(--space-16);
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  display: inline-block;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .footer__top a:hover {
+    color: var(--text-white);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+.footer__mid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-40);
+  padding: var(--space-40) 0;
+}
+.footer__tagline {
+  margin-top: var(--space-32);
+  max-width: 42ch;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__brand {
+  display: block;
+  font-family: var(--font-en);
+  font-size: var(--text-32);
+  color: var(--text-white);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .footer__brand:hover {
+    opacity: 0.75;
+  }
+}
+.footer__brand small {
+  display: block;
+  margin-top: var(--space-0);
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: var(--text-11);
+  letter-spacing: var(--tracking-wide);
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+.footer dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-8) 24px;
+}
+.footer dt {
+  color: var(--text-white);
+  font-weight: 400;
+}
+.footer dd {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding-top: var(--space-24);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: var(--text-12);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+}
+.footer__social {
+  display: flex;
+  gap: var(--space-6);
+}
+.footer__social a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  .footer__social a:hover {
+    background: var(--bg-white);
+    color: var(--text-gray-7);
+    border-color: var(--text-white);
+  }
+}
+.footer__social svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ============================================================
+   FOOTER TOP BUTTON
+   ============================================================ */
+.footer__top-wrap {
+  display: flex;
+  justify-content: flex-start;
+  padding: var(--space-32) 0 var(--space-16);
+}
+@media (min-width: 861px) {
+  .footer__top-wrap {
+    justify-content: center;
+  }
+}
+.footer__top-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-11);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: color 0.2s;
+}
+.footer__top-btn svg {
+  width: 20px;
+  height: 20px;
+}
+@media (hover: hover) {
+  .footer__top-btn:hover {
+    color: var(--text-white);
+  }
+}
+
+/* ============================================================
+   FOOT-CONTACT — 문의 이메일 블록 (푸터 위, 과감한 굵은 구분선)
+   ============================================================ */
+.foot-contact {
+  background: var(--bg-white);
+  border-top: 4px solid var(--gray-950); /* 영역 구분: 과감한 두꺼운 보더 */
+  padding: clamp(44px, 6vw, 80px) 0;
+}
+.foot-contact__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 56px);
+  flex-wrap: wrap;
+}
+.foot-contact__title {
+  font-size: var(--type-h3);
+  font-weight: 700;
+  color: var(--text-gray-7);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-8);
+}
+.foot-contact__desc {
+  font-size: var(--text-15);
+  font-weight: 450;
+  color: var(--text-gray-3);
+  line-height: 1.6;
+}
+.foot-contact__form {
+  display: flex;
+  flex: 0 1 480px;
+  min-width: 280px;
+}
+.foot-contact__input {
+  flex: 1;
+  min-width: 0;
+  /* height: 56px; */
+  padding: 0 var(--space-18);
+  border: 1px solid var(--gray-950);
+  border-right: 0;
+  background: var(--bg-white);
+  font-size: 16px;
+  color: var(--text-gray-7);
+  font-family: inherit;
+  box-shadow: none;
+}
+
+.foot-contact__input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--blue-500);
+}
+.foot-contact__input:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: -2px;
+  box-shadow: none;
+  border: 2px solid var(--blue-500);
+}
+
+.foot-contact__input::placeholder {
+  color: var(--text-gray-2);
+}
+.foot-contact__btn {
+  border-radius: 0;
+  border: 1px solid var(--gray-950);
+  padding: 0 var(--space-32);
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .foot-contact {
+    border-top: none;
+  }
+  .foot-contact__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .foot-contact__form {
+    flex-basis: auto;
+  }
+}

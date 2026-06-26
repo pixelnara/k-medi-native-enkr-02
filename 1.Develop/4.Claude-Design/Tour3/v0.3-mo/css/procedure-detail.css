@@ -1,0 +1,650 @@
+/* ============================================================
+   PROCEDURE-DETAIL — 시술 상세 페이지
+   Depends on: reset.css · font.css · theme.css · components/* · common.css
+   ============================================================ */
+
+/* → components/topbar.css */
+@media (max-width: 900px) {
+  .topbar {
+    height: 70px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   01. HERO — Full-width Image Overlay
+   ───────────────────────────────────────────────────── */
+.pd-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 42vw, 540px);
+  overflow: hidden;
+}
+
+.pd-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.pd-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.pd-hero__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--header-h) + 16px) var(--gutter) 32px;
+}
+
+.pd-hero__eyebrow {
+  display: inline-block;
+  font-size: var(--text-12);
+  font-weight: 600;
+  letter-spacing: var(--tracking-open);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 100px;
+  padding: 5px 16px;
+  margin-bottom: var(--space-20);
+  backdrop-filter: blur(4px);
+}
+
+.pd-hero__title {
+  font-size: clamp(44px, 6vw, 88px);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tightest);
+  color: var(--text-white);
+  line-height: 1.05;
+  margin-bottom: var(--space-20);
+}
+
+.pd-hero__sub {
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 450;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 560px;
+  word-break: keep-all;
+}
+
+/* ─────────────────────────────────────────────────────
+   02. QUICK INFO TABLE (개요 섹션 내 인라인 배치)
+   ───────────────────────────────────────────────────── */
+.pd-info__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.pd-info__table--inline {
+  max-width: 720px;
+  margin: var(--space-44) auto 0;
+  border-top: 2px solid var(--border-gray-1);
+}
+
+.pd-info__row {
+  border-bottom: 2px solid var(--border-gray-1);
+}
+.pd-info__table--inline .pd-info__row:last-child {
+  border-bottom: 2px solid var(--border-gray-1);
+}
+
+.pd-info__th {
+  padding: clamp(14px, 1.8vw, 20px) clamp(16px, 2vw, 32px);
+  text-align: left;
+  font-size: var(--text-18);
+  font-weight: 600;
+  color: var(--text-blue);
+  white-space: nowrap;
+  width: 180px;
+  vertical-align: middle;
+  letter-spacing: var(--tracking-tight);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pd-info__icon-inline {
+  display: inline-flex;
+  align-items: center;
+  color: var(--blue-500);
+  margin-right: var(--space-6);
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.pd-info__td {
+  padding: clamp(14px, 1.8vw, 20px) clamp(16px, 2vw, 32px);
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-6);
+  line-height: 1.5;
+  word-break: keep-all;
+  vertical-align: middle;
+}
+
+.pd-info__note {
+  font-size: var(--text-12);
+  font-weight: 400;
+  color: var(--text-gray-2);
+  margin-left: 4px;
+}
+
+/* ─────────────────────────────────────────────────────
+   Section Head — shared
+   ───────────────────────────────────────────────────── */
+.pd-sec-head {
+  margin-bottom: var(--space-32);
+}
+
+.pd-sec-head .eyebrow {
+  display: block;
+  font-size: var(--text-11);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-gray-2);
+  margin-bottom: var(--space-12);
+}
+
+.pd-sec-title {
+  font-family: var(--font-sans);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tightest);
+  color: var(--text-gray-6);
+  line-height: 1.15;
+}
+
+/* ─────────────────────────────────────────────────────
+   03. OVERVIEW
+   ───────────────────────────────────────────────────── */
+.pd-overview .pd-sec-head {
+  text-align: center;
+}
+
+.pd-overview__body {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: var(--type-body-lg);
+  font-weight: 450;
+  line-height: 1.9;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-3);
+  word-break: keep-all;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────────────────
+   04. TREATMENT AREAS
+   ───────────────────────────────────────────────────── */
+.pd-areas {
+  background: var(--bg-warm);
+}
+
+.pd-areas .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pd-areas .pd-sec-head {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.pd-areas__current-name {
+  font-size: var(--text-17);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-3);
+  margin-top: var(--space-8);
+}
+
+.pd-areas__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-32);
+  max-width: 720px;
+  width: 100%;
+}
+
+.pd-area-panel {
+  display: none;
+  width: 100%;
+  max-width: 720px;
+}
+.pd-area-panel.is-active {
+  display: block;
+}
+
+.pd-area-panel__video-wrap {
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-gray);
+  width: 100%;
+}
+.pd-area-panel__video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.pd-area-panel__caption {
+  margin-top: var(--space-16);
+  font-size: var(--text-14);
+  font-weight: 400;
+  color: var(--text-gray-3);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────────────
+   05. TREATMENT PROCESS (Accordion)
+   ───────────────────────────────────────────────────── */
+.pd-process {
+  background: var(--bg-white);
+}
+
+/* 섹션 헤더 가운데 정렬 */
+.pd-process .pd-sec-head {
+  text-align: center;
+}
+.pd-process .pd-sec-head .eyebrow {
+  text-align: center;
+}
+
+/* 아코디언 컨테이너 — 720px, 가운데, 라인 처리 */
+.pd-process .acc {
+  max-width: 720px;
+  margin: 0 auto;
+  gap: 0;
+  border-top: 1px solid var(--border-gray-1);
+}
+
+/* 각 아이템: 배경 없음, 하단 라인 */
+.pd-process .acc-item {
+  background: transparent;
+  border-bottom: 1px solid var(--border-gray-1);
+  transition: background 0.25s;
+}
+.pd-process .acc-item.is-open {
+  background: transparent;
+}
+
+/* 헤더 — 닫힌 상태: 흰 배경 */
+.pd-process .acc-head {
+  background: var(--bg-white);
+  color: var(--text-gray-6);
+  padding: var(--space-24) var(--space-28);
+  gap: var(--space-20);
+  font-size: var(--type-body-lg);
+  font-weight: 600;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+/* 헤더 — 열린 상태: gray-950 검정 */
+.pd-process .acc-item.is-open .acc-head {
+  background: var(--gray-950);
+  color: var(--text-white);
+}
+
+/* 스텝 번호 */
+.pd-step-num {
+  font-size: var(--text-14);
+  font-weight: 700;
+  letter-spacing: var(--tracking-open);
+  color: var(--blue-pure);
+  flex-shrink: 0;
+  min-width: 32px;
+  transition: color 0.25s;
+}
+.pd-process .acc-item.is-open .pd-step-num {
+  color: var(--text-white);
+}
+
+.pd-step-name {
+  flex: 1;
+}
+
+/* +/− 아이콘 */
+.pd-process .acc-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  color: var(--blue-pure);
+}
+.pd-process .acc-item.is-open .acc-icon {
+  color: var(--text-white);
+}
+
+/* 콘텐츠 영역 */
+.pd-process__content {
+  padding: var(--space-32) var(--space-28);
+  font-size: var(--type-body);
+  font-weight: 450;
+  line-height: 1.9;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-3);
+  background: var(--bg-white);
+}
+
+/* ─────────────────────────────────────────────────────
+   06. BENEFITS + PRECAUTIONS
+   ───────────────────────────────────────────────────── */
+.pd-bp {
+  background: var(--bg-warm);
+}
+
+.pd-bp__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2px, 0.2vw, 16px);
+}
+
+.pd-bp__col {
+  background: var(--bg-white);
+  border: 1px solid var(--border-gray-1);
+  padding: clamp(28px, 3.5vw, 48px);
+}
+
+.pd-bp__col-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-14);
+  margin-bottom: var(--space-28);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--border-gray-1);
+}
+
+.pd-bp__icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pd-bp__col--benefit .pd-bp__icon-wrap {
+  background: var(--gray-950);
+  color: var(--text-white);
+}
+.pd-bp__col--caution .pd-bp__icon-wrap {
+  background: transparent;
+  color: var(--gray-950);
+  border: 1.5px solid var(--gray-800);
+}
+
+.pd-bp__col-title {
+  font-size: var(--type-h5);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-6);
+}
+
+.pd-bp__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+}
+
+.pd-bp__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  font-size: var(--type-body3);
+  font-weight: 450;
+  line-height: 1.6;
+  color: var(--text-gray-3);
+  word-break: keep-all;
+}
+
+.pd-bp__list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 7px;
+}
+.pd-bp__col--benefit .pd-bp__list li::before {
+  background: var(--gray-950);
+}
+.pd-bp__col--caution .pd-bp__list li::before {
+  background: var(--gray-500);
+}
+
+/* ─────────────────────────────────────────────────────
+   07. RELATED PROCEDURES
+   ───────────────────────────────────────────────────── */
+.pd-related .pd-sec-head {
+  text-align: center;
+}
+.pd-related .pd-sec-head .eyebrow {
+  text-align: center;
+}
+
+.pd-related__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(2px, 1.2vw, 2px);
+}
+
+.pd-rel-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border-gray-1);
+  overflow: hidden;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+@media (hover: hover) {
+  .pd-rel-card:hover {
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
+    border-color: var(--gray-400);
+  }
+  .pd-rel-card:hover .pd-rel-card__img {
+    transform: scale(1.05);
+  }
+}
+
+.pd-rel-card__img-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--bg-gray);
+}
+.pd-rel-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.pd-rel-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-12) var(--space-14);
+  border-top: 1px solid var(--border-gray-1);
+}
+.pd-rel-card__name {
+  font-size: var(--text-16);
+  font-weight: 600;
+  color: var(--text-gray-6);
+  letter-spacing: var(--tracking-tight);
+}
+.pd-rel-card__arr {
+  color: var(--text-gray-2);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+@media (hover: hover) {
+  .pd-rel-card:hover .pd-rel-card__arr {
+    transform: translateX(3px);
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* Hero */
+  .pd-hero {
+    height: clamp(280px, 56vw, 420px);
+  }
+  .pd-hero__text {
+    padding: calc(56px + 16px) var(--gutter) 24px;
+  }
+
+  /* Quick Info table: th width 축소 */
+  .pd-info__th {
+    width: 110px;
+  }
+
+  /* Areas */
+  .pd-area-panel {
+    grid-template-columns: 1fr;
+  }
+  .pd-area-panel__img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* BP */
+  .pd-bp__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Related: 3 cols */
+  .pd-related__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pd-hero__title {
+    font-size: clamp(36px, 10vw, 60px);
+  }
+  .pd-hero__sub {
+    font-size: var(--text-15);
+  }
+
+  .pd-overview__body {
+    font-size: var(--text-14);
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  .pd-info__th {
+    width: 90px;
+    font-size: var(--text-12);
+    padding: 14px var(--gutter);
+  }
+  .pd-info__td {
+    font-size: var(--text-14);
+    padding: 14px var(--gutter);
+  }
+
+  .pd-sec-title {
+    font-size: clamp(24px, 6.5vw, 34px);
+  }
+
+  .pd-process .acc-head {
+    padding: var(--space-18) var(--space-20);
+    font-size: var(--text-15);
+  }
+  .pd-process__content {
+    padding: var(--space-6) var(--space-20) var(--space-24);
+  }
+
+  /* Related: horizontal scroll */
+  .pd-related__grid {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: var(--space-8);
+  }
+  .pd-related__grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   MOBILE CTA (모바일 전용 하단 고정 버튼)
+   ───────────────────────────────────────────────────── */
+.pd-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .chat-btn {
+    display: none !important;
+  }
+  .mobile-bar {
+    display: none !important;
+  }
+  .pd-mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: var(--blue-pure);
+    color: var(--text-white);
+    font-size: var(--text-17);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    text-decoration: none;
+    z-index: 300;
+  }
+  main {
+    /* padding-bottom: 60px; */
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   FOOT CONTACT — 너비 제한
+   ───────────────────────────────────────────────────── */
+.foot-contact .wrap {
+  max-width: 1200px;
+}
+
+/* CTA 배너 배경 — blue-600 */
+.cta-banner {
+  background: var(--blue-600);
+  border-top: 4px solid var(--gray-950);
+}
+@media (max-width: 600px) {
+  .cta-banner {
+    border-top: 0;
+  }
+}

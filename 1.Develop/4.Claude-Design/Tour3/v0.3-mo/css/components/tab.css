@@ -1,0 +1,53 @@
+/* tab.css — Tab component variants
+   Extracted & unified · 2026-06-21
+   ├─ .tab-line   — sticky underline tab (procedure, travel)
+   └─ .tab-pill   — segmented pill tab  (skin-sol, skin-analysis)
+   ─────────────────────────────────────────────────────────────── */
+
+/* ── Underline tab (밑줄 슬라이드) — .tab-line__btn 공통 스타일 ── */
+.tab-line__btn {
+  position: relative;
+  font-weight: 500;
+  color: var(--text-gray-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.tab-line__btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gray-1);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+@media (hover: hover) {
+.tab-line__btn:hover { color: var(--border-gray-4); }
+}
+.tab-line__btn.is-active {
+  color: var(--accent-gray-1);
+  font-weight: 700;
+}
+.tab-line__btn.is-active::after { transform: scaleX(1); }
+
+/* ── Pill tab (세그먼트 알약) ── */
+.tab-pill__btn {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  background: transparent;
+  transition:
+    background 0.22s,
+    color 0.22s;
+  white-space: nowrap;
+}
+.tab-pill__btn.is-active {
+  color: var(--text-white);
+}

@@ -1,0 +1,414 @@
+/* modal.css — Modal & Sheet components
+   Extracted from common.css · 2026-06-21
+   ├─ Login Modal (.login-modal*)
+   └─ Procedure Sheet (.proc-sheet*) — 모바일 전용 시술 사이드 패널
+   ─────────────────────────────────────────────────────────────── */
+
+/* ── Login Modal ── */
+.login-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+.login-modal.is-open {
+  display: flex;
+}
+.login-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.login-modal__box {
+  position: relative;
+  background: var(--surface-gray-1);
+  color: var(--text-gray-7);
+  border-radius: 2px;
+  padding: 32px 28px 24px;
+  font-family: var(--font-sans);
+  width: 100%;
+  max-width: 380px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+.login-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-gray-2);
+  display: flex;
+  padding: var(--space-4);
+}
+@media (hover: hover) {
+.login-modal__close:hover {
+  color: var(--text-gray-7);
+}
+}
+.login-modal__brand {
+  font-size: var(--text-18);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-14);
+  color: var(--text-gray-7);
+}
+.login-modal__brand span {
+  color: var(--text-gray-7);
+}
+.login-modal__title {
+  font-size: var(--text-19);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-7);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+.login-modal__subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-gray-2);
+  margin-bottom: var(--space-20);
+  text-align: center;
+}
+.login-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: left;
+}
+.login-modal__label-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.login-field-label {
+  font-size: var(--text-11);
+  font-weight: 500;
+  color: var(--text-gray-5);
+}
+.login-modal__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.login-field-icon {
+  position: absolute;
+  left: 11px;
+  color: var(--text-gray-2);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.login-modal__input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1.5px solid var(--border-gray-1);
+  border-radius: 2px;
+  background: var(--bg-white);
+  font-size: var(--text-13);
+  font-weight: 450;
+  color: var(--text-gray-7);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.login-modal__input:focus {
+  border-color: var(--text-gray-7);
+  box-shadow: inset 0 0 0 1px var(--text-gray-7); /* 2px 효과 — 리플로우/선 튐 방지 */
+}
+.login-modal__input::placeholder {
+  color: var(--text-gray-1);
+}
+input[type="password"].login-modal__input {
+  font-size: var(--text-17);
+  letter-spacing: 2px;
+}
+.login-pwd-eye {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-gray-1);
+  display: flex;
+  align-items: center;
+  padding: var(--space-4);
+}
+@media (hover: hover) {
+.login-pwd-eye:hover {
+  color: var(--text-gray-3);
+}
+}
+.login-modal__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2px;
+}
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  font-size: var(--text-11);
+  font-weight: 400;
+  color: var(--text-gray-3);
+  cursor: pointer;
+}
+.login-remember input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  accent-color: var(--text-gray-3);
+  cursor: pointer;
+}
+.login-modal__forgot {
+  font-size: var(--text-11);
+  font-weight: 500;
+  color: var(--text-caption);
+  text-decoration: none;
+}
+@media (hover: hover) {
+.login-modal__forgot:hover {
+  text-decoration: underline;
+}
+}
+.login-modal__submit {
+  width: 100%;
+  padding: 11px;
+  background: var(--btn-primary);
+  color: var(--text-white);
+  border: none;
+  border-radius: 2px;
+  font-size: var(--text-13);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: var(--space-4);
+  transition: opacity 0.2s;
+}
+@media (hover: hover) {
+.login-modal__submit:hover {
+  opacity: 0.82;
+}
+}
+.login-modal__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  margin: 14px 0;
+  color: var(--text-gray-1);
+  font-size: var(--text-11);
+  font-weight: 400;
+}
+.login-modal__divider::before,
+.login-modal__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-gray-1);
+}
+.login-modal__social {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.login-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border-gray-1);
+  border-radius: 2px;
+  background: var(--bg-white);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-gray-6);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+@media (hover: hover) {
+.login-social-btn:hover {
+  opacity: 0.85;
+}
+}
+.login-social-btn--kakao {
+  background: var(--btn-kakao);
+  border-color: var(--btn-kakao);
+  color: var(--btn-kakao-text);
+}
+.login-modal__join {
+  text-align: center;
+  font-size: var(--text-11);
+  font-weight: 400;
+  color: var(--text-gray-2);
+  margin-top: var(--space-14);
+}
+.login-modal__join a {
+  color: var(--text-gray-7);
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (hover: hover) {
+.login-modal__join a:hover {
+  text-decoration: underline;
+}
+}
+.login-modal__admin {
+  margin-top: var(--space-14);
+  padding-top: 12px;
+  border-top: 1px solid var(--border-gray-1);
+  text-align: center;
+}
+.login-admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-11);
+  font-weight: 500;
+  color: var(--text-gray-2);
+  text-decoration: none;
+}
+@media (hover: hover) {
+.login-admin-link:hover {
+  color: var(--text-gray-3);
+}
+}
+@media (max-width: 768px) {
+  .login-modal {
+    align-items: flex-start;
+  }
+  .login-modal__backdrop {
+    display: none;
+  }
+  .login-modal__box {
+    width: 100%;
+    min-height: 100dvh;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 56px 24px 48px;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+  .login-modal__close {
+    top: 14px;
+    right: 14px;
+  }
+}
+
+/* ── Procedure Sheet — 모바일 전용 시술 사이드 패널 ── */
+.proc-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 9100;
+  background: var(--bg-white);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateY(100%);
+  visibility: hidden;
+  transition:
+    transform 0.45s cubic-bezier(0.7, 0, 0.2, 1),
+    visibility 0s linear 0.45s;
+}
+.proc-sheet.is-open {
+  transform: translateY(0);
+  visibility: visible;
+  transition:
+    transform 0.45s cubic-bezier(0.7, 0, 0.2, 1),
+    visibility 0s linear 0s;
+}
+.proc-sheet__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border-gray-1);
+}
+.proc-sheet__close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-gray-6);
+  flex-shrink: 0;
+}
+.proc-sheet__close svg {
+  width: 22px;
+  height: 22px;
+}
+.proc-sheet__title {
+  font-size: var(--text-18);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-gray-6);
+}
+.proc-sheet__list {
+  padding: 0 20px;
+}
+.proc-sheet__list li a {
+  display: block;
+  padding: 18px 0;
+  font-size: var(--text-16);
+  color: var(--text-gray-6);
+  border-bottom: 1px solid var(--border-gray-1);
+  text-decoration: none;
+  font-weight: 500;
+}
+.proc-sheet__list li:last-child a {
+  border-bottom: none;
+}
+.proc-sheet__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 20px 32px;
+  padding: 24px 20px;
+  background: var(--accent-gray-2);
+  color: var(--text-white);
+  text-decoration: none;
+  border-radius: 4px;
+}
+.proc-sheet__banner-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.proc-sheet__banner-label {
+  font-size: var(--text-10);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.proc-sheet__banner-title {
+  font-size: var(--text-18);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+.proc-sheet__banner-sub {
+  font-size: var(--text-13);
+  font-weight: 450;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+.proc-sheet__banner svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-left: var(--space-12);
+}
+@media (min-width: 861px) {
+  .proc-sheet {
+    display: none !important;
+  }
+}

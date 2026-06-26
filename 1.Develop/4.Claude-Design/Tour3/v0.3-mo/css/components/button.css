@@ -1,0 +1,154 @@
+/* button.css — Button, Link-arrow & Filter Chip components
+   Extracted from common.css · 2026-06-21
+   ─────────────────────────────────────────────────────────────── */
+
+/* Text link with arrow */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-10);
+  font-size: var(--text-13);
+  font-weight: 700;
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+  color: var(--text-gray-6);
+  padding-bottom: var(--space-6);
+  position: relative;
+}
+.link-arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text-gray-6);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.link-arrow .ar {
+  transition: transform 0.4s ease;
+}
+@media (hover: hover) {
+.link-arrow:hover .ar {
+  transform: translateX(5px);
+}
+}
+
+/* Outline button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-10);
+  height: 54px;
+  padding: 0 var(--space-32);
+  font-size: var(--text-14);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  border: 1px solid var(--text-gray-6);
+  color: var(--text-gray-6);
+  background: transparent;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+@media (hover: hover) {
+.btn:hover {
+  background: var(--text-gray-6);
+  color: var(--bg-white);
+}
+}
+.btn--primary {
+  background: var(--btn-primary);
+  color: var(--bg-white);
+  border-color: transparent;
+}
+.btn--primary2 {
+  background: var(--btn-secondary);
+  color: var(--bg-white);
+  border-color: transparent;
+}
+@media (hover: hover) {
+.btn--primary:hover {
+  background: var(--btn-secondary);
+  color: var(--text-white);
+}
+}
+@media (hover: hover) {
+.btn--primary2:hover {
+  background: var(--blue-600);
+}
+}
+/* Primary Outline — 명시적 outline 변형 (base .btn 외형과 동일) */
+.btn--primary-outline {
+  border: 1px solid var(--text-gray-6);
+  color: var(--text-gray-6);
+  background: transparent;
+}
+@media (hover: hover) {
+.btn--primary-outline:hover {
+  background: var(--text-gray-6);
+  color: var(--bg-white);
+}
+}
+
+/* ── Filter Chip ─────────────────────────────────────────────────
+   공통 정의: .filter(home) · .faq-tab(faq) · .tv-chip(travel) · .ihc__tab(center)
+   각 페이지 CSS는 크기·여백 반응형 override만 유지.
+   ─────────────────────────────────────────────────────────────── */
+.chip,
+.filter,
+.faq-tab,
+.tv-chip,
+.ihc__tab {
+  padding: var(--space-8) var(--space-20);
+  font-size: var(--text-14);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
+  color: var(--text-gray-6);
+  background: var(--bg-white);
+  border: 1px solid var(--border-gray-4);
+  border-radius: 0;
+  cursor: pointer;
+  line-height: 1;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+@media (hover: hover) {
+.chip:hover,
+.filter:hover,
+.faq-tab:hover,
+.tv-chip:hover,
+.ihc__tab:hover {
+  border-color: var(--text-gray-6);
+  color: var(--text-gray-6);
+}
+}
+.chip.is-active,
+.filter.is-active,
+.faq-tab.is-active,
+.tv-chip.is-active,
+.ihc__tab.is-active {
+  background: var(--btn-primary);
+  color: var(--text-white);
+  border-color: var(--btn-primary);
+}
+
+/* ── Focus-visible (keyboard navigation) ─────────────────────── */
+.btn:focus-visible,
+.chip:focus-visible,
+.filter:focus-visible,
+.faq-tab:focus-visible,
+.tv-chip:focus-visible,
+.ihc__tab:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 2px;
+}
+.link-arrow:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 4px;
+}
