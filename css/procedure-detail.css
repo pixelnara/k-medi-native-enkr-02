@@ -63,8 +63,9 @@
 }
 
 .pd-hero__title {
+  font-family: var(--typo-h1-font);
   font-size: clamp(44px, 6vw, 88px);
-  font-weight: 700;
+  font-weight: var(--typo-h1-weight);
   letter-spacing: var(--tracking-tightest);
   color: var(--text-white);
   line-height: 1.05;
@@ -163,7 +164,7 @@
 }
 
 .pd-sec-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 700;
   letter-spacing: var(--tracking-tightest);

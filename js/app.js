@@ -58,7 +58,7 @@
   onScroll();
 
   /* ---------- Header: hide main bar on scroll-down (non-index pages) ---------- */
-  const isIndex = /(?:^|\/)(index\.html)?$/.test(window.location.pathname);
+  const isIndex = /(?:^|\/)(index(-ko)?\.html)?$/.test(window.location.pathname);
   if (header && !isIndex) {
     let prevY = window.scrollY;
     window.addEventListener(

@@ -49,6 +49,7 @@
 }
 
 .tv-card__title {
+  font-family: var(--font-body);
   font-size: var(--text-17);
   font-weight: 700;
   letter-spacing: var(--tracking-tight);

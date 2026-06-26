@@ -24,7 +24,7 @@
   justify-content: space-between;
   gap: var(--space-20);
   text-align: left;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--text-gray-6);
   letter-spacing: var(--tracking-tight);
   background: var(--bg-white);

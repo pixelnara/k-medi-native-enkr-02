@@ -20,6 +20,20 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   transition: border-color 0.5s ease;
 }
+/* 기본(투명 hero) — 흰 글자 */
+.header__util a,
+.header__util .util-dropdown__trigger,
+.header__util .lang-code,
+.header__util .lang-select__btn {
+  color: var(--text-white);
+}
+/* is-solid (스크롤) — 다크 글자 */
+.header.is-solid .header__util a,
+.header.is-solid .header__util .util-dropdown__trigger,
+.header.is-solid .header__util .lang-code,
+.header.is-solid .header__util .lang-select__btn {
+  color: var(--text-gray-6);
+}
 .header__util .wrap {
   display: flex;
   align-items: center;
@@ -449,6 +463,14 @@
 }
 .header--light .header__util {
   border-color: var(--border-gray-1);
+  background: var(--bg-white);
+  color: var(--text-gray-6);
+}
+.header--light .header__util a,
+.header--light .header__util .util-dropdown__trigger,
+.header--light .header__util .lang-code,
+.header--light .header__util .lang-select__btn {
+  color: var(--text-gray-6);
 }
 .header--light .link-arrow {
   color: var(--text-gray-6);
@@ -909,7 +931,7 @@
   padding: 48px 0 var(--space-36);
 }
 .gnb-col > h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--gray-950);
   font-size: var(--text-21);
   font-weight: 700;

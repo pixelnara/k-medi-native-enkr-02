@@ -27,7 +27,7 @@
   color: var(--text-gray-7);
   border-radius: 2px;
   padding: 32px 28px 24px;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   width: 100%;
   max-width: 380px;
   max-height: 90vh;

@@ -23,7 +23,7 @@
 }
 
 .rsv-hero__title {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 700;
   color: var(--text-gray-6);
@@ -218,7 +218,7 @@
   padding: 12px var(--space-16);
   font-size: var(--text-15);
   font-weight: 600;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--text-gray-5);
   background: var(--bg-white);
   border: 1px solid var(--border-gray-2);
@@ -253,7 +253,7 @@
   border: 1.5px solid var(--border-gray-2);
   border-radius: 2px;
   background: var(--bg-white);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: var(--text-15);
   font-weight: 400;
   color: var(--text-gray-6);

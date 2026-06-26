@@ -20,11 +20,13 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--typo-body-font);
+  font-size: var(--typo-body-size);
+  font-weight: var(--typo-body-weight);
+  line-height: var(--typo-body-line);
+  letter-spacing: var(--typo-body-letter);
   background: var(--bg-white);
   color: var(--text-gray-3);
-  font-weight: 400;
-  line-height: 1.7;
 }
 
 /* ---------- Shared layout helpers ---------- */
@@ -58,16 +60,75 @@ body {
   color: var(--text-gray-6);
   font-weight: 700;
 }
-/* Display titles */
+/* ── Semantic Typography Utility Classes ──────────────────────────
+   역할 기반 class. HTML 태그(h1~h6)와 무관하게 역할로 적용.
+   Display 계열 → Optima(--font-display), Heading/UI → Pretendard(--font-body)
+   ──────────────────────────────────────────────────────────────── */
+
+/* Hero Title: 홈 히어로·풀블리드 배경 위 최대 장식 타이틀 */
+.hero-title {
+  font-family: var(--typo-hero-font);
+  font-size: var(--typo-hero-size);
+  font-weight: var(--typo-hero-weight);
+  line-height: var(--typo-hero-line);
+  letter-spacing: var(--typo-hero-letter);
+}
+
+/* Display Title: 섹션 최상위 브랜드·장식 제목 */
+.display-title {
+  font-family: var(--typo-display-font);
+  font-size: var(--typo-display-size);
+  font-weight: var(--typo-display-weight);
+  line-height: var(--typo-display-line);
+  letter-spacing: var(--typo-display-letter);
+}
+
+/* Section Display Title: 섹션 내 장식형 중간 제목 */
+.section-display-title {
+  font-family: var(--typo-section-display-font);
+  font-size: var(--typo-section-display-size);
+  font-weight: var(--typo-section-display-weight);
+  line-height: var(--typo-section-display-line);
+  letter-spacing: var(--typo-section-display-letter);
+}
+
+/* Content Heading: 정보 전달형 h2 (섹션 서브 제목, Pretendard) */
+.content-heading {
+  font-family: var(--typo-h2-font);
+  font-size: var(--typo-h2-size);
+  font-weight: var(--typo-h2-weight);
+  line-height: var(--typo-h2-line);
+  letter-spacing: var(--typo-h2-letter);
+}
+
+/* Content Title: 카드·폼·리스트 h3 제목 (Pretendard) */
+.content-title {
+  font-family: var(--typo-h3-font);
+  font-size: var(--typo-h3-size);
+  font-weight: var(--typo-h3-weight);
+  line-height: var(--typo-h3-line);
+  letter-spacing: var(--typo-h3-letter);
+}
+
+/* Lead: 리드 본문·섹션 설명 */
+.lead {
+  font-family: var(--typo-lead-font);
+  font-size: var(--typo-lead-size);
+  font-weight: var(--typo-lead-weight);
+  line-height: var(--typo-lead-line);
+  letter-spacing: var(--typo-lead-letter);
+}
+
+/* Legacy alias — 기존 .display 클래스 유지 (호환성) */
 .display {
-  font-family: var(--font-sans);
+  font-family: var(--typo-section-display-font);
   color: var(--text-gray-6);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: var(--tracking-tight);
+  font-weight: var(--typo-section-display-weight);
+  line-height: var(--typo-section-display-line);
+  letter-spacing: var(--typo-section-display-letter);
 }
 .h-lg {
-  font-size: var(--text-80);
+  font-size: var(--typo-display-size);
   font-weight: 700;
   letter-spacing: var(--tracking-tightest);
 }
@@ -79,7 +140,7 @@ body {
 /* ── Section Intro Component ── */
 .sec-intro {
   text-align: center;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--text-gray-6);
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 500;
@@ -147,8 +208,9 @@ body {
   background: rgba(255, 255, 255, 0.9);
 }
 .page-hero__title {
+  font-family: var(--typo-h1-font);
   font-size: var(--text-80);
-  font-weight: 700;
+  font-weight: var(--typo-h1-weight);
   letter-spacing: var(--tracking-tight);
   line-height: 1.08;
   margin-bottom: var(--space-16);
@@ -243,8 +305,9 @@ body {
   margin-bottom: var(--space-12);
 }
 .page-head-edito__title {
+  font-family: var(--typo-h1-font);
   font-size: clamp(40px, 6vw, 88px);
-  font-weight: 700;
+  font-weight: var(--typo-h1-weight);
   letter-spacing: var(--tracking-tighter);
   color: var(--gray-950);
   line-height: 0.95;
@@ -1787,12 +1850,17 @@ image-slot#cert-sgi {
   text-align: left;
 }
 .ed-head__title {
+  font-family: var(--font-display);
   font-size: clamp(26px, 3.4vw, 48px);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--tracking-tighter);
   color: var(--gray-950);
   line-height: 1;
   margin: 0;
+}
+[lang="ko"] .ed-head__title {
+  font-family: var(--font-body);
+  font-weight: 700;
 }
 .ed-head__title::before {
   content: "✦";

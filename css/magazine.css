@@ -24,8 +24,9 @@
   margin-bottom: var(--space-12);
 }
 .mag-page-head__title {
+  font-family: var(--typo-h1-font);
   font-size: clamp(40px, 6vw, 88px);
-  font-weight: 700;
+  font-weight: var(--typo-h1-weight);
   letter-spacing: var(--tracking-tighter);
   color: var(--gray-950);
   line-height: 0.95;
@@ -676,8 +677,9 @@
   margin-bottom: var(--space-16);
 }
 .art2-hero__title {
+  font-family: var(--typo-h1-font);
   font-size: clamp(32px, 5.5vw, 76px);
-  font-weight: 700;
+  font-weight: var(--typo-h1-weight);
   color: var(--text-white);
   letter-spacing: var(--tracking-tighter);
   line-height: 1.1;

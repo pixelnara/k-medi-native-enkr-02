@@ -100,7 +100,7 @@
   margin-bottom: var(--space-10);
 }
 .proc-slide__title {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 800;
   letter-spacing: var(--tracking-tightest);
