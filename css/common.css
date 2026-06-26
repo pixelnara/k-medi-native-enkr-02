@@ -1347,15 +1347,8 @@ image-slot#cert-sgi {
     color: var(--gray-950);
   }
   .mbar-btn.is-active svg {
-    width: 30px;
-    height: 30px;
     fill: currentColor;
     stroke: currentColor;
-  }
-  .mbar-btn.is-active .mbar-label {
-    font-size: var(--text-11);
-    font-weight: 700;
-    color: var(--gray-950);
   }
   .mbar-btn:active {
     background: rgba(0, 0, 0, 0.06);
@@ -1391,15 +1384,15 @@ image-slot#cert-sgi {
     letter-spacing: var(--tracking-loose);
   }
   .mbar-label {
-    font-size: 9px;
-    font-weight: 500;
+    font-size: var(--text-10);
+    font-weight: 600;
     letter-spacing: var(--tracking-loose);
     color: inherit;
     white-space: nowrap;
   }
   .mbar-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     flex-shrink: 0;
   }
   button.mbar-btn {
