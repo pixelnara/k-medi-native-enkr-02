@@ -975,7 +975,11 @@ image-slot#cert-sgi {
     display: none;
   }
   .gnb-banner--hugro::before {
+<<<<<<< HEAD
     background-image: url("../assets/img/img-building.png");
+=======
+    background-image: url("/assets/img/img-building.png");
+>>>>>>> 5e6c833d9f87b4b08801641f54d1d1e48747a05b
   }
   /* 텍스트 블록 */
   .gnb-banner__inner {

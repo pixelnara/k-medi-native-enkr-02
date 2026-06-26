@@ -1,2 +1,23 @@
+<<<<<<< HEAD
 design-system.html
 MD/
+=======
+.DS_Store
+.vscode/
+.claude/
+
+# 문서
+MD/
+
+# 디자인 시스템 파일
+design-system.html
+
+# Next.js / Node
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+
+# 빌드 아카이브
+*.zip
+>>>>>>> 5e6c833d9f87b4b08801641f54d1d1e48747a05b
