@@ -23,7 +23,7 @@ body {
   font-family: var(--font-sans);
   background: var(--bg-white);
   color: var(--text-gray-3);
-  font-weight: 450;
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -213,7 +213,6 @@ body {
   }
   .page-hero__sub {
     font-size: var(--text-16);
-    font-weight: 500;
     line-height: 1.6;
   }
 }
@@ -762,9 +761,6 @@ image-slot#cert-sgi {
 }
 
 @media (max-width: 860px) {
-  body {
-    font-weight: 400;
-  }
   :root {
     --header-h: 70px;
   }

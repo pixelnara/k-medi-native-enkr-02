@@ -806,7 +806,6 @@ figure.art-img--center img {
   }
   .info-box__title {
     font-size: 16px;
-    font-weight: 700;
     margin-bottom: var(--space-18);
   }
   .info-row {

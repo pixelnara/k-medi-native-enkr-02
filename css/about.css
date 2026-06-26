@@ -308,7 +308,6 @@
     font-size: clamp(15px, 1.4vw, 17px);
     line-height: 1.9;
     letter-spacing: var(--tracking-tight);
-    font-weight: 450;
   }
   .intro__text {
     color: var(--text-gray-4);
