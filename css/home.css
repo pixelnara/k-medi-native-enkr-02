@@ -1826,18 +1826,9 @@
     stroke: currentColor;
   }
   .mbar-btn--cta {
-    position: relative;
-    color: rgba(0, 0, 0, 0.35);
-    border-left: none;
-  }
-  .mbar-btn--cta::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    bottom: 16px;
-    width: 1px;
-    background: rgba(0, 0, 0, 0.13);
+    /* position: relative; */
+    /* color: rgba(0, 0, 0, 0.35); */
+    /* border-left: none; */
   }
 
   /* Language bottom sheet */

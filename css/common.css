@@ -1361,6 +1361,11 @@ image-slot#cert-sgi {
     fill: currentColor;
     stroke: currentColor;
   }
+  /* 쇼핑 아이콘 활성: 가방 몸통 채우고 손잡이는 흰 선으로 */
+  .mbar-btn[aria-label="쇼핑"].is-active svg path {
+    fill: none;
+    stroke: var(--bg-white);
+  }
   .mbar-btn:active {
     background: rgba(0, 0, 0, 0.06);
   }
@@ -1401,6 +1406,37 @@ image-slot#cert-sgi {
     border: none;
     cursor: pointer;
     padding: 0;
+  }
+  /* Mobile bottom bar — dark variant (gray-950) */
+  .mobile-bar--dark {
+    background: var(--gray-950);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+  }
+  .mobile-bar--dark .mbar-btn {
+    color: rgba(255, 255, 255, 0.45);
+  }
+  @media (hover: hover) {
+    .mobile-bar--dark .mbar-btn:hover {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+  .mobile-bar--dark .mbar-btn.is-active {
+    color: #fff;
+  }
+  .mobile-bar--dark .mbar-btn.is-active svg {
+    fill: currentColor;
+    stroke: currentColor;
+  }
+  .mobile-bar--dark .mbar-btn--cta {
+    color: rgba(255, 255, 255, 0.45);
+  }
+  .mobile-bar--dark .mbar-btn[aria-label="쇼핑"].is-active svg path {
+    fill: none;
+    stroke: var(--gray-950);
+  }
+  .mobile-bar--dark .mbar-btn:active {
+    background: rgba(255, 255, 255, 0.08);
   }
   /* Language bottom sheet */
   .lang-sheet.is-open {
