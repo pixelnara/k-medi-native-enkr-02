@@ -91,7 +91,10 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
 }
 
 .rsv-step__label {
@@ -231,7 +234,7 @@
 .rsv-chips {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-10);
+  gap: var(--space-4);
 }
 
 .rsv-chip {
@@ -247,7 +250,10 @@
   border: 1px solid var(--border-gray-2);
   border-radius: 0;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
   line-height: 1;
   text-align: center;
 }
@@ -281,7 +287,9 @@
   font-weight: 400;
   color: var(--text-gray-6);
   outline: none;
-  transition: border-color 0.18s, box-shadow 0.18s;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -627,7 +635,9 @@
   cursor: pointer;
   color: var(--text-gray-3);
   border-radius: 50%;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 @media (hover: hover) {
@@ -654,7 +664,9 @@
   background: var(--bg-white);
   cursor: pointer;
   text-align: left;
-  transition: border-color 0.15s, background 0.15s;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
   width: 100%;
 }
 
@@ -803,7 +815,7 @@
 
   .rsv-chip {
     font-size: var(--text-14);
-    padding: 10px var(--space-12);
+    padding: 16px var(--space-12);
   }
 
   .rsv-field-row {
