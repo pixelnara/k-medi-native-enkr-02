@@ -1028,7 +1028,7 @@ image-slot#cert-sgi {
   }
   .gnb-col ul > li > a {
     display: block;
-    padding: var(--space-12) var(--space-8);
+    padding: var(--space-16) var(--space-8);
     font-size: var(--text-14);
     font-weight: 550;
     color: var(--text-gray-6);
@@ -1077,7 +1077,7 @@ image-slot#cert-sgi {
   .gnb-item-row > a {
     flex: 1;
     display: block;
-    padding: var(--space-12) var(--space-8);
+    padding: var(--space-16) var(--space-8);
     font-size: var(--text-14);
     font-weight: 550;
     color: var(--text-gray-6);
@@ -1130,7 +1130,7 @@ image-slot#cert-sgi {
     flex-direction: column;
     padding: 0 0 0 var(--space-24);
     border-left: 2px solid var(--border-gray-1);
-    margin-top: var(--space-4);
+    /* margin-top: var(--space-4); */
   }
   .gnb-col.is-open ul .gnb-has-sub.is-open .gnb-sub-list .gnb-sub-list li a {
     display: block;
