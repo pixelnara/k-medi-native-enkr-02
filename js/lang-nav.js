@@ -2,38 +2,45 @@
  * lang-nav.js
  * 언어 선택 시 대응하는 언어 버전 페이지로 이동합니다.
  *
- * 파일 명명 규칙:
- *   EN (기본) : pagename.html
- *   KR        : pagename-ko.html
+ * 폴더 구조:
+ *   ko/pagename.html  ← 국문
+ *   en/pagename.html  ← 영문
  *
- * 예) index.html (EN) ↔ index-ko.html (KR)
- *     about.html (EN) ↔ about-ko.html  (KR)
+ * 예) en/center.html ↔ ko/center.html
  */
 (function () {
-  const LANG_MAP = {
+  const LANG_FOLDER = {
     KR: "ko",
     EN: "en",
-    CN: "cn",
-    JP: "jp",
-    VN: "vn",
   };
-
-  /** 현재 파일명에서 lang 접미사를 제거해 base 이름을 반환 */
-  function getBaseName(filename) {
-    return filename
-      .replace(/-ko\.html$/, ".html")
-      .replace(/-en\.html$/, ".html")
-      .replace(/-cn\.html$/, ".html")
-      .replace(/-jp\.html$/, ".html")
-      .replace(/-vn\.html$/, ".html");
-  }
 
   /** 언어 코드에 맞는 URL 반환 */
   function getLangUrl(langCode) {
-    const filename = location.pathname.split("/").pop() || "index.html";
-    const base = getBaseName(filename);
-    if (langCode === "EN") return base; // EN = 접미사 없음
-    return base.replace(".html", `-${LANG_MAP[langCode]}.html`);
+    const targetFolder = LANG_FOLDER[langCode];
+    if (!targetFolder) return null;
+
+    const parts = location.pathname.split("/");
+    const raw    = parts[parts.length - 1]; // 마지막 세그먼트 (빈 값·폴더명·파일명 모두 가능)
+    const parent = parts[parts.length - 2]; // 그 앞 세그먼트
+
+    const FOLDERS = Object.values(LANG_FOLDER); // ['ko', 'en']
+
+    let filename, inLangFolder;
+
+    if (FOLDERS.includes(raw) || raw === "") {
+      // /ko  /ko/  처럼 마지막이 폴더명이거나 빈 문자열인 경우 → index 페이지
+      const folder = FOLDERS.includes(raw) ? raw : parent;
+      inLangFolder = FOLDERS.includes(folder);
+      filename = "index.html";
+    } else {
+      // /ko/center  /ko/center.html 처럼 파일명이 있는 경우
+      filename = raw.endsWith(".html") ? raw : raw + ".html";
+      inLangFolder = FOLDERS.includes(parent);
+    }
+
+    return inLangFolder
+      ? `../${targetFolder}/${filename}`
+      : `${targetFolder}/${filename}`;
   }
 
   /** 현재 페이지의 언어 코드 반환 */
@@ -72,7 +79,7 @@
     opt.addEventListener("click", () => {
       // lang-option 텍스트 = "KR" / "EN" etc.
       const code = opt.textContent.trim();
-      if (LANG_MAP[code] !== undefined) handleLangChange(code);
+      if (code) handleLangChange(code);
     });
   });
 

@@ -235,102 +235,146 @@
   /* 좋아요 활성 */
   --cosm-like-active: var(--gray-900);
 
-  /* ─── Responsive Type Scale ─── */
-  /* 제목·본문 계열에만 적용. UI 요소(버튼·레이블·칩)는 기존 --text-*px 유지 */
+  /* ─── Layer 2: Responsive Type Scale ───────────────────────────
+     제목(h1~h6)·본문 계열 반응형 크기.
+     UI 요소(버튼·레이블·칩)는 --text-*px 그대로 유지.
+     ─────────────────────────────────────────────────────────── */
 
-  --type-h2: clamp(28px, 3.5vw, 52px); /* 섹션 서브 제목 */
-  --type-h3: clamp(20px, 2.2vw, 30px); /* 카드 대제목, hero 서브타이틀 */
-  --type-h4: clamp(18px, 1.8vw, 24px); /* 카드 소제목, CTA desc */
-  --type-h5: clamp(16px, 1.5vw, 22px); /* step 레이블, icon 레이블 */
+  --type-h1: var(--text-46); /* clamp(30px,3.4vw,46px) — 페이지 대표 제목 */
+  --type-h2: clamp(28px, 3.5vw, 52px); /* 섹션 대제목 */
+  --type-h3: clamp(20px, 2.2vw, 30px); /* 서브섹션·카드 대제목 */
+  --type-h4: clamp(18px, 1.8vw, 24px); /* 카드 소제목·CTA 설명 */
+  --type-h5: clamp(16px, 1.5vw, 22px); /* step 레이블·아이콘 레이블 */
+  --type-h6: var(--text-15); /* 소형 레이블·캡션 헤딩 */
+
   --type-body-lg: clamp(16px, calc(15px + 0.4vw), 18px); /* 리드 본문 */
   --type-body: clamp(15px, calc(14.5px + 0.25vw), 17px); /* 일반 본문 */
   --type-body2: clamp(14px, calc(14px + 0.15vw), 15px); /* 보조 본문 */
 
-  /* ─── Semantic: Typography Role Token ─── */
-  /* Primitive(--text-*) 위에 역할 기반 token을 정의.
-     폰트 변수는 font.css의 --font-display / --font-body 참조.
-     HTML 태그(h1~h6)가 아닌 화면 역할 기준으로 구분. */
+  /* ═══════════════════════════════════════════════════════════
+     Layer 3 — Semantic Typography Role Token
+     ───────────────────────────────────────────────────────────
+     두 갈래로 분리:
+       3-A. Display / Brand  — 시각적 강조·장식성, HTML 구조 비종속
+       3-B. Heading          — 문서 구조·접근성, h1~h6 semantic 대응
+     ───────────────────────────────────────────────────────────
+     · 모든 큰 글자 = h1이 아님
+     · 모든 h1이 반드시 hero display style일 필요 없음
+     · 폰트 분기는 Layer 4 [lang] 블록에서 처리
+     ═══════════════════════════════════════════════════════════ */
 
-  /* ── Display / Brand (Optima 계열 — 장식·히어로·브랜드 제목에만 사용) ── */
-  --typo-hero-font:    var(--font-display);
-  --typo-hero-size:    var(--text-104);
-  --typo-hero-weight:  400;
-  --typo-hero-line:    1.05;
-  --typo-hero-letter:  -0.02em;
+  /* ┌───────────────────────────────────────────────────────┐
+     │  3-A. Display / Brand tier                           │
+     │  브랜드 무드·장식성이 강한 시각적 제목 역할.          │
+     │  HTML heading 구조와 1:1 대응하지 않아도 됨.          │
+     │  EN: --font-display (Optima, Marcellus …)            │
+     │  KO: Pretendard (Layer 4 override)                   │
+     └───────────────────────────────────────────────────────┘ */
 
-  --typo-display-font:   var(--font-display);
-  --typo-display-size:   var(--text-80);
+  /* hero — 홈 히어로·풀블리드 최대 장식 제목 */
+  --typo-hero-font: var(--font-display);
+  --typo-hero-size: var(--text-104);
+  --typo-hero-weight: 400;
+  --typo-hero-line: 1.05;
+  --typo-hero-letter: -0.02em;
+
+  /* display — 브랜드 임팩트 제목 (hero 아래 단계) */
+  --typo-display-font: var(--font-display);
+  --typo-display-size: var(--text-80);
   --typo-display-weight: 400;
-  --typo-display-line:   1.08;
+  --typo-display-line: 1.08;
   --typo-display-letter: -0.015em;
 
-  --typo-section-display-font:   var(--font-display);
-  --typo-section-display-size:   var(--text-46);
+  /* section-display — 섹션 단위 장식 타이틀 */
+  --typo-section-display-font: var(--font-display);
+  --typo-section-display-size: var(--text-46);
   --typo-section-display-weight: 400;
-  --typo-section-display-line:   1.15;
+  --typo-section-display-line: 1.15;
   --typo-section-display-letter: -0.01em;
 
-  /* ── Heading / Information (Pretendard — 정보 전달형 제목) ── */
-  --typo-h1-font:    var(--font-body);
-  --typo-h1-size:    var(--text-46);
-  --typo-h1-weight:  700;
-  --typo-h1-line:    1.25;
-  --typo-h1-letter:  -0.02em;
+  /* ┌───────────────────────────────────────────────────────┐
+     │  3-B. Heading tier                                   │
+     │  문서 구조·접근성을 위한 semantic heading.            │
+     │  h1~h6 HTML 태그에 대응하는 role token.              │
+     │  EN: --font-display (Optima 계열)                    │
+     │  KO: Pretendard (Layer 4 override, font만 변경)      │
+     │  → 크기·굵기·행간은 언어 무관하게 유지됨             │
+     └───────────────────────────────────────────────────────┘ */
 
-  --typo-h2-font:    var(--font-body);
-  --typo-h2-size:    var(--text-34);
-  --typo-h2-weight:  700;
-  --typo-h2-line:    1.35;
-  --typo-h2-letter:  -0.015em;
+  --typo-h1-font: var(--font-display);
+  --typo-h1-size: var(--type-h1);
+  --typo-h1-weight: 600;
+  --typo-h1-line: 1.25;
+  --typo-h1-letter: -0.02em;
 
-  --typo-h3-font:    var(--font-body);
-  --typo-h3-size:    var(--text-24);
-  --typo-h3-weight:  600;
-  --typo-h3-line:    1.45;
-  --typo-h3-letter:  -0.01em;
+  --typo-h2-font: var(--font-display);
+  --typo-h2-size: var(--text-34);
+  --typo-h2-weight: 600;
+  --typo-h2-line: 1.35;
+  --typo-h2-letter: -0.015em;
 
-  --typo-h4-font:    var(--font-body);
-  --typo-h4-size:    var(--text-20);
-  --typo-h4-weight:  600;
-  --typo-h4-line:    1.5;
-  --typo-h4-letter:  -0.005em;
+  --typo-h3-font: var(--font-display);
+  --typo-h3-size: var(--text-24);
+  --typo-h3-weight: 500;
+  --typo-h3-line: 1.45;
+  --typo-h3-letter: -0.01em;
 
-  /* ── Body / UI (Pretendard — 본문·설명·보조) ── */
-  --typo-lead-font:    var(--font-body);
-  --typo-lead-size:    var(--text-18);
-  --typo-lead-weight:  400;
-  --typo-lead-line:    1.75;
-  --typo-lead-letter:  -0.01em;
+  --typo-h4-font: var(--font-display);
+  --typo-h4-size: var(--text-20);
+  --typo-h4-weight: 500;
+  --typo-h4-line: 1.5;
+  --typo-h4-letter: -0.005em;
 
-  --typo-body-font:    var(--font-body);
-  --typo-body-size:    var(--text-16);
-  --typo-body-weight:  400;
-  --typo-body-line:    1.7;
-  --typo-body-letter:  -0.01em;
+  --typo-h5-font: var(--font-display);
+  --typo-h5-size: var(--type-h5);
+  --typo-h5-weight: 500;
+  --typo-h5-line: 1.5;
+  --typo-h5-letter: 0em;
 
-  --typo-caption-font:   var(--font-body);
-  --typo-caption-size:   var(--text-14);
+  --typo-h6-font: var(--font-display);
+  --typo-h6-size: var(--type-h6);
+  --typo-h6-weight: 500;
+  --typo-h6-line: 1.4;
+  --typo-h6-letter: 0.01em;
+
+  /* ── 3-C. Body / UI (Pretendard 고정 — 언어 무관) ─────────── */
+
+  --typo-lead-font: var(--font-body);
+  --typo-lead-size: var(--text-18);
+  --typo-lead-weight: 400;
+  --typo-lead-line: 1.75;
+  --typo-lead-letter: -0.01em;
+
+  --typo-body-font: var(--font-body);
+  --typo-body-size: var(--text-16);
+  --typo-body-weight: 400;
+  --typo-body-line: 1.7;
+  --typo-body-letter: -0.01em;
+
+  --typo-caption-font: var(--font-body);
+  --typo-caption-size: var(--text-14);
   --typo-caption-weight: 400;
-  --typo-caption-line:   1.5;
+  --typo-caption-line: 1.5;
   --typo-caption-letter: -0.005em;
 
-  --typo-label-font:   var(--font-body);
-  --typo-label-size:   var(--text-13);
+  --typo-label-font: var(--font-body);
+  --typo-label-size: var(--text-13);
   --typo-label-weight: 500;
-  --typo-label-line:   1.4;
+  --typo-label-line: 1.4;
   --typo-label-letter: -0.005em;
 
-  /* ── UI Interactive (Pretendard — 버튼·내비게이션·폼) ── */
-  --typo-button-font:   var(--font-body);
-  --typo-button-size:   var(--text-15);
+  /* ── 3-D. UI Interactive (Pretendard 고정) ─────────────────── */
+
+  --typo-button-font: var(--font-body);
+  --typo-button-size: var(--text-15);
   --typo-button-weight: 600;
-  --typo-button-line:   1.2;
+  --typo-button-line: 1.2;
   --typo-button-letter: 0.02em;
 
-  --typo-nav-font:   var(--font-body);
-  --typo-nav-size:   var(--text-14);
+  --typo-nav-font: var(--font-body);
+  --typo-nav-size: var(--text-14);
   --typo-nav-weight: 600;
-  --typo-nav-line:   1.2;
+  --typo-nav-line: 1.2;
   --typo-nav-letter: 0.01em;
 
   /* ─── Layout ─── */
@@ -369,5 +413,5 @@
    ============================================================ */
 [lang="ko"] {
   --font-display: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
-  --font-en:      "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-en: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
 }

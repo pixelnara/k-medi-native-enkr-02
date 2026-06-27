@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Magazine — Beauty, Medical & Travel Insights | KMEDITOUR</title>
+<meta name="description" content="Everything about Korean medical beauty. Treatment trends, travel guides, and wellness routines — KMEDITOUR Editorial." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Magazine | KMEDITOUR" />
+<meta property="og:description" content="Everything about Korean medical beauty. Treatment trends, travel guides, and wellness routines." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="KMEDITOUR" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="stylesheet" href="../css/font.css" />
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/theme.css" />
+<link rel="stylesheet" href="../css/components/mag-card.css" />
+<link rel="stylesheet" href="../css/components/button.css" />
+<link rel="stylesheet" href="../css/components/modal.css" />
+<link rel="stylesheet" href="../css/components/header.css" />
+<link rel="stylesheet" href="../css/components/footer.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/components/subpage.css" />
+<link rel="stylesheet" href="../css/magazine.css" />
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============================== HEADER ============================== -->
+<header class="header header--light">
+  <div class="header__util">
+    <div class="wrap">
+      <div class="util-left">
+        <div class="util-dropdown">
+          <span class="util-dropdown__trigger">Beauty
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+          <div class="util-dropdown__menu">
+            <a href="procedure.html">Treatments</a>
+            <a href="skin-sol.html">My Skin Solution</a>
+            <a href="cosmetic.html" class="util-menu-utility">Cosmetics</a>
+          </div>
+        </div>
+        <span class="util-sep" aria-hidden="true"></span>
+        <a href="travel.html">Tour</a>
+        <span class="util-sep" aria-hidden="true"></span>
+        <div class="util-dropdown">
+          <span class="util-dropdown__trigger">Shopping
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+          <div class="util-dropdown__menu">
+            <a href="skin-sol.html">My Skin Solution</a>
+            <a href="cosmetic.html">Cosmetics</a>
+          </div>
+        </div>
+        <span class="util-sep" aria-hidden="true"></span>
+        <div class="util-dropdown">
+          <span class="util-dropdown__trigger">Hugro Center
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+          <div class="util-dropdown__menu">
+            <a href="center.html">About Hugro Center</a>
+            <a href="skin-analysis.html">Skin Analysis</a>
+          </div>
+        </div>
+      </div>
+      <div class="util-right">
+        <a href="about.html">About Us</a>
+        <span class="util-sep" aria-hidden="true"></span>
+        <a href="faq.html">FAQ</a>
+        <span class="util-sep" aria-hidden="true"></span>
+        <div class="lang-select">
+          <button class="lang-select__btn" aria-expanded="false" aria-haspopup="listbox" aria-label="Select language">
+            <span class="lang-flag"><img src="../assets/flag/flag_united states.svg" width="22" height="16" alt="EN" /></span>
+            <span class="lang-code">EN</span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-dropdown">
+            <li class="lang-option"><span><img src="../assets/flag/flag_south korea.svg" width="22" height="16" alt="KR" /></span>KR</li>
+            <li class="lang-option is-active"><span><img src="../assets/flag/flag_united states.svg" width="22" height="16" alt="US" /></span>EN</li>
+            <li class="lang-option"><span><img src="../assets/flag/flag_china.svg" width="22" height="16" alt="CN" /></span>CN</li>
+            <li class="lang-option"><span><img src="../assets/flag/flag_japan.svg" width="22" height="16" alt="JP" /></span>JP</li>
+            <li class="lang-option"><span><img src="../assets/flag/flag_vietnam.svg" width="22" height="16" alt="VN" /></span>VN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="wrap">
+      <a href="index.html" class="brand">KMEDITOUR<small class="brand-sub-mobile">Premium Concierge in Korea</small></a>
+      <span class="header__tagline">Premium Concierge</span>
+      <nav class="gnb">
+        <a href="index.html">Home</a>
+        <a href="procedure.html">Beauty</a>
+        <a href="travel.html">Tour</a>
+        <a href="center.html">Hugro Center</a>
+        <a href="magazine.html" aria-current="page">Magazine</a>
+      </nav>
+      <div class="header__right">
+        <a href="index.html#booking" class="btn btn--primary2">Book a Consultation</a>
+        <button class="header-lang-btn header-right--v2 mbar-lang" aria-label="Change language">
+          <svg class="header-lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="header-lang-code">EN</span>
+        </button>
+        <button class="header-mypage-btn header-right--v2" aria-label="My Page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </button>
+        <button class="menu-btn header-menu-btn" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== GNB OVERLAY ============================== -->
+<div class="gnb-overlay gnb-overlay--dark" role="dialog" aria-modal="true" aria-label="Site Navigation" aria-hidden="true">
+  <div class="wrap">
+    <div class="gnb-overlay__bar">
+      <a href="index.html" class="brand gnb-overlay__brand">KMEDITOUR<small>Premium Concierge in Korea</small></a>
+      <div class="gnb-overlay__actions">
+        <a href="#" class="gnb-login-btn">Sign In / Register</a>
+      </div>
+      <button class="gnb-overlay__close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="gnb-mobile-top">
+      <div class="gnb-contact-block">
+        <div class="gnb-contact-cta">
+          <a href="index.html#booking" class="gnb-cta-btn gnb-cta-btn--book">Book a Consultation</a>
+          <a href="mailto:contact@kmeditour.com" class="gnb-cta-btn gnb-cta-btn--mail">contact@kmeditour.com</a>
+        </div>
+      </div>
+      <div class="gnb-lang-tabs">
+        <button class="gnb-lang-tab" data-lang="KR"><img src="../assets/flag/flag_south korea.svg" alt="KR" class="gnb-lang-flag" /><span class="gnb-lang-code">KR</span></button>
+        <button class="gnb-lang-tab is-active" data-lang="EN"><img src="../assets/flag/flag_united states.svg" alt="EN" class="gnb-lang-flag" /><span class="gnb-lang-code">EN</span></button>
+        <button class="gnb-lang-tab" data-lang="CN"><img src="../assets/flag/flag_china.svg" alt="CN" class="gnb-lang-flag" /><span class="gnb-lang-code">CN</span></button>
+        <button class="gnb-lang-tab" data-lang="JP"><img src="../assets/flag/flag_japan.svg" alt="JP" class="gnb-lang-flag" /><span class="gnb-lang-code">JP</span></button>
+        <button class="gnb-lang-tab" data-lang="VN"><img src="../assets/flag/flag_vietnam.svg" alt="VN" class="gnb-lang-flag" /><span class="gnb-lang-code">VN</span></button>
+      </div>
+    </div>
+    <div class="gnb-cols">
+      <div class="gnb-col gnb-col--mobile-only">
+        <h4>About<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="center.html">Hugro Center</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col">
+        <h4>Services<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="procedure.html">Beauty &amp; Treatments</a></li>
+          <li><a href="travel.html">Tour</a></li>
+          <li><a href="skin-sol.html">My Skin Solution</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col">
+        <h4>Shopping<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="skin-sol.html">My Skin Solution</a></li>
+          <li><a href="cosmetic.html">Cosmetics</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col">
+        <h4>Space<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="center.html">About Hugro Center</a></li>
+          <li><a href="skin-analysis.html">Skin Analysis</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col">
+        <h4>News<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="#" class="gnb-link--utility">Events</a></li>
+          <li><a href="magazine.html" class="gnb-link--utility">Magazine</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col gnb-col--about-desktop">
+        <h4>About<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="about.html" class="gnb-link--utility">Who We Are</a></li>
+          <li><a href="center.html">Hugro Center</a></li>
+          <li><a href="faq.html" class="gnb-link--utility">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="gnb-banners">
+      <a href="center.html" class="gnb-banner gnb-banner--hugro">
+        <div class="gnb-banner__inner">
+          <p class="gnb-banner__label">Premium Space</p>
+          <p class="gnb-banner__title">Hugro Center</p>
+          <p class="gnb-banner__sub">Your total care destination for medical beauty &amp; wellness</p>
+        </div>
+        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="skin-sol.html" class="gnb-banner gnb-banner--skin">
+        <div class="gnb-banner__inner">
+          <p class="gnb-banner__label">Skin Solution</p>
+          <p class="gnb-banner__title">Find My Skin Solution</p>
+          <p class="gnb-banner__sub">Personalised care tailored to your skin type</p>
+        </div>
+        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== MAIN ============================== -->
+<main id="main-content">
+
+  <!-- PAGE HEADER -->
+  <div class="page-head-edito">
+    <div class="wrap">
+      <div class="page-head-edito__inner">
+        <div>
+          <p class="page-head-edito__eyebrow">Editorial</p>
+          <h1 class="page-head-edito__title page-head-edito__title--display">Magazine</h1>
+          <p class="page-head-edito__desc">Curated editorials on Korean medical beauty trends, travel guides, and wellness insights.</p>
+        </div>
+        <div class="page-head-edito__right">
+          <p class="page-head-edito__issue-label">Issue</p>
+          <p class="page-head-edito__issue-num">Vol.07</p>
+          <p class="page-head-edito__issue-date">June 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY FILTER -->
+  <div class="mag-filter">
+    <div class="wrap">
+      <div class="mag-filter__inner" role="tablist" aria-label="Category filter">
+        <button class="mag-filter__tab is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+        <button class="mag-filter__tab" role="tab" aria-selected="false" data-filter="beauty">Beauty</button>
+        <button class="mag-filter__tab" role="tab" aria-selected="false" data-filter="medical">Medical</button>
+        <button class="mag-filter__tab" role="tab" aria-selected="false" data-filter="travel">Travel</button>
+        <button class="mag-filter__tab" role="tab" aria-selected="false" data-filter="wellness">Wellness</button>
+        <button class="mag-filter__tab" role="tab" aria-selected="false" data-filter="guide">Guide</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED ARTICLE -->
+  <div class="wrap">
+    <section class="mag-featured" aria-label="Featured Article">
+      <a class="mag-featured__link" href="magazine-detail.html" data-category="medical">
+        <div class="mag-featured__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
+            alt="Korean Medical Beauty Trends 2026"
+            loading="eager"
+          />
+        </div>
+        <div class="mag-featured__body">
+          <p class="mag-featured__category">Medical</p>
+          <h2 class="mag-featured__title" style="font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em;">Korean Medical Beauty Trends 2026 — Five Treatments Defining the New Paradigm</h2>
+          <p class="mag-featured__excerpt">Beyond fillers and Botox, a new era of regenerative care and AI-powered skin diagnostics is reshaping Seoul's clinic landscape. We examine five innovative treatments leading the conversation in Gangnam — with insights from leading specialists.</p>
+          <div class="mag-featured__meta">
+            <span>2026.06.20</span>
+            <span class="mag-featured__meta-sep"></span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </a>
+    </section>
+  </div>
+
+  <!-- ARTICLE GRID -->
+  <section class="mag-grid-section" id="mag-articles">
+    <div class="wrap">
+      <div class="ed-head" data-reveal>
+        <h2 class="ed-head__title">Latest Articles</h2>
+      </div>
+      <div class="mag-grid" id="magGrid">
+
+        <!-- Card 1 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="beauty" data-reveal>
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=75" alt="Skincare Routine" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Beauty</p>
+          <h3 class="mag-card__title">Gangnam Dermatology Tour — Apgujeong to Cheongdam</h3>
+          <p class="mag-card__excerpt">Our beauty coordinator's personal roadmap to Seoul's finest dermatology clinics, from Apgujeong to the boutique lanes of Cheongdam.</p>
+          <p class="mag-card__meta">2026.06.15 &ensp;·&ensp; 6 min read</p>
+        </a>
+
+        <!-- Card 2 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="medical" data-reveal data-reveal="2">
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=75" alt="Botox and Filler" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Medical</p>
+          <h3 class="mag-card__title">Botox vs. Filler — A Considered Guide to Choosing the Right Treatment</h3>
+          <p class="mag-card__excerpt">Two treatments that are often confused, yet fundamentally different. We compare their mechanisms, longevity, and suitability for each concern.</p>
+          <p class="mag-card__meta">2026.06.10 &ensp;·&ensp; 7 min read</p>
+        </a>
+
+        <!-- Card 3 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="travel" data-reveal data-reveal="3">
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=800&q=75" alt="Apgujeong Seoul" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Travel</p>
+          <h3 class="mag-card__title">An Afternoon in Apgujeong — Where Beauty and Fine Dining Meet</h3>
+          <p class="mag-card__excerpt">A curated selection of the finest spots around Apgujeong Rodeo — perfect for a leisurely afternoon after your clinic visit.</p>
+          <p class="mag-card__meta">2026.06.05 &ensp;·&ensp; 5 min read</p>
+        </a>
+
+        <!-- Card 4 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="wellness" data-reveal>
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=75" alt="Wellness Spa Seoul" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Wellness</p>
+          <h3 class="mag-card__title">Seoul Wellness Rituals for Post-Treatment Recovery</h3>
+          <p class="mag-card__excerpt">From traditional Korean herbal spas to luxury hotel wellness suites — a thoughtful recovery guide to help you achieve the best results.</p>
+          <p class="mag-card__meta">2026.05.28 &ensp;·&ensp; 5 min read</p>
+        </a>
+
+        <!-- Card 5 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="beauty" data-reveal data-reveal="2">
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=75" alt="Korean Cosmetics" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Beauty</p>
+          <h3 class="mag-card__title">The Complete K-Beauty Shopping Guide — Olive Young to Sephora</h3>
+          <p class="mag-card__excerpt">Expert-curated essentials from Korea's most beloved beauty retailers — the definitive shopping list for every K-beauty devotee.</p>
+          <p class="mag-card__meta">2026.05.22 &ensp;·&ensp; 6 min read</p>
+        </a>
+
+        <!-- Card 6 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="medical" data-reveal data-reveal="3">
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=75" alt="Thread Lifting" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Medical</p>
+          <h3 class="mag-card__title">Thread Lifting — What You Need to Know Before and After</h3>
+          <p class="mag-card__excerpt">What does it truly take to see lasting results? A specialist walks us through preparation, the procedure itself, and post-care essentials.</p>
+          <p class="mag-card__meta">2026.05.16 &ensp;·&ensp; 8 min read</p>
+        </a>
+
+        <!-- Card 7 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="guide" data-reveal>
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=75" alt="Arriving in Korea" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Guide</p>
+          <h3 class="mag-card__title">Your First Medical Tourism Trip to Korea — A Step-by-Step Checklist</h3>
+          <p class="mag-card__excerpt">Visas, currency exchange, interpreters, clinic reservations — everything you need to arrive with confidence and complete peace of mind.</p>
+          <p class="mag-card__meta">2026.05.10 &ensp;·&ensp; 10 min read</p>
+        </a>
+
+        <!-- Card 8 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="travel" data-reveal data-reveal="2">
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=75" alt="Seoul at Night" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Travel</p>
+          <h3 class="mag-card__title">Seoul in Four Days — A Beauty Tour Itinerary</h3>
+          <p class="mag-card__excerpt">Balancing clinic appointments with the best of the city. A seamless itinerary connecting Gangnam, Hongdae, and Bukchon.</p>
+          <p class="mag-card__meta">2026.05.03 &ensp;·&ensp; 7 min read</p>
+        </a>
+
+        <!-- Card 9 -->
+        <a class="mag-card" href="magazine-detail.html" data-category="wellness" data-reveal data-reveal="3">
+          <div class="mag-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=75" alt="Korean Wellness Food" loading="lazy" />
+          </div>
+          <p class="mag-card__category">Wellness</p>
+          <h3 class="mag-card__title">How the Korean Diet Transforms Your Skin — A Beauty Food Guide</h3>
+          <p class="mag-card__excerpt">Kimchi, doenjang, red ginseng. The scientific case behind K-beauty's most celebrated dietary practices, as the world takes note.</p>
+          <p class="mag-card__meta">2026.04.25 &ensp;·&ensp; 6 min read</p>
+        </a>
+
+      </div><!-- /.mag-grid -->
+
+      <!-- Load More -->
+      <div class="mag-more">
+        <button class="mag-more__btn" id="magLoadMore">
+          Load More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOT-CONTACT ============================== -->
+<section class="foot-contact">
+  <div class="wrap foot-contact__inner">
+    <div class="foot-contact__text">
+      <h2 class="foot-contact__title">Have a question?</h2>
+      <p class="foot-contact__desc">Leave your email and a dedicated coordinator will be in touch shortly.</p>
+    </div>
+    <form class="foot-contact__form" onsubmit="return false;">
+      <input type="email" class="foot-contact__input" placeholder="Your email address" aria-label="Email address" />
+      <button type="submit" class="btn btn--primary foot-contact__btn">Get in Touch</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Refund Policy</a>
+    </div>
+    <div class="footer__mid">
+      <div>
+        <a href="index.html" class="footer__brand">KMEDITOUR<small>Premium Concierge in Korea</small></a>
+        <p class="footer__tagline">A premium concierge bridging Korea's advanced medical expertise with Seoul's quiet refinement. From treatments to stays, your dedicated coordinator shapes every detail of your journey.</p>
+      </div>
+      <dl>
+        <dt>Representative</dt><dd>Seokjae Lee</dd>
+        <dt>Address</dt><dd>22 Apgujeong-ro 14-gil, 4F, Gangnam-gu, Seoul (Sinsa-dong)</dd>
+        <dt>Tel</dt><dd>+82-2-514-0799</dd>
+        <dt>Business Reg. No.</dt><dd>558-81-03752</dd>
+      </dl>
+      <dl>
+        <dt>Consultation Hours</dt><dd>Daily 09:00 — 21:00</dd>
+        <dt>KakaoTalk</dt><dd>@KMEDITOUR</dd>
+        <dt>Email</dt><dd>contact@kmeditour.com</dd>
+        <dt>Dedicated Care</dt><dd>1-on-1 Coordinator Assigned</dd>
+      </dl>
+    </div>
+    <div class="footer__top-wrap">
+      <button class="footer__top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        <span>TOP</span>
+      </button>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 KMEDITOUR. All rights reserved.</span>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Language Bottom Sheet -->
+<div class="lang-sheet" id="langSheet" aria-hidden="true">
+  <div class="lang-sheet__backdrop"></div>
+  <div class="lang-sheet__inner">
+    <p class="lang-sheet__title">Select Language</p>
+    <div class="lang-sheet__opts">
+      <button class="lang-sheet__opt" data-lang="KR"><img src="../assets/flag/flag_south korea.svg" alt="Korean" class="lang-sheet-flag-img" />한국어</button>
+      <button class="lang-sheet__opt is-active" data-lang="EN"><img src="../assets/flag/flag_united states.svg" alt="English" class="lang-sheet-flag-img" />English</button>
+      <button class="lang-sheet__opt" data-lang="CN"><img src="../assets/flag/flag_china.svg" alt="Chinese" class="lang-sheet-flag-img" />中文</button>
+      <button class="lang-sheet__opt" data-lang="JP"><img src="../assets/flag/flag_japan.svg" alt="Japanese" class="lang-sheet-flag-img" />日本語</button>
+      <button class="lang-sheet__opt" data-lang="VN"><img src="../assets/flag/flag_vietnam.svg" alt="Vietnamese" class="lang-sheet-flag-img" />Tiếng Việt</button>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="login-modal" id="loginModal" aria-hidden="true">
+  <div class="login-modal__backdrop" id="loginBackdrop"></div>
+  <div class="login-modal__box" role="dialog" aria-modal="true" aria-label="Sign In">
+    <button class="login-modal__close" id="loginClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <p class="login-modal__title">Sign In / Register</p>
+    <p class="login-modal__sub">Become a KMEDITOUR member to access personalised care services.</p>
+    <div class="login-modal__actions">
+      <a href="#" class="btn btn--kakao">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3C6.477 3 2 6.582 2 11c0 2.792 1.644 5.25 4.14 6.75L5 21l4.14-2.5C9.72 18.83 10.84 19 12 19c5.523 0 10-3.582 10-8s-4.477-8-10-8z"/></svg>
+        Continue with KakaoTalk
+      </a>
+      <a href="#" class="btn btn--primary">Sign In with Email</a>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/magazine.js"></script>
+<script src="../js/mobile-bar.js"></script>
+<script src="../js/lang-nav.js"></script>
+<script src="../#"></script>
+</body>
+</html>

@@ -60,6 +60,19 @@ body {
   color: var(--text-gray-6);
   font-weight: 700;
 }
+/* ── Font Role Utility ────────────────────────────────────────────
+   font-display / font-body 를 HTML 클래스로 명시.
+   디버그 중: .font-display { color: red } — 확인 후 제거 예정.
+   ──────────────────────────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+  color: red; /* DEBUG — 확인 후 제거 */
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
 /* ── Semantic Typography Utility Classes ──────────────────────────
    역할 기반 class. HTML 태그(h1~h6)와 무관하게 역할로 적용.
    Display 계열 → Optima(--font-display), Heading/UI → Pretendard(--font-body)
@@ -1931,3 +1944,50 @@ image-slot#cert-sgi {
   }
 }
 
+/* ================================================================
+   DEBUG — display font 지점 시각화 (확인 후 이 블록 전체 제거)
+   ================================================================ */
+
+/* common.css */
+.eyebrow,
+.hero-title,
+.display-title,
+.section-display-title,
+.display,
+.page-head-edito__title--display,
+.ed-head__title,
+
+/* header.css */
+.brand,
+.brand small,
+
+/* footer.css */
+.footer__brand,
+.footer__brand small,
+
+/* home.css */
+.feature__kicker,
+.why-journey__icon-label,
+.why-journey__icon-sub,
+.news-card__cat,
+.news-card__title,
+.acc-em,
+.hiw-card__step,
+
+/* about.css */
+.step__num,
+.step__title,
+.stat-row__num,
+
+/* skin-analysis.css */
+.sa-panel__title,
+.sa-slide__title,
+
+/* skin-sol.css */
+.pss-category__num,
+.pss-result__code,
+
+/* travel-card.css /* DEBUG */
+.tv-card__title {
+  color: red;
+}
