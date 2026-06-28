@@ -57,7 +57,7 @@
 .mag-card__title {
   font-family: var(--font-body);
   font-size: var(--h5-size);
-  font-weight: var(--h5-weight);
+  font-weight: 600;
   color: var(--text-gray-7);
   letter-spacing: var(--tracking-tight);
   line-height: 1.3;

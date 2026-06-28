@@ -259,7 +259,7 @@
   --h5-size: var(--res-h5); /* clamp(16, 1.5vw, 22) */
   --h5-weight: 500;
 
-  --h6-size: var(--text-15);
+  --h6-size: var(--text-14);
   --h6-weight: 500;
   --h6-line: 1.4;
   --h6-letter: var(--tracking-snug);

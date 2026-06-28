@@ -351,7 +351,7 @@
 .pss-icon--rose,
 .pss-icon--green,
 .pss-icon--wave {
-  background: var(--gray-50);
+  background: var(--gray-150);
   color: var(--edi-ink);
 }
 
@@ -365,7 +365,7 @@
   font-size: var(--text-13);
   font-weight: 450;
   color: var(--text-gray-3);
-  line-height: 1.65;
+  line-height: 1.4;
   flex: 1;
 }
 
@@ -404,11 +404,10 @@
 
 /* ── Analyze Button ── */
 .pss-analyze {
-  /* margin-top: var(--space-40); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: var(--space-16); */
+  gap: var(--space-16);
 }
 .pss-analyze__hint {
   font-size: var(--text-13);
@@ -421,7 +420,7 @@
   height: 60px;
   padding: 0 var(--space-48);
   font-size: var(--text-16);
-  letter-spacing: var(--tracking-open);
+  letter-spacing: var(--tracking-tight);
   gap: var(--space-10);
   border-radius: 0;
   opacity: 0.4;
@@ -963,7 +962,7 @@
     min-height: auto;
     /* right 56px: check(32) + right-offset(14) + gap(10) */
     padding: var(--space-18) 56px var(--space-18) var(--space-18);
-    gap: var(--space-16);
+    gap: var(--space-12);
   }
   .pss-option__check {
     top: 50%;
@@ -985,7 +984,7 @@
     font-size: var(--text-15);
   }
   .pss-option__text {
-    font-size: var(--text-13);
+    font-size: var(--text-12);
   }
   .pss-products-grid {
     gap: var(--space-12);

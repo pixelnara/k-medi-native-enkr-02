@@ -191,11 +191,11 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-blue);
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-4);
 }
 .mag-featured__title {
   font-size: clamp(24px, 2.8vw, 40px);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: var(--tracking-tighter);
   color: var(--gray-950);
   line-height: 1.2;
@@ -245,8 +245,8 @@
     padding: var(--space-24) 0;
   }
   .mag-featured__title {
-    font-size: clamp(19px, 5vw, 32px);
-    line-height: 1.5;
+    font-size: clamp(16px, 4vw, 32px);
+    line-height: 1.4;
   }
 }
 
