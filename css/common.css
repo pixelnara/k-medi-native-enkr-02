@@ -789,6 +789,50 @@ image-slot#cert-sgi {
   border-color: var(--teal-500);
   background: var(--teal-50);
 }
+/* 이메일 주소 + 복사 버튼 한 줄 정렬 */
+.contact-popup__item-value-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+/* 만나서 상담받기 (추천) — 최상단 추천 항목 */
+.contact-popup__item--feature {
+  align-items: center;
+  background: var(--surface-gray-1);
+}
+@media (hover: hover) {
+  .contact-popup__item--feature:hover {
+    background: var(--gray-50);
+  }
+}
+.contact-popup__icon--meet {
+  background: var(--teal-50);
+  color: var(--teal-500);
+}
+.contact-popup__feature-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--text-15);
+  font-weight: 700;
+  color: var(--text-gray-6);
+}
+.contact-popup__feature-badge {
+  font-size: var(--text-11);
+  font-weight: 600;
+  color: var(--teal-500);
+  background: var(--teal-50);
+  border-radius: var(--radius-pill);
+  padding: 1px var(--space-6);
+}
+.contact-popup__feature-arrow {
+  margin-left: auto;
+  width: var(--space-18);
+  height: var(--space-18);
+  color: var(--text-gray-4);
+  flex-shrink: 0;
+}
 /* ──────────── → components/header.css (GNB Mobile Top) ──────────── */
 
 .chat-btn__close {
@@ -801,132 +845,6 @@ image-slot#cert-sgi {
   display: block;
 }
 
-/* ============================================================
-   CONTACT BOTTOM SHEET (문의하기)
-   ============================================================ */
-.contact-sheet {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1200;
-}
-.contact-sheet__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-.contact-sheet__inner {
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: var(--bg-white);
-  border-radius: 20px 20px 0 0;
-  overflow: hidden;
-  z-index: 1;
-}
-.contact-sheet__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-16);
-  padding: 28px var(--space-20) 20px;
-  border-bottom: 1px solid var(--border-gray-1);
-}
-.contact-sheet__title {
-  font-size: var(--text-18);
-  font-weight: 700;
-  letter-spacing: var(--tracking-tight);
-  color: var(--text-gray-6);
-  margin-bottom: 6px;
-}
-.contact-sheet__subtitle {
-  font-size: var(--text-13);
-  font-weight: 450;
-  color: var(--text-gray-4);
-  line-height: 1.5;
-}
-.contact-sheet__row {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 20px var(--space-20);
-  border-bottom: 1px solid var(--border-gray-1);
-}
-.contact-sheet__icon {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--surface-gray-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-gray-4);
-}
-.contact-sheet__icon svg {
-  width: 18px;
-  height: 18px;
-}
-.contact-sheet__info {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.contact-sheet__label {
-  font-size: var(--text-12);
-  font-weight: 500;
-  color: var(--text-gray-4);
-}
-.contact-sheet__value {
-  font-size: var(--text-15);
-  font-weight: 700;
-  color: var(--text-gray-6);
-}
-.contact-sheet__hint {
-  font-size: var(--text-12);
-  font-weight: 400;
-  color: var(--text-gray-3);
-  line-height: 1.5;
-  margin-top: 2px;
-}
-.contact-sheet__copy {
-  flex-shrink: 0;
-  align-self: center;
-  padding: 6px 14px;
-  border: 1px solid var(--border-gray-2);
-  border-radius: 20px;
-  font-size: var(--text-12);
-  font-weight: 500;
-  color: var(--text-gray-5);
-  background: none;
-  cursor: pointer;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-.contact-sheet__copy:active {
-  background: var(--surface-gray-1);
-}
-.contact-sheet__login-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 20px var(--space-20);
-  background: var(--bg-dark);
-  color: var(--bg-white);
-  text-decoration: none;
-  font-size: var(--text-15);
-  font-weight: 600;
-}
-.contact-sheet__login-row svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
-.contact-sheet__chevron {
-  margin-left: auto;
-}
 /* ──────────── → components/header.css (GNB Overlay) ──────────── */
 
 /* REVEAL ON SCROLL ============================================================ */
@@ -1693,10 +1611,36 @@ image-slot#cert-sgi {
     letter-spacing: var(--tracking-tight);
     white-space: nowrap;
   }
+  /* 모바일: 문의 팝업을 하단 액션시트(버텀시트)로 전환
+     — 언어 선택 시트(.lang-sheet)와 동일한 라운드/딤 처리 기준 */
   .contact-popup {
-    width: calc(100vw - var(--space-32));
-    right: var(--space-16);
-    bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-56) + var(--space-16));
+    inset: 0;
+    width: auto;
+    background: rgba(0, 0, 0, 0.5); /* 뒷배경 딤 처리 */
+    z-index: 1300; /* 모바일 바·언어시트 위로 최상단 노출 */
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.28s ease;
+  }
+  .contact-popup.is-open {
+    opacity: 1;
+    transform: none;
+  }
+  .contact-popup__card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 20px 20px 0 0; /* lang-sheet와 동일한 라운드 값 */
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.18);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: translateY(100%);
+    transition: transform 0.34s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .contact-popup.is-open .contact-popup__card {
+    transform: translateY(0);
   }
 
   /* Section titles */
@@ -1747,13 +1691,6 @@ image-slot#cert-sgi {
     grid-template-columns: 130px 1fr;
   }
 
-  /* Contact bottom sheet */
-  .contact-sheet.is-open {
-    display: block;
-  }
-  .contact-sheet__inner {
-    bottom: 72px;
-  }
   .footer dl dt {
     white-space: nowrap;
   }

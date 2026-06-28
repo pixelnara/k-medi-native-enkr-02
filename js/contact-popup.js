@@ -1,6 +1,9 @@
 (function () {
   var isEN = document.documentElement.lang === 'en' || location.pathname.indexOf('/en/') !== -1;
   var chatLabel = isEN ? 'Contact' : '문의하기';
+  // 예약 페이지 경로 (현재 폴더 깊이에 맞춰 계산)
+  var inLangFolder = location.pathname.indexOf('/ko/') !== -1 || location.pathname.indexOf('/en/') !== -1;
+  var reservationHref = inLangFolder ? 'reservation.html' : (isEN ? 'en/reservation.html' : 'ko/reservation.html');
   var html = [
     '<button class="chat-btn" id="chatBtn" aria-label="' + chatLabel + '" aria-expanded="false">',
     '  <svg class="chat-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
@@ -24,14 +27,26 @@
     "      </button>",
     "    </div>",
     '    <hr class="contact-popup__divider">',
+    '    <a href="' + reservationHref + '" class="contact-popup__item contact-popup__item--feature">',
+    '      <span class="contact-popup__icon contact-popup__icon--meet">',
+    '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+    "      </span>",
+    '      <div class="contact-popup__item-body">',
+    '        <strong class="contact-popup__feature-title">만나서 상담받기 <span class="contact-popup__feature-badge">추천</span></strong>',
+    "      </div>",
+    '      <svg class="contact-popup__feature-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>',
+    "    </a>",
     '    <a href="mailto:contact@kmeditour.co.kr" class="contact-popup__item">',
     '      <span class="contact-popup__icon contact-popup__icon--email">',
     '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>',
     "      </span>",
     '      <div class="contact-popup__item-body">',
     '        <span class="contact-popup__item-label">이메일</span>',
-    '        <strong class="contact-popup__item-value">contact@kmeditour.co.kr</strong>',
-    '        <span class="contact-popup__item-hint">PC는 주소 복사, 모바일은 메일 앱이 열려요. <button class="contact-popup__copy-btn" id="emailCopyBtn" type="button">복사</button></span>',
+    '        <span class="contact-popup__item-value-row">',
+    '          <strong class="contact-popup__item-value">contact@kmeditour.co.kr</strong>',
+    '          <button class="contact-popup__copy-btn" id="emailCopyBtn" type="button">복사</button>',
+    "        </span>",
+    '        <span class="contact-popup__item-hint">PC는 주소 복사, 모바일은 메일 앱이 열려요.</span>',
     "      </div>",
     "    </a>",
     '    <a href="tel:+82-2-514-0799" class="contact-popup__item">',
@@ -41,7 +56,7 @@
     '      <div class="contact-popup__item-body">',
     '        <span class="contact-popup__item-label">전화 상담</span>',
     '        <strong class="contact-popup__item-value">+82-2-514-0799</strong>',
-    '        <span class="contact-popup__item-hint">평일만 가능합니다.<br/> 주말 및 공휴일은 이용이 불가능합니다.</span>',
+    '        <span class="contact-popup__item-hint">평일만 가능합니다.</span>',
     "      </div>",
     "    </a>",
     '    <a href="#" class="contact-popup__login-btn" id="contactLoginTrigger">',
@@ -73,23 +88,32 @@
   window.addEventListener("scroll", onScrollReveal, { passive: true });
   onScrollReveal();
 
+  /* 모바일(≤860px)에서는 버텀시트 + 뒷배경 고정(스크롤 잠금) */
+  var sheetMQ = window.matchMedia("(max-width: 860px)");
+
   function openPopup() {
     popup.classList.add("is-open");
     popup.setAttribute("aria-hidden", "false");
     chatBtn.classList.add("is-open");
     chatBtn.setAttribute("aria-expanded", "true");
+    if (sheetMQ.matches) document.body.style.overflow = "hidden";
   }
   function closePopup() {
     popup.classList.remove("is-open");
     popup.setAttribute("aria-hidden", "true");
     chatBtn.classList.remove("is-open");
     chatBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
   }
 
   chatBtn.addEventListener("click", function () {
     popup.classList.contains("is-open") ? closePopup() : openPopup();
   });
   closeBtn.addEventListener("click", closePopup);
+  /* 버텀시트 뒷배경(딤) 탭 시 닫기 — 카드 내부 클릭은 통과 */
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) closePopup();
+  });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closePopup();
   });
