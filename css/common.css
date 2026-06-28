@@ -911,6 +911,7 @@ image-slot#cert-sgi {
     /* 마지막 메뉴(Find My Skin Solution 등)가 하단 Safari 툴바/홈 인디케이터에
        가려지지 않도록 스크롤 영역 하단 여백 확보 */
     padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+    height: 100vh;
   }
   /* depth1: 아코디언 헤더 */
   .gnb-col > h4 {
@@ -918,7 +919,7 @@ image-slot#cert-sgi {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-16) 0;
-    font-size: var(--text-15);
+    font-size: var(--text-17);
     font-weight: 550;
     color: var(--text-gray-6);
     letter-spacing: var(--tracking-tight);
@@ -966,7 +967,7 @@ image-slot#cert-sgi {
   }
   .gnb-col ul > li > a {
     display: block;
-    padding: var(--space-16) var(--space-8);
+    padding: var(--space-16) var(--space-16);
     font-size: var(--text-14);
     font-weight: 550;
     color: var(--text-gray-6);
@@ -975,7 +976,7 @@ image-slot#cert-sgi {
     border-bottom: 1px solid var(--border-gray-1);
   }
   .gnb-col ul > li:last-child > a {
-    border-bottom: none;
+    border-bottom: 1px solid var(--border-gray-1);
   }
   .gnb-col ul > li > a:active,
   .gnb-item-row > a:active {
@@ -1015,7 +1016,7 @@ image-slot#cert-sgi {
   .gnb-item-row > a {
     flex: 1;
     display: block;
-    padding: var(--space-16) var(--space-8);
+    padding: var(--space-16) var(--space-16);
     font-size: var(--text-14);
     font-weight: 550;
     color: var(--text-gray-6);
@@ -1063,7 +1064,7 @@ image-slot#cert-sgi {
   }
   .gnb-has-sub.is-open .gnb-sub-list > li > a {
     display: block;
-    padding: 12px 0 12px 0;
+    padding: 12px 0 12px 12px;
     font-size: var(--text-14);
     font-weight: 500;
     color: var(--text-gray-6);
@@ -1179,7 +1180,7 @@ image-slot#cert-sgi {
   .gnb-sub-list .gnb-item-row > a {
     flex: 1;
     display: block;
-    padding: var(--space-12) var(--space-0);
+    padding: var(--space-12) var(--space-0) var(--space-12) var(--space-12);
     font-size: var(--text-14);
     font-weight: 550;
     color: var(--text-gray-6);
