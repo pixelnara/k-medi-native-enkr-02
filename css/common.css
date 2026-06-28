@@ -543,7 +543,7 @@ image-slot#cert-sgi {
   align-items: center;
   justify-content: center;
   z-index: 850;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25); */
   /* 진입 시 숨김 → .is-revealed 추가 시 노출 (스크롤 노출용) */
   opacity: 0;
   visibility: hidden;
@@ -1597,11 +1597,10 @@ image-slot#cert-sgi {
     width: fit-content;
     height: auto;
     border-radius: var(--radius-pill);
-    padding: var(--space-12) var(--space-20);
+    padding: var(--space-10) var(--space-16);
     gap: 0;
-    background: var(--bg-white);
+    background: var(--surface-gray-5);
     color: var(--text-gray-7);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
     /* 검정 버텀바(80px) 위쪽에 띄움 — 그림자가 바와 겹치지 않도록 여유 확보 */
     bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-32));
   }

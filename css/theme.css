@@ -139,6 +139,7 @@
   --surface-gray-2: var(--gray-200);
   --surface-gray-3: var(--brown-50);
   --surface-gray-4: var(--gray-175);
+  --surface-gray-5: var(--blue-300);
 
   /* ─── 2-C. Text (general UI) ─── */
   --text-gray-1: var(--gray-300); /* placeholder · inactive */
