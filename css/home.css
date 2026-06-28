@@ -1186,9 +1186,8 @@
   font-size: var(--text-11);
   font-weight: 600;
   color: var(--text-blue);
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid var(--text-gray-7);
-  border-radius: 0px;
+  background: var(--surface-gray-1);
+  border-radius: 2px;
   padding: 3px 9px;
   letter-spacing: 0.01em;
   white-space: nowrap;
