@@ -194,8 +194,9 @@
   margin-bottom: var(--space-4);
 }
 .mag-featured__title {
+  font-family: var(--font-display); /* EN Optima / KO Pretendard (lang override) */
   font-size: clamp(24px, 2.8vw, 40px);
-  font-weight: 600;
+  font-weight: 600; /* ← 여기서 두께 조정 (400 · 500 · 600 · 700) */
   letter-spacing: var(--tracking-tighter);
   color: var(--gray-950);
   line-height: 1.2;
