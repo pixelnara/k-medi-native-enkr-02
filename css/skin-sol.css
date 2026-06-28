@@ -889,10 +889,6 @@
   .pss-breadcrumb {
     display: none;
   }
-  /* Issue 5-2: 채팅 버튼 퀴즈 콘텐츠 충돌 방지 */
-  .chat-btn {
-    display: none;
-  }
   .pss-quiz-outer {
     max-width: 100%;
   }

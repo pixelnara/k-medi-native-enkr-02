@@ -1602,8 +1602,8 @@ image-slot#cert-sgi {
     background: var(--bg-white);
     color: var(--text-gray-7);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-    /* 검정 버텀바(80px) 위쪽에 띄움 */
-    bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-16));
+    /* 검정 버텀바(80px) 위쪽에 띄움 — 그림자가 바와 겹치지 않도록 여유 확보 */
+    bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-32));
   }
   /* 모바일 알약은 텍스트만 노출 (좌측 아이콘 숨김) */
   .chat-btn svg {
