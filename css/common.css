@@ -959,7 +959,7 @@ image-slot#cert-sgi {
     display: none;
     flex-direction: column;
     gap: 0;
-    background: var(--bg-white);
+    background: var(--surface-gray-2);
     padding: var(--space-0) var(--space-0);
   }
   .gnb-col.is-open ul {

@@ -41,6 +41,7 @@
     var dots     = document.getElementById(dotsId)
                    ? document.getElementById(dotsId).querySelectorAll('.sa-carousel__dot')
                    : [];
+    var counter  = carousel.querySelector('.sa-carousel__counter');
     var prev     = carousel.querySelector('.sa-carousel__arrow--prev');
     var next     = carousel.querySelector('.sa-carousel__arrow--next');
     var total    = slides.length;
@@ -49,8 +50,10 @@
     function goTo(idx) {
       if (idx < 0 || idx >= total) return;
       cur = idx;
-      track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+      var slideWidth = slides[0].offsetWidth;
+      track.style.transform = 'translateX(-' + (cur * slideWidth) + 'px)';
       dots.forEach(function (d, i) { d.classList.toggle('is-active', i === cur); });
+      if (counter) counter.textContent = (cur + 1) + ' / ' + total;
       if (prev) prev.disabled = cur === 0;
       if (next) next.disabled = cur === total - 1;
     }
@@ -58,6 +61,7 @@
     if (prev) prev.addEventListener('click', function () { goTo(cur - 1); });
     if (next) next.addEventListener('click', function () { goTo(cur + 1); });
     dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
+    window.addEventListener('resize', function () { goTo(cur); });
 
     // 터치 스와이프
     var startX = 0;
