@@ -537,7 +537,7 @@ image-slot#cert-sgi {
   width: var(--space-48);
   height: var(--space-48);
   border-radius: var(--radius-full);
-  background: var(--accent-blue);
+  background: var(--blue-100);
   color: var(--text-white);
   display: flex;
   align-items: center;
@@ -1603,8 +1603,8 @@ image-slot#cert-sgi {
     border-radius: var(--radius-pill);
     padding: var(--space-10) var(--space-16);
     gap: 0;
-    background: var(--surface-gray-5);
-    color: var(--text-gray-7);
+    background: var(--blue-600);
+    color: var(--text-white);
     /* 검정 버텀바(80px) 위쪽에 띄움 — 그림자가 바와 겹치지 않도록 여유 확보 */
     bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-32));
   }

@@ -33,10 +33,13 @@
   /* ─── 1-B. Color: Blue ─── */
   --blue-pure: #0000ff;
   --blue-100: #eaedf5;
+  --blue-200: #b3c5f2;
   --blue-300: #869fdf;
   --blue-400: #4a71d9;
   --blue-500: #1e49ba;
   --blue-600: #183b96;
+  --blue-700: #102c78;
+  --blue-800: #0a1f58;
   --blue-ec: #087eec;
 
   /* ─── 1-C. Color: Light Blue ─── */
