@@ -1039,3 +1039,48 @@ ul.gnb-sub-list.gnb-sub-list--flat {
     text-decoration: none;
   }
 }
+
+/* ── Header Left (mobile only) ── */
+.header__left {
+  display: none;
+}
+@media (max-width: 860px) {
+  .header__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .header__left .header-lang-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: auto;
+    height: auto;
+    color: var(--text-gray-7);
+  }
+  .header__left .header-lang-code {
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .header-center-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: var(--text-gray-7);
+  }
+  .header-center-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .header-center-label {
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1;
+  }
+}

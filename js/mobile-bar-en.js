@@ -4,18 +4,17 @@
   var ICONS = {
     Home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
     Skin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg>',
-    Shop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="4.5"/><path d="M8 8.5a4 4 0 0 0 8 0"/></svg>',
+    Cosmetic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="4.5"/><path d="M8 8.5a4 4 0 0 0 8 0"/></svg>',
     Tour: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>',
-    Center: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>',
     Magazine: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
   };
 
   var ITEMS = [
     { label: 'Home',     href: 'index.html' },
     { label: 'Skin',     href: 'skin-sol.html' },
-    { label: 'Shop',     href: 'cosmetic.html' },
+    { label: 'Cosmetic', href: 'cosmetic.html' },
     { label: 'Tour',     href: 'travel.html' },
-    { label: 'Center',   href: 'center.html' },
+    { label: 'Magazine', href: 'magazine.html' },
   ];
 
   // 파일명 → 활성 탭
@@ -24,10 +23,9 @@
     '':                    'Home',
     'skin-sol.html':       'Skin',
     'skin-analysis.html':  'Skin',
-    'cosmetic.html':       'Shop',
-    'product.html':        'Shop',
+    'cosmetic.html':       'Cosmetic',
+    'product.html':        'Cosmetic',
     'travel.html':         'Tour',
-    'center.html':         'Center',
     'magazine.html':       'Magazine',
     'magazine-detail.html':'Magazine',
   };
