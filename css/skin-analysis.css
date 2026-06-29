@@ -297,10 +297,11 @@
 .sa-carousel__ctrl {
   display: flex;
   align-items: stretch;
-  width: 440px;
+  width: min(440px, 100%);
   /* margin-top: 16px; */
   margin: 32px auto;
   background: var(--bg-white);
+  box-sizing: border-box;
 }
 .sa-carousel__counter {
   display: flex;
