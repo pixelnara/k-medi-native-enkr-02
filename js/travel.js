@@ -190,6 +190,8 @@
   var I18N = {
     ko: {
       catLabel: "카테고리",
+      sortRec: "추천순",
+      sortName: "이름순",
       empty: "검색 결과가 없습니다.",
       countHotel: function (n) {
         return '총 <span class="tv-count__num">' + n + "</span>개 숙소";
@@ -200,6 +202,8 @@
     },
     en: {
       catLabel: "Category",
+      sortRec: "Recommended",
+      sortName: "Alphabetical",
       empty: "No results found.",
       countHotel: function (n) {
         return '<span class="tv-count__num">' + n + "</span> Hotels";
@@ -237,6 +241,39 @@
     });
   });
 
+  /* ── 검색 아이콘 토글 ── */
+  document.querySelectorAll('[data-search-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var box = document.querySelector('[data-search-box="' + btn.dataset.searchToggle + '"]');
+      if (!box) return;
+      if (box.hasAttribute('hidden')) {
+        box.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        var inp = box.querySelector('.tv-search__input');
+        if (inp) inp.focus();
+      } else {
+        box.setAttribute('hidden', '');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  /* ── 컬럼(그리드) 토글 ── */
+  document.querySelectorAll('[data-cols]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.dataset.cols;
+      document.querySelectorAll('[data-cols="' + key + '"]').forEach(function (b) {
+        b.classList.toggle('is-active', b === btn);
+      });
+      var grid = document.getElementById('grid-' + key);
+      if (grid) {
+        grid.classList.remove('tv-grid--c1', 'tv-grid--c2');
+        grid.classList.add('tv-grid--c' + btn.dataset.val);
+      }
+    });
+  });
+
   /* ── 소팅 ── */
   var sortState = { hotel: "recommended", shopping: "recommended" };
 
@@ -259,7 +296,7 @@
         i.classList.toggle("is-active", i.dataset.value === val);
       });
       document.querySelector('[data-sort-label="' + key + '"]').textContent =
-        val === "recommended" ? "추천순" : "이름순";
+        val === "recommended" ? T.sortRec : T.sortName;
       menu.classList.remove("is-open");
       filterAndSort(key);
     });
