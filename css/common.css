@@ -1133,7 +1133,7 @@ image-slot#cert-sgi {
     display: none;
   }
   .gnb-banner--hugro::before {
-    background-image: url("../assets/img/img-building.png");
+    background-image: url("../assets/img/1-page-home/06_others/img-building.png");
   }
   /* 텍스트 블록 */
   .gnb-banner__inner {
