@@ -9,12 +9,22 @@
 }
 
 @keyframes topbar-slide-in {
-  from { transform: translateY(-100%); }
-  to   { transform: none; }
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: none;
+  }
 }
 @keyframes topbar-content-in {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -50,7 +60,9 @@
   .topbar__back:active {
     opacity: 0.45;
     transform: scale(0.88) translateX(-3px);
-    transition: opacity 0.07s, transform 0.07s;
+    transition:
+      opacity 0.07s,
+      transform 0.07s;
   }
 
   .topbar__title {
@@ -73,7 +85,11 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .topbar { animation: none; }
-    main    { animation: none; }
+    .topbar {
+      animation: none;
+    }
+    main {
+      animation: none;
+    }
   }
 }

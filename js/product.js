@@ -9,7 +9,9 @@
     p = JSON.parse(sessionStorage.getItem("cosm_product"));
   } catch (e) {}
   if (!p) {
-    history.length > 1 ? history.back() : (window.location.href = "cosmetic.html");
+    history.length > 1
+      ? history.back()
+      : (window.location.href = "cosmetic.html");
     return;
   }
 
@@ -59,7 +61,8 @@
     curIdx = (idx + imgs.length) % imgs.length;
     document.getElementById("pdMainImg").src = imgs[curIdx];
     document.getElementById("pdMainImg").alt = p.name;
-    document.getElementById("pdCounter").textContent = curIdx + 1 + " / " + imgs.length;
+    document.getElementById("pdCounter").textContent =
+      curIdx + 1 + " / " + imgs.length;
     document.querySelectorAll(".pd-gallery__dot").forEach(function (d, i) {
       d.classList.toggle("is-active", i === curIdx);
     });
@@ -136,10 +139,17 @@
     document.getElementById("pdRecPanel").style.display = "none";
   } else {
     recProds.forEach(function (r) {
-      var rPrice = r.discount ? Math.round(r.price * (1 - r.discount / 100)) : r.price;
+      var rPrice = r.discount
+        ? Math.round(r.price * (1 - r.discount / 100))
+        : r.price;
       var item = document.createElement("button");
       item.className = "pd-rec-item";
-      item.innerHTML = '<div class="pd-rec-item__img-wrap"><img class="pd-rec-item__img" src="' + r.img + '" alt="' + r.name + '" /></div>';
+      item.innerHTML =
+        '<div class="pd-rec-item__img-wrap"><img class="pd-rec-item__img" src="' +
+        r.img +
+        '" alt="' +
+        r.name +
+        '" /></div>';
       item.addEventListener("click", function () {
         sessionStorage.setItem("cosm_product", JSON.stringify(r));
         window.location.reload();
@@ -154,10 +164,14 @@
 
   var ratingVal = p.rating ? p.rating.toFixed(1) : "";
   document.getElementById("pdRatingVal").textContent = ratingVal;
-  document.getElementById("pdRatingCount").textContent = p.ratingCount ? "(" + p.ratingCount + ")" : "";
+  document.getElementById("pdRatingCount").textContent = p.ratingCount
+    ? "(" + p.ratingCount + ")"
+    : "";
 
   /* ── 가격 계산 ── */
-  var finalPrice = p.discount ? Math.round(p.price * (1 - p.discount / 100)) : p.price;
+  var finalPrice = p.discount
+    ? Math.round(p.price * (1 - p.discount / 100))
+    : p.price;
   document.getElementById("pdOptionPrice").textContent = fmt(finalPrice);
   if (p.discount) {
     document.getElementById("pdPriceOrig").textContent = fmt(p.price);
@@ -200,9 +214,21 @@
   /* ── 상세 설명 주입 ── */
   var ph = document.getElementById("pdDetailPlaceholder");
   var features = [
-    { icon: "🌿", title: "자연 유래 성분", desc: "자극 없는 천연 원료로 예민한 피부도 안심" },
-    { icon: "💧", title: "고보습 포뮬러", desc: "24시간 지속되는 깊은 수분 공급" },
-    { icon: "✨", title: "가시적 효과", desc: "4주 사용 후 눈에 띄는 피부 개선" },
+    {
+      icon: "🌿",
+      title: "자연 유래 성분",
+      desc: "자극 없는 천연 원료로 예민한 피부도 안심",
+    },
+    {
+      icon: "💧",
+      title: "고보습 포뮬러",
+      desc: "24시간 지속되는 깊은 수분 공급",
+    },
+    {
+      icon: "✨",
+      title: "가시적 효과",
+      desc: "4주 사용 후 눈에 띄는 피부 개선",
+    },
     { icon: "🔬", title: "임상 테스트", desc: "피부과 전문의 검증 완료" },
   ];
   var featureItems = features
@@ -257,7 +283,9 @@
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
-    var first = modal.querySelector("input:not([type=hidden]),button:not([disabled])");
+    var first = modal.querySelector(
+      "input:not([type=hidden]),button:not([disabled])",
+    );
     if (first)
       setTimeout(function () {
         first.focus();
@@ -290,7 +318,8 @@
   const eyeIcon = document.getElementById("eyeIcon");
   const eyeOffSvg =
     '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
-  const eyeOnSvg = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+  const eyeOnSvg =
+    '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
   if (pwdToggle)
     pwdToggle.addEventListener("click", function () {
       const isHidden = pwdInput.type === "password";

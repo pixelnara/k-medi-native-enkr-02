@@ -321,7 +321,9 @@
     white-space: nowrap;
   }
   .cosm-shop {
-    padding-bottom: calc(var(--space-40) + env(safe-area-inset-bottom, 0px) + var(--space-16));
+    padding-bottom: calc(
+      var(--space-40) + env(safe-area-inset-bottom, 0px) + var(--space-16)
+    );
   }
 }
 @media (max-width: 480px) {

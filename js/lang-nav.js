@@ -20,7 +20,7 @@
     if (!targetFolder) return null;
 
     const parts = location.pathname.split("/");
-    const raw    = parts[parts.length - 1]; // 마지막 세그먼트 (빈 값·폴더명·파일명 모두 가능)
+    const raw = parts[parts.length - 1]; // 마지막 세그먼트 (빈 값·폴더명·파일명 모두 가능)
     const parent = parts[parts.length - 2]; // 그 앞 세그먼트
 
     const FOLDERS = Object.values(LANG_FOLDER); // ['ko', 'en']

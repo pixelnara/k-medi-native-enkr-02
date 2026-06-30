@@ -1,895 +1,2141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>상담 예약 — KMEDITOUR · 프리미엄 컨시어지 인 코리아</title>
-<meta name="description" content="KMEDITOUR 시술 상담 예약 — 원하는 시술을 선택하고 전담 코디네이터와 1:1 상담을 예약하세요." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="../css/font.css" />
-<link rel="stylesheet" href="../css/reset.css" />
-<link rel="stylesheet" href="../css/theme.css" />
-<link rel="stylesheet" href="../css/components/button.css" />
-<link rel="stylesheet" href="../css/components/accordion.css" />
-<link rel="stylesheet" href="../css/components/modal.css" />
-<link rel="stylesheet" href="../css/components/card.css" />
-<link rel="stylesheet" href="../css/components/tab.css" />
-<link rel="stylesheet" href="../css/components/breadcrumb.css" />
-<link rel="stylesheet" href="../css/components/header.css" />
-<link rel="stylesheet" href="../css/components/footer.css" />
-<link rel="stylesheet" href="../css/common.css" />
-<link rel="stylesheet" href="../css/components/subpage.css" />
-<link rel="stylesheet" href="../css/reservation.css" />
-</head>
-<body>
-<a class="skip-link" href="#main-content">본문으로 이동</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>상담 예약 — KMEDITOUR · 프리미엄 컨시어지 인 코리아</title>
+    <meta
+      name="description"
+      content="KMEDITOUR 시술 상담 예약 — 원하는 시술을 선택하고 전담 코디네이터와 1:1 상담을 예약하세요."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/components/button.css" />
+    <link rel="stylesheet" href="../css/components/accordion.css" />
+    <link rel="stylesheet" href="../css/components/modal.css" />
+    <link rel="stylesheet" href="../css/components/card.css" />
+    <link rel="stylesheet" href="../css/components/tab.css" />
+    <link rel="stylesheet" href="../css/components/breadcrumb.css" />
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/components/subpage.css" />
+    <link rel="stylesheet" href="../css/reservation.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 이동</a>
 
-<!-- ============================== HEADER ============================== -->
-<header class="header header--solid header--reservation">
-  <div class="header__util">
-    <div class="wrap">
-      <div class="util-left">
-        <div class="util-dropdown">
-          <span class="util-dropdown__trigger">뷰티
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-          <div class="util-dropdown__menu">
-            <a href="procedure.html">시술 종류</a>
-            <a href="skin-sol.html">나의 피부 솔루션 찾기</a>
-          </div>
-        </div>
-        <span class="util-sep" aria-hidden="true"></span>
-        <a href="travel.html">투어</a>
-        <span class="util-sep" aria-hidden="true"></span>
-        <div class="util-dropdown">
-          <span class="util-dropdown__trigger">쇼핑
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-          <div class="util-dropdown__menu">
-            <a href="cosmetic.html">코스메틱 제품</a>
-          </div>
-        </div>
-        <span class="util-sep" aria-hidden="true"></span>
-        <div class="util-dropdown">
-          <span class="util-dropdown__trigger">휴그로센터
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-          <div class="util-dropdown__menu">
-            <a href="center.html">휴그로센터 소개</a>
-            <a href="skin-analysis.html">피부분석 서비스</a>
-          </div>
-        </div>
-      </div>
-      <div class="util-right">
-        <a href="about.html">회사소개</a>
-        <span class="util-sep" aria-hidden="true"></span>
-        <a href="faq.html">FAQ</a>
-        <span class="util-sep" aria-hidden="true"></span>
-        <div class="lang-select">
-          <button class="lang-select__btn" aria-expanded="false" aria-haspopup="listbox" aria-label="언어 선택">
-            <span class="lang-flag"><img src="../assets/flag/flag_south korea.svg" width="22" height="16" alt="KR" /></span>
-            <span class="lang-code">KR</span>
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <ul class="lang-dropdown">
-            <li class="lang-option is-active"><span><img src="../assets/flag/flag_south korea.svg" width="22" height="16" alt="KR" /></span>KR</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_united states.svg" width="22" height="16" alt="US" /></span>EN</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_china.svg" width="22" height="16" alt="CN" /></span>CN</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_japan.svg" width="22" height="16" alt="JP" /></span>JP</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_vietnam.svg" width="22" height="16" alt="VN" /></span>VN</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="header__main">
-    <div class="wrap">
-            <div class="header__left">
-        <button class="header-lang-btn mbar-lang" aria-label="언어변경">
-          <svg class="header-lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span class="header-lang-code">KR</span>
-        </button>
-        <a href="center.html" class="header-center-btn" aria-label="휴그로센터">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-          <span class="header-center-label">휴그로센터</span>
-        </a>
-      </div>
-      <a href="index.html" class="brand">KMEDITOUR<small class="brand-sub-mobile">Premium Concierge in Korea</small></a>
-      <span class="header__tagline">프리미엄 컨시어지</span>
-      <nav class="gnb">
-        <a href="index.html">홈</a>
-        <a href="index.html#how">서비스 이용 방법</a>
-        <a href="index.html#services">서비스</a>
-        <a href="index.html#whyus">우리를 선택하는 이유</a>
-        <a href="index.html#treatments">하이라이트</a>
-        <a href="magazine.html">매거진</a>
-      </nav>
-      <div class="header__right">
-        <a href="reservation.html" class="btn btn--primary2">상담 예약하기</a>
-        <button class="header-mypage-btn header-right--v2" aria-label="마이 페이지">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </button>
-        <button class="menu-btn header-menu-btn" aria-label="메뉴">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ============================== GNB OVERLAY ============================== -->
-<div class="gnb-overlay gnb-overlay--dark" role="dialog" aria-modal="true" aria-label="사이트 내비게이션" aria-hidden="true">
-  <div class="wrap">
-    <div class="gnb-overlay__bar">
-      <a href="index.html" class="brand gnb-overlay__brand">KMEDITOUR<small>Premium Concierge in Korea</small></a>
-      <div class="gnb-overlay__actions">
-        <a href="#" class="gnb-login-btn">로그인 / 회원가입</a>
-      </div>
-      <button class="gnb-overlay__close" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="gnb-mobile-top">
-      <div class="gnb-contact-block">
-        <div class="gnb-contact-cta">
-          <a href="reservation.html" class="gnb-cta-btn gnb-cta-btn--book">상담 예약하기</a>
-          <a href="mailto:contact@kmeditour.com" class="gnb-cta-btn gnb-cta-btn--mail">contact@kmeditour.com</a>
-        </div>
-      </div>
-      <div class="gnb-lang-tabs">
-        <button class="gnb-lang-tab is-active" data-lang="KR"><img src="../assets/flag/flag_south korea.svg" alt="KR" class="gnb-lang-flag" /><span class="gnb-lang-code">KR</span></button>
-        <button class="gnb-lang-tab" data-lang="EN"><img src="../assets/flag/flag_united states.svg" alt="EN" class="gnb-lang-flag" /><span class="gnb-lang-code">EN</span></button>
-        <button class="gnb-lang-tab" data-lang="CN"><img src="../assets/flag/flag_china.svg" alt="CN" class="gnb-lang-flag" /><span class="gnb-lang-code">CN</span></button>
-        <button class="gnb-lang-tab" data-lang="JP"><img src="../assets/flag/flag_japan.svg" alt="JP" class="gnb-lang-flag" /><span class="gnb-lang-code">JP</span></button>
-        <button class="gnb-lang-tab" data-lang="VN"><img src="../assets/flag/flag_vietnam.svg" alt="VN" class="gnb-lang-flag" /><span class="gnb-lang-code">VN</span></button>
-      </div>
-    </div>
-    <div class="gnb-cols">
-      <div class="gnb-col gnb-col--mobile-only">
-        <h4 data-en="About">소개<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="about.html" data-en="Who We Are">회사소개</a></li>
-          <li><a href="center.html" data-en="Hugro Center">휴그로센터</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Our Services">서비스<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li class="gnb-has-sub">
-            <div class="gnb-item-row">
-              <a href="#" data-en="Beauty Concierge">뷰티</a>
-              <button class="gnb-sub-toggle" aria-label="뷰티 하위 메뉴"><svg class="gnb-sub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <!-- ============================== HEADER ============================== -->
+    <header class="header header--solid header--reservation">
+      <div class="header__util">
+        <div class="wrap">
+          <div class="util-left">
+            <div class="util-dropdown">
+              <span class="util-dropdown__trigger"
+                >뷰티
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  width="10"
+                  height="10"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+              <div class="util-dropdown__menu">
+                <a href="procedure.html">시술 종류</a>
+                <a href="skin-sol.html">나의 피부 솔루션 찾기</a>
+              </div>
             </div>
-            <ul class="gnb-sub-list">
-              <li><a href="skin-sol.html">나의 피부 솔루션 찾기</a></li>
+            <span class="util-sep" aria-hidden="true"></span>
+            <a href="travel.html">투어</a>
+            <span class="util-sep" aria-hidden="true"></span>
+            <div class="util-dropdown">
+              <span class="util-dropdown__trigger"
+                >쇼핑
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  width="10"
+                  height="10"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+              <div class="util-dropdown__menu">
+                <a href="cosmetic.html">코스메틱 제품</a>
+              </div>
+            </div>
+            <span class="util-sep" aria-hidden="true"></span>
+            <div class="util-dropdown">
+              <span class="util-dropdown__trigger"
+                >휴그로센터
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  width="10"
+                  height="10"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+              <div class="util-dropdown__menu">
+                <a href="center.html">휴그로센터 소개</a>
+                <a href="skin-analysis.html">피부분석 서비스</a>
+              </div>
+            </div>
+          </div>
+          <div class="util-right">
+            <a href="about.html">회사소개</a>
+            <span class="util-sep" aria-hidden="true"></span>
+            <a href="faq.html">FAQ</a>
+            <span class="util-sep" aria-hidden="true"></span>
+            <div class="lang-select">
+              <button
+                class="lang-select__btn"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-label="언어 선택"
+              >
+                <span class="lang-flag"
+                  ><img
+                    src="../assets/flag/flag_south korea.svg"
+                    width="22"
+                    height="16"
+                    alt="KR"
+                /></span>
+                <span class="lang-code">KR</span>
+                <svg
+                  class="lang-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <ul class="lang-dropdown">
+                <li class="lang-option is-active">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_south korea.svg"
+                      width="22"
+                      height="16"
+                      alt="KR" /></span
+                  >KR
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_united states.svg"
+                      width="22"
+                      height="16"
+                      alt="US" /></span
+                  >EN
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_china.svg"
+                      width="22"
+                      height="16"
+                      alt="CN" /></span
+                  >CN
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_japan.svg"
+                      width="22"
+                      height="16"
+                      alt="JP" /></span
+                  >JP
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_vietnam.svg"
+                      width="22"
+                      height="16"
+                      alt="VN" /></span
+                  >VN
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="wrap">
+          <div class="header__left">
+            <button class="header-lang-btn mbar-lang" aria-label="언어변경">
+              <svg
+                class="header-lang-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              <span class="header-lang-code">KR</span>
+            </button>
+            <a
+              href="center.html"
+              class="header-center-btn"
+              aria-label="휴그로센터"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="20"
+                height="20"
+              >
+                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                <path d="M10 6h4" />
+                <path d="M10 10h4" />
+                <path d="M10 14h4" />
+                <path d="M10 18h4" />
+              </svg>
+              <span class="header-center-label">휴그로센터</span>
+            </a>
+          </div>
+          <a href="index.html" class="brand"
+            >KMEDITOUR<small class="brand-sub-mobile"
+              >Premium Concierge in Korea</small
+            ></a
+          >
+          <span class="header__tagline">프리미엄 컨시어지</span>
+          <nav class="gnb">
+            <a href="index.html">홈</a>
+            <a href="index.html#how">서비스 이용 방법</a>
+            <a href="index.html#services">서비스</a>
+            <a href="index.html#whyus">우리를 선택하는 이유</a>
+            <a href="index.html#treatments">하이라이트</a>
+            <a href="magazine.html">매거진</a>
+          </nav>
+          <div class="header__right">
+            <a href="reservation.html" class="btn btn--primary2"
+              >상담 예약하기</a
+            >
+            <button
+              class="header-mypage-btn header-right--v2"
+              aria-label="마이 페이지"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+              </svg>
+            </button>
+            <button class="menu-btn header-menu-btn" aria-label="메뉴">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================== GNB OVERLAY ============================== -->
+    <div
+      class="gnb-overlay gnb-overlay--dark"
+      role="dialog"
+      aria-modal="true"
+      aria-label="사이트 내비게이션"
+      aria-hidden="true"
+    >
+      <div class="wrap">
+        <div class="gnb-overlay__bar">
+          <a href="index.html" class="brand gnb-overlay__brand"
+            >KMEDITOUR<small>Premium Concierge in Korea</small></a
+          >
+          <div class="gnb-overlay__actions">
+            <a href="#" class="gnb-login-btn">로그인 / 회원가입</a>
+          </div>
+          <button class="gnb-overlay__close" aria-label="닫기">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="gnb-mobile-top">
+          <div class="gnb-contact-block">
+            <div class="gnb-contact-cta">
+              <a href="reservation.html" class="gnb-cta-btn gnb-cta-btn--book"
+                >상담 예약하기</a
+              >
+              <a
+                href="mailto:contact@kmeditour.com"
+                class="gnb-cta-btn gnb-cta-btn--mail"
+                >contact@kmeditour.com</a
+              >
+            </div>
+          </div>
+          <div class="gnb-lang-tabs">
+            <button class="gnb-lang-tab is-active" data-lang="KR">
+              <img
+                src="../assets/flag/flag_south korea.svg"
+                alt="KR"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">KR</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="EN">
+              <img
+                src="../assets/flag/flag_united states.svg"
+                alt="EN"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">EN</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="CN">
+              <img
+                src="../assets/flag/flag_china.svg"
+                alt="CN"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">CN</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="JP">
+              <img
+                src="../assets/flag/flag_japan.svg"
+                alt="JP"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">JP</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="VN">
+              <img
+                src="../assets/flag/flag_vietnam.svg"
+                alt="VN"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">VN</span>
+            </button>
+          </div>
+        </div>
+        <div class="gnb-cols">
+          <div class="gnb-col gnb-col--mobile-only">
+            <h4 data-en="About">
+              소개<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="about.html" data-en="Who We Are">회사소개</a></li>
+              <li>
+                <a href="center.html" data-en="Hugro Center">휴그로센터</a>
+              </li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="Our Services">
+              서비스<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
               <li class="gnb-has-sub">
                 <div class="gnb-item-row">
-                  <a href="procedure.html" class="gnb-proc-trigger">시술 종류</a>
-                  <button class="gnb-sub-toggle" aria-label="시술 하위 메뉴"><svg class="gnb-sub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+                  <a href="#" data-en="Beauty Concierge">뷰티</a>
+                  <button class="gnb-sub-toggle" aria-label="뷰티 하위 메뉴">
+                    <svg
+                      class="gnb-sub-chevron"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
                 </div>
                 <ul class="gnb-sub-list">
-                  <li><a href="procedure.html">전체</a></li>
-                  <li><a href="#">필러</a></li>
-                  <li><a href="#">보톡스</a></li>
-                  <li><a href="#">실리프팅</a></li>
-                  <li><a href="#">레이저</a></li>
-                  <li><a href="#">스킨 부스터</a></li>
-                  <li><a href="#">피부관리</a></li>
-                  <li><a href="#">지방분해</a></li>
-                  <li><a href="#">기타</a></li>
+                  <li><a href="skin-sol.html">나의 피부 솔루션 찾기</a></li>
+                  <li class="gnb-has-sub">
+                    <div class="gnb-item-row">
+                      <a href="procedure.html" class="gnb-proc-trigger"
+                        >시술 종류</a
+                      >
+                      <button
+                        class="gnb-sub-toggle"
+                        aria-label="시술 하위 메뉴"
+                      >
+                        <svg
+                          class="gnb-sub-chevron"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="gnb-sub-list">
+                      <li><a href="procedure.html">전체</a></li>
+                      <li><a href="#">필러</a></li>
+                      <li><a href="#">보톡스</a></li>
+                      <li><a href="#">실리프팅</a></li>
+                      <li><a href="#">레이저</a></li>
+                      <li><a href="#">스킨 부스터</a></li>
+                      <li><a href="#">피부관리</a></li>
+                      <li><a href="#">지방분해</a></li>
+                      <li><a href="#">기타</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <li><a href="travel.html" data-en="Travel Concierge">투어</a></li>
             </ul>
-          </li>
-          <li><a href="travel.html" data-en="Travel Concierge">투어</a></li>        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Shopping">쇼핑<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="cosmetic.html">코스메틱 제품</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Space">스페이스<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="center.html">휴그로센터 소개</a></li>
-          <li><a href="skin-analysis.html">피부분석 서비스</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="News">소식<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="#" data-en="Event" class="gnb-link--utility">이벤트</a></li>
-          <li><a href="magazine.html" data-en="Magazine" class="gnb-link--utility">매거진</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col gnb-col--about-desktop">
-        <h4 data-en="About">소개<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="about.html" data-en="Who We Are">회사소개</a></li>
-          <li><a href="center.html" data-en="Hugro Center">휴그로센터</a></li>
-          <li><a href="faq.html" data-en="FAQ" class="gnb-link--utility">FAQ</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="gnb-banners">
-      <a href="center.html" class="gnb-banner gnb-banner--hugro">
-        <div class="gnb-banner__inner">
-          <p class="gnb-banner__label">Premium Space</p>
-          <p class="gnb-banner__title">휴그로센터</p>
-          <p class="gnb-banner__sub">의료 뷰티 여행 토탈 케어 공간</p>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="Shopping">
+              쇼핑<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="cosmetic.html">코스메틱 제품</a></li>
+            </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="Space">
+              스페이스<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="center.html">휴그로센터 소개</a></li>
+              <li><a href="skin-analysis.html">피부분석 서비스</a></li>
+            </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="News">
+              소식<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li>
+                <a href="#" data-en="Event" class="gnb-link--utility">이벤트</a>
+              </li>
+              <li>
+                <a
+                  href="magazine.html"
+                  data-en="Magazine"
+                  class="gnb-link--utility"
+                  >매거진</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="gnb-col gnb-col--about-desktop">
+            <h4 data-en="About">
+              소개<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="about.html" data-en="Who We Are">회사소개</a></li>
+              <li>
+                <a href="center.html" data-en="Hugro Center">휴그로센터</a>
+              </li>
+              <li>
+                <a href="faq.html" data-en="FAQ" class="gnb-link--utility"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="skin-sol.html" class="gnb-banner gnb-banner--skin">
-        <div class="gnb-banner__inner">
-          <p class="gnb-banner__label">Skin Solution</p>
-          <p class="gnb-banner__title">나의 피부 솔루션 찾기</p>
-          <p class="gnb-banner__sub">나만의 피부 타입 맞춤 케어</p>
+        <div class="gnb-banners">
+          <a href="center.html" class="gnb-banner gnb-banner--hugro">
+            <div class="gnb-banner__inner">
+              <p class="gnb-banner__label">Premium Space</p>
+              <p class="gnb-banner__title">휴그로센터</p>
+              <p class="gnb-banner__sub">의료 뷰티 여행 토탈 케어 공간</p>
+            </div>
+            <svg
+              class="gnb-banner__arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="skin-sol.html" class="gnb-banner gnb-banner--skin">
+            <div class="gnb-banner__inner">
+              <p class="gnb-banner__label">Skin Solution</p>
+              <p class="gnb-banner__title">나의 피부 솔루션 찾기</p>
+              <p class="gnb-banner__sub">나만의 피부 타입 맞춤 케어</p>
+            </div>
+            <svg
+              class="gnb-banner__arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
         </div>
-        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- 시술 팝업 시트 (모바일) -->
-<div class="proc-sheet" id="procSheet" aria-hidden="true">
-  <div class="proc-sheet__bar">
-    <span class="proc-sheet__title">시술 종류</span>
-    <button class="proc-sheet__close" aria-label="닫기">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-  </div>
-  <ul class="proc-sheet__list">
-    <li><a href="procedure.html">전체</a></li>
-    <li><a href="#">필러</a></li>
-    <li><a href="#">보톡스</a></li>
-    <li><a href="#">실리프팅</a></li>
-    <li><a href="#">레이저</a></li>
-    <li><a href="#">스킨 부스터</a></li>
-    <li><a href="#">피부관리</a></li>
-    <li><a href="#">지방분해</a></li>
-    <li><a href="#">기타</a></li>
-  </ul>
-</div>
-
-<!-- ============================== MAIN ============================== -->
-<main id="main-content">
-
-<!-- ── Page Hero + Step Indicator ── -->
-<section class="rsv-hero">
-  <div class="wrap">
-    <h1 class="rsv-hero__title">상담 예약</h1>
-    <p class="rsv-hero__sub">원하는 시술 상담을 예약하세요</p>
-
-    <div class="rsv-stepper" id="rsvStepper" aria-label="예약 진행 단계">
-      <div class="rsv-step is-active" data-step="1">
-        <span class="rsv-step__num">1</span>
-        <span class="rsv-step__label">상담 정보</span>
-      </div>
-      <div class="rsv-step__line" aria-hidden="true"></div>
-      <div class="rsv-step" data-step="2">
-        <span class="rsv-step__num">2</span>
-        <span class="rsv-step__label">예약자 정보</span>
-      </div>
-      <div class="rsv-step__line" aria-hidden="true"></div>
-      <div class="rsv-step" data-step="3">
-        <span class="rsv-step__num">3</span>
-        <span class="rsv-step__label">확인 및 결제</span>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ── Form Body ── -->
-<section class="rsv-body">
-  <div class="wrap">
-    <div class="rsv-container">
+    <!-- 시술 팝업 시트 (모바일) -->
+    <div class="proc-sheet" id="procSheet" aria-hidden="true">
+      <div class="proc-sheet__bar">
+        <span class="proc-sheet__title">시술 종류</span>
+        <button class="proc-sheet__close" aria-label="닫기">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
+      <ul class="proc-sheet__list">
+        <li><a href="procedure.html">전체</a></li>
+        <li><a href="#">필러</a></li>
+        <li><a href="#">보톡스</a></li>
+        <li><a href="#">실리프팅</a></li>
+        <li><a href="#">레이저</a></li>
+        <li><a href="#">스킨 부스터</a></li>
+        <li><a href="#">피부관리</a></li>
+        <li><a href="#">지방분해</a></li>
+        <li><a href="#">기타</a></li>
+      </ul>
+    </div>
 
-      <!-- ══════════════════════════════
+    <!-- ============================== MAIN ============================== -->
+    <main id="main-content">
+      <!-- ── Page Hero + Step Indicator ── -->
+      <section class="rsv-hero">
+        <div class="wrap">
+          <h1 class="rsv-hero__title">상담 예약</h1>
+          <p class="rsv-hero__sub">원하는 시술 상담을 예약하세요</p>
+
+          <div class="rsv-stepper" id="rsvStepper" aria-label="예약 진행 단계">
+            <div class="rsv-step is-active" data-step="1">
+              <span class="rsv-step__num">1</span>
+              <span class="rsv-step__label">상담 정보</span>
+            </div>
+            <div class="rsv-step__line" aria-hidden="true"></div>
+            <div class="rsv-step" data-step="2">
+              <span class="rsv-step__num">2</span>
+              <span class="rsv-step__label">예약자 정보</span>
+            </div>
+            <div class="rsv-step__line" aria-hidden="true"></div>
+            <div class="rsv-step" data-step="3">
+              <span class="rsv-step__num">3</span>
+              <span class="rsv-step__label">확인 및 결제</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Form Body ── -->
+      <section class="rsv-body">
+        <div class="wrap">
+          <div class="rsv-container">
+            <!-- ══════════════════════════════
            STEP 1 — 상담 정보
       ══════════════════════════════ -->
-      <div class="rsv-panel is-active" id="rsvPanel1" aria-label="STEP 1: 상담 정보">
+            <div
+              class="rsv-panel is-active"
+              id="rsvPanel1"
+              aria-label="STEP 1: 상담 정보"
+            >
+              <div class="rsv-card">
+                <!-- 시술 부위 -->
+                <div class="rsv-field-group">
+                  <div class="rsv-field-head">
+                    <p class="rsv-field-label">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="12" r="4" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                      </svg>
+                      시술 부위 <span class="rsv-required">*</span>
+                    </p>
+                    <p class="rsv-field-sub">
+                      관심 있는 시술을 선택하세요 (복수 선택 가능)
+                    </p>
+                  </div>
+                  <div
+                    class="rsv-chips"
+                    id="procedureChips"
+                    role="group"
+                    aria-label="시술 부위 선택"
+                  >
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="필러"
+                      aria-pressed="false"
+                    >
+                      필러
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="보톡스"
+                      aria-pressed="false"
+                    >
+                      보톡스
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="실리프팅"
+                      aria-pressed="false"
+                    >
+                      실리프팅
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="레이저"
+                      aria-pressed="false"
+                    >
+                      레이저
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="스킨부스터"
+                      aria-pressed="false"
+                    >
+                      스킨부스터
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="피부관리"
+                      aria-pressed="false"
+                    >
+                      피부관리
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="지방분해"
+                      aria-pressed="false"
+                    >
+                      지방분해
+                    </button>
+                    <button
+                      type="button"
+                      class="rsv-chip"
+                      data-value="기타"
+                      aria-pressed="false"
+                    >
+                      기타
+                    </button>
+                  </div>
+                  <p class="rsv-field-error" id="errChip">
+                    * 시술 부위를 하나 이상 선택해 주세요.
+                  </p>
+                </div>
 
-        <div class="rsv-card">
+                <!-- 날짜 + 시간 -->
+                <div class="rsv-field-row">
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvDate">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                      </svg>
+                      희망 날짜 <span class="rsv-required">*</span>
+                    </label>
+                    <input
+                      type="date"
+                      class="rsv-input"
+                      id="rsvDate"
+                      name="rsvDate"
+                      required
+                    />
+                    <p class="rsv-field-hint">평일만 선택 가능합니다</p>
+                    <p class="rsv-field-error" id="errDate">
+                      * 날짜를 선택해 주세요.
+                    </p>
+                  </div>
 
-          <!-- 시술 부위 -->
-          <div class="rsv-field-group">
-            <div class="rsv-field-head">
-              <p class="rsv-field-label">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
-                시술 부위 <span class="rsv-required">*</span>
-              </p>
-              <p class="rsv-field-sub">관심 있는 시술을 선택하세요 (복수 선택 가능)</p>
-            </div>
-            <div class="rsv-chips" id="procedureChips" role="group" aria-label="시술 부위 선택">
-              <button type="button" class="rsv-chip" data-value="필러" aria-pressed="false">필러</button>
-              <button type="button" class="rsv-chip" data-value="보톡스" aria-pressed="false">보톡스</button>
-              <button type="button" class="rsv-chip" data-value="실리프팅" aria-pressed="false">실리프팅</button>
-              <button type="button" class="rsv-chip" data-value="레이저" aria-pressed="false">레이저</button>
-              <button type="button" class="rsv-chip" data-value="스킨부스터" aria-pressed="false">스킨부스터</button>
-              <button type="button" class="rsv-chip" data-value="피부관리" aria-pressed="false">피부관리</button>
-              <button type="button" class="rsv-chip" data-value="지방분해" aria-pressed="false">지방분해</button>
-              <button type="button" class="rsv-chip" data-value="기타" aria-pressed="false">기타</button>
-            </div>
-            <p class="rsv-field-error" id="errChip">* 시술 부위를 하나 이상 선택해 주세요.</p>
-          </div>
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvTime">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                      희망 시간
+                    </label>
+                    <div class="rsv-select-wrap">
+                      <select class="rsv-select" id="rsvTime" name="rsvTime">
+                        <option value="">시간 선택</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                      </select>
+                      <span class="rsv-select-chevron" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          width="14"
+                          height="14"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </span>
+                    </div>
+                    <p class="rsv-field-hint">
+                      한국시간(KST) 기준 평일 10:00 ~ 18:00
+                    </p>
+                  </div>
 
-          <!-- 날짜 + 시간 -->
-          <div class="rsv-field-row">
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvDate">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                희망 날짜 <span class="rsv-required">*</span>
-              </label>
-              <input type="date" class="rsv-input" id="rsvDate" name="rsvDate" required />
-              <p class="rsv-field-hint">평일만 선택 가능합니다</p>
-              <p class="rsv-field-error" id="errDate">* 날짜를 선택해 주세요.</p>
-            </div>
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvDate">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                      </svg>
+                      예상 방문시기
+                    </label>
+                    <input
+                      type="date"
+                      class="rsv-input"
+                      id="rsvDate"
+                      name="rsvDate"
+                      required
+                    />
+                    <p class="rsv-field-hint">한국에 대략적으로 방문할 시기</p>
+                    <p class="rsv-field-error" id="errDate">
+                      * 날짜를 선택해 주세요.
+                    </p>
+                  </div>
+                </div>
 
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvTime">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                희망 시간
-              </label>
-              <div class="rsv-select-wrap">
-                <select class="rsv-select" id="rsvTime" name="rsvTime">
-                  <option value="">시간 선택</option>
-                  <option value="10:00">10:00</option>
-                  <option value="10:30">10:30</option>
-                  <option value="11:00">11:00</option>
-                  <option value="11:30">11:30</option>
-                  <option value="12:00">12:00</option>
-                  <option value="13:00">13:00</option>
-                  <option value="13:30">13:30</option>
-                  <option value="14:00">14:00</option>
-                  <option value="14:30">14:30</option>
-                  <option value="15:00">15:00</option>
-                  <option value="15:30">15:30</option>
-                  <option value="16:00">16:00</option>
-                  <option value="16:30">16:30</option>
-                  <option value="17:00">17:00</option>
-                  <option value="17:30">17:30</option>
-                  <option value="18:00">18:00</option>
-                </select>
-                <span class="rsv-select-chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
-                </span>
-              </div>
-              <p class="rsv-field-hint">한국시간(KST) 기준 평일 10:00 ~ 18:00</p>
-            </div>
+                <!-- 시술 / 증상 -->
+                <div class="rsv-field-group">
+                  <label class="rsv-field-label" for="rsvSymptom">
+                    시술 / 증상 <span class="rsv-required">*</span>
+                  </label>
+                  <div class="rsv-textarea-wrap">
+                    <textarea
+                      class="rsv-textarea"
+                      id="rsvSymptom"
+                      name="rsvSymptom"
+                      placeholder="관심 있는 시술이나 개선하고 싶은 증상을 자유롭게 적어주세요."
+                      rows="5"
+                      required
+                    ></textarea>
+                    <button
+                      type="button"
+                      class="rsv-textarea-send"
+                      aria-label="입력 완료"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="15"
+                        height="15"
+                      >
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                      </svg>
+                    </button>
+                  </div>
+                  <p class="rsv-field-error" id="errSymptom">
+                    * 내용을 기입해 주세요 (필수사항)
+                  </p>
+                </div>
 
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvDate">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                예상 방문시기
-              </label>
-              <input type="date" class="rsv-input" id="rsvDate" name="rsvDate" required />
-              <p class="rsv-field-hint">한국에 대략적으로 방문할 시기</p>
-              <p class="rsv-field-error" id="errDate">* 날짜를 선택해 주세요.</p>
-            </div>
-          </div>
-
-          <!-- 시술 / 증상 -->
-          <div class="rsv-field-group">
-            <label class="rsv-field-label" for="rsvSymptom">
-              시술 / 증상 <span class="rsv-required">*</span>
-            </label>
-            <div class="rsv-textarea-wrap">
-              <textarea
-                class="rsv-textarea"
-                id="rsvSymptom"
-                name="rsvSymptom"
-                placeholder="관심 있는 시술이나 개선하고 싶은 증상을 자유롭게 적어주세요."
-                rows="5"
-                required
-              ></textarea>
-              <button type="button" class="rsv-textarea-send" aria-label="입력 완료">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-            </div>
-            <p class="rsv-field-error" id="errSymptom">* 내용을 기입해 주세요 (필수사항)</p>
-          </div>
-
-          <!-- 상담비 안내 -->
-          <div class="rsv-fee-box" role="note" aria-label="상담비 안내">
-            <div class="rsv-fee-box__icon" aria-hidden="true">$</div>
-            <div>
-              <p class="rsv-fee-box__title">상담비: ₩140,000</p>
-              <p class="rsv-fee-box__desc">예약 확정을 위해 ₩140,000의 상담비가 필요합니다. 상담비는 시술비용에 포함됩니다.</p>
-            </div>
-          </div>
-
-        </div><!-- /.rsv-card -->
-
-        <div class="rsv-actions">
-          <button
-            type="button"
-            class="btn btn--primary rsv-btn-next"
-            data-rsv-action="next"
-            data-target="2"
-          >
-            다음
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-
-      </div><!-- /#rsvPanel1 -->
-
-
-      <!-- ══════════════════════════════
-           STEP 2 — 예약자 정보
-      ══════════════════════════════ -->
-      <div class="rsv-panel" id="rsvPanel2" aria-label="STEP 2: 예약자 정보">
-
-        <div class="rsv-card">
-
-          <!-- 회원 자동입력 안내 -->
-          <div class="rsv-member-notice" role="status" aria-live="polite">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            회원 정보가 자동 입력되었습니다. 필요시 수정해 주세요.
-          </div>
-
-          <!-- 필수 입력 -->
-          <div class="rsv-field-row">
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvName">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-                성명 <span class="rsv-required">*</span>
-              </label>
-              <input type="text" class="rsv-input" id="rsvName" name="rsvName" placeholder="이름을 입력하세요" autocomplete="name" required />
-              <p class="rsv-field-error" id="errName">* 성명을 입력해 주세요.</p>
-            </div>
-
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvPhone">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.36 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6.05 6.05l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                연락처 <span class="rsv-required">*</span>
-              </label>
-              <input type="tel" class="rsv-input" id="rsvPhone" name="rsvPhone" placeholder="+82-10-0000-0000" autocomplete="tel" required />
-              <p class="rsv-field-error" id="errPhone">* 연락처를 입력해 주세요.</p>
-            </div>
-          </div>
-
-          <div class="rsv-field-row">
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvEmail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-                이메일 <span class="rsv-required">*</span>
-              </label>
-              <input type="email" class="rsv-input" id="rsvEmail" name="rsvEmail" placeholder="email@example.com" autocomplete="email" required />
-              <p class="rsv-field-error" id="errEmail">* 이메일을 입력해 주세요.</p>
-            </div>
-
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvNationality">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                국적 <span class="rsv-required">*</span>
-              </label>
-              <div class="rsv-select-wrap">
-                <select class="rsv-select" id="rsvNationality" name="rsvNationality" required>
-                  <option value="">국적 선택</option>
-                  <option value="KR">한국</option>
-                  <option value="US">미국</option>
-                  <option value="CN">중국</option>
-                  <option value="JP">일본</option>
-                  <option value="VN">베트남</option>
-                  <option value="TW">대만</option>
-                  <option value="TH">태국</option>
-                  <option value="SG">싱가포르</option>
-                  <option value="AU">호주</option>
-                  <option value="CA">캐나다</option>
-                  <option value="GB">영국</option>
-                  <option value="FR">프랑스</option>
-                  <option value="DE">독일</option>
-                  <option value="OTHER">기타</option>
-                </select>
-                <span class="rsv-select-chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 선택 입력 -->
-          <div class="rsv-optional-section">
-            <p class="rsv-optional-label">선택 입력</p>
-
-            <div class="rsv-field-row">
-              <div class="rsv-field-group">
-                <label class="rsv-field-label" for="rsvGender">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-                  성별
-                </label>
-                <div class="rsv-select-wrap">
-                  <select class="rsv-select" id="rsvGender" name="rsvGender">
-                    <option value="">선택 안 함</option>
-                    <option value="F">여성</option>
-                    <option value="M">남성</option>
-                    <option value="other">기타</option>
-                  </select>
-                  <span class="rsv-select-chevron" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
-                  </span>
+                <!-- 상담비 안내 -->
+                <div class="rsv-fee-box" role="note" aria-label="상담비 안내">
+                  <div class="rsv-fee-box__icon" aria-hidden="true">$</div>
+                  <div>
+                    <p class="rsv-fee-box__title">상담비: ₩140,000</p>
+                    <p class="rsv-fee-box__desc">
+                      예약 확정을 위해 ₩140,000의 상담비가 필요합니다. 상담비는
+                      시술비용에 포함됩니다.
+                    </p>
+                  </div>
                 </div>
               </div>
+              <!-- /.rsv-card -->
 
-              <div class="rsv-field-group">
-                <label class="rsv-field-label" for="rsvBirthdate">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  생년월일
-                </label>
-                <input type="date" class="rsv-input" id="rsvBirthdate" name="rsvBirthdate" autocomplete="bday" />
+              <div class="rsv-actions">
+                <button
+                  type="button"
+                  class="btn btn--primary rsv-btn-next"
+                  data-rsv-action="next"
+                  data-target="2"
+                >
+                  다음
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
               </div>
             </div>
+            <!-- /#rsvPanel1 -->
 
-            <div class="rsv-field-group">
-              <label class="rsv-field-label" for="rsvLang">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                선호 언어
-              </label>
-              <div class="rsv-select-wrap">
-                <select class="rsv-select" id="rsvLang" name="rsvLang">
-                  <option value="ko">한국어</option>
-                  <option value="en">English</option>
-                  <option value="zh">中文 (普通话)</option>
-                  <option value="ja">日本語</option>
-                  <option value="vi">Tiếng Việt</option>
-                </select>
-                <span class="rsv-select-chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
-                </span>
+            <!-- ══════════════════════════════
+           STEP 2 — 예약자 정보
+      ══════════════════════════════ -->
+            <div
+              class="rsv-panel"
+              id="rsvPanel2"
+              aria-label="STEP 2: 예약자 정보"
+            >
+              <div class="rsv-card">
+                <!-- 회원 자동입력 안내 -->
+                <div class="rsv-member-notice" role="status" aria-live="polite">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  회원 정보가 자동 입력되었습니다. 필요시 수정해 주세요.
+                </div>
+
+                <!-- 필수 입력 -->
+                <div class="rsv-field-row">
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvName">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                      </svg>
+                      성명 <span class="rsv-required">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      class="rsv-input"
+                      id="rsvName"
+                      name="rsvName"
+                      placeholder="이름을 입력하세요"
+                      autocomplete="name"
+                      required
+                    />
+                    <p class="rsv-field-error" id="errName">
+                      * 성명을 입력해 주세요.
+                    </p>
+                  </div>
+
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvPhone">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.36 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6.05 6.05l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                      연락처 <span class="rsv-required">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      class="rsv-input"
+                      id="rsvPhone"
+                      name="rsvPhone"
+                      placeholder="+82-10-0000-0000"
+                      autocomplete="tel"
+                      required
+                    />
+                    <p class="rsv-field-error" id="errPhone">
+                      * 연락처를 입력해 주세요.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rsv-field-row">
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvEmail">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <polyline points="2,4 12,13 22,4" />
+                      </svg>
+                      이메일 <span class="rsv-required">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      class="rsv-input"
+                      id="rsvEmail"
+                      name="rsvEmail"
+                      placeholder="email@example.com"
+                      autocomplete="email"
+                      required
+                    />
+                    <p class="rsv-field-error" id="errEmail">
+                      * 이메일을 입력해 주세요.
+                    </p>
+                  </div>
+
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvNationality">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                        />
+                      </svg>
+                      국적 <span class="rsv-required">*</span>
+                    </label>
+                    <div class="rsv-select-wrap">
+                      <select
+                        class="rsv-select"
+                        id="rsvNationality"
+                        name="rsvNationality"
+                        required
+                      >
+                        <option value="">국적 선택</option>
+                        <option value="KR">한국</option>
+                        <option value="US">미국</option>
+                        <option value="CN">중국</option>
+                        <option value="JP">일본</option>
+                        <option value="VN">베트남</option>
+                        <option value="TW">대만</option>
+                        <option value="TH">태국</option>
+                        <option value="SG">싱가포르</option>
+                        <option value="AU">호주</option>
+                        <option value="CA">캐나다</option>
+                        <option value="GB">영국</option>
+                        <option value="FR">프랑스</option>
+                        <option value="DE">독일</option>
+                        <option value="OTHER">기타</option>
+                      </select>
+                      <span class="rsv-select-chevron" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          width="14"
+                          height="14"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 선택 입력 -->
+                <div class="rsv-optional-section">
+                  <p class="rsv-optional-label">선택 입력</p>
+
+                  <div class="rsv-field-row">
+                    <div class="rsv-field-group">
+                      <label class="rsv-field-label" for="rsvGender">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <circle cx="12" cy="8" r="4" />
+                          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                        </svg>
+                        성별
+                      </label>
+                      <div class="rsv-select-wrap">
+                        <select
+                          class="rsv-select"
+                          id="rsvGender"
+                          name="rsvGender"
+                        >
+                          <option value="">선택 안 함</option>
+                          <option value="F">여성</option>
+                          <option value="M">남성</option>
+                          <option value="other">기타</option>
+                        </select>
+                        <span class="rsv-select-chevron" aria-hidden="true">
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            width="14"
+                            height="14"
+                          >
+                            <polyline points="6 9 12 15 18 9" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="rsv-field-group">
+                      <label class="rsv-field-label" for="rsvBirthdate">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <rect x="3" y="4" width="18" height="18" rx="2" />
+                          <line x1="16" y1="2" x2="16" y2="6" />
+                          <line x1="8" y1="2" x2="8" y2="6" />
+                          <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                        생년월일
+                      </label>
+                      <input
+                        type="date"
+                        class="rsv-input"
+                        id="rsvBirthdate"
+                        name="rsvBirthdate"
+                        autocomplete="bday"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="rsv-field-group">
+                    <label class="rsv-field-label" for="rsvLang">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                      </svg>
+                      선호 언어
+                    </label>
+                    <div class="rsv-select-wrap">
+                      <select class="rsv-select" id="rsvLang" name="rsvLang">
+                        <option value="ko">한국어</option>
+                        <option value="en">English</option>
+                        <option value="zh">中文 (普通话)</option>
+                        <option value="ja">日本語</option>
+                        <option value="vi">Tiếng Việt</option>
+                      </select>
+                      <span class="rsv-select-chevron" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          width="14"
+                          height="14"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.rsv-card -->
+
+              <div class="rsv-actions rsv-actions--row">
+                <button
+                  type="button"
+                  class="btn btn--primary-outline rsv-btn-prev"
+                  data-rsv-action="prev"
+                  data-target="1"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                  이전
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary rsv-btn-next"
+                  data-rsv-action="next"
+                  data-target="3"
+                >
+                  다음
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
               </div>
             </div>
-          </div>
+            <!-- /#rsvPanel2 -->
 
-        </div><!-- /.rsv-card -->
-
-        <div class="rsv-actions rsv-actions--row">
-          <button
-            type="button"
-            class="btn btn--primary-outline rsv-btn-prev"
-            data-rsv-action="prev"
-            data-target="1"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-            이전
-          </button>
-          <button
-            type="button"
-            class="btn btn--primary rsv-btn-next"
-            data-rsv-action="next"
-            data-target="3"
-          >
-            다음
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-
-      </div><!-- /#rsvPanel2 -->
-
-
-      <!-- ══════════════════════════════
+            <!-- ══════════════════════════════
            STEP 3 — 확인 및 결제
       ══════════════════════════════ -->
-      <div class="rsv-panel" id="rsvPanel3" aria-label="STEP 3: 확인 및 결제">
+            <div
+              class="rsv-panel"
+              id="rsvPanel3"
+              aria-label="STEP 3: 확인 및 결제"
+            >
+              <div class="rsv-card">
+                <p class="rsv-summary-title">예약 내용 확인</p>
+                <p
+                  style="
+                    font-size: var(--text-13);
+                    color: var(--text-gray-3);
+                    margin-top: -20px;
+                    margin-bottom: 4px;
+                  "
+                >
+                  입력하신 정보를 확인해 주세요.
+                </p>
 
-        <div class="rsv-card">
+                <!-- 시술 부위 -->
+                <div class="rsv-summary-card">
+                  <p class="rsv-summary-label">시술 부위</p>
+                  <div class="rsv-summary-tags" id="summaryTags">
+                    <!-- JS로 채워짐 -->
+                  </div>
+                </div>
 
-          <p class="rsv-summary-title">예약 내용 확인</p>
-          <p style="font-size: var(--text-13); color: var(--text-gray-3); margin-top: -20px; margin-bottom: 4px;">입력하신 정보를 확인해 주세요.</p>
+                <!-- 날짜 + 시간 -->
+                <div class="rsv-summary-card">
+                  <div class="rsv-summary-row">
+                    <div class="rsv-summary-item">
+                      <span class="rsv-summary-item__label">희망 날짜</span>
+                      <span class="rsv-summary-item__value" id="summaryDate"
+                        >—</span
+                      >
+                    </div>
+                    <div class="rsv-summary-item">
+                      <span class="rsv-summary-item__label">희망 시간</span>
+                      <span class="rsv-summary-item__value" id="summaryTime"
+                        >—</span
+                      >
+                    </div>
+                  </div>
+                </div>
 
-          <!-- 시술 부위 -->
-          <div class="rsv-summary-card">
-            <p class="rsv-summary-label">시술 부위</p>
-            <div class="rsv-summary-tags" id="summaryTags">
-              <!-- JS로 채워짐 -->
-            </div>
-          </div>
+                <!-- 시술/증상 -->
+                <div class="rsv-summary-card">
+                  <p class="rsv-summary-label">시술 / 증상</p>
+                  <p class="rsv-summary-text" id="summarySymptom">—</p>
+                </div>
 
-          <!-- 날짜 + 시간 -->
-          <div class="rsv-summary-card">
-            <div class="rsv-summary-row">
-              <div class="rsv-summary-item">
-                <span class="rsv-summary-item__label">희망 날짜</span>
-                <span class="rsv-summary-item__value" id="summaryDate">—</span>
+                <!-- 예약자 정보 -->
+                <div class="rsv-summary-card">
+                  <p class="rsv-summary-label">예약자 정보</p>
+                  <div class="rsv-summary-booker">
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                      </svg>
+                      <span id="summaryName">—</span>
+                    </span>
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.36 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6.05 6.05l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                      <span id="summaryPhone">—</span>
+                    </span>
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <polyline points="2,4 12,13 22,4" />
+                      </svg>
+                      <span id="summaryEmail">—</span>
+                    </span>
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                        />
+                      </svg>
+                      <span id="summaryNationality">—</span>
+                    </span>
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                      </svg>
+                      <span id="summaryGender">—</span>
+                    </span>
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                      </svg>
+                      <span id="summaryBirthdate">—</span>
+                    </span>
+                    <span class="rsv-summary-booker-item">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="14"
+                        height="14"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                        />
+                      </svg>
+                      <span id="summaryLang">—</span>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- 상담비 재안내 -->
+                <div class="rsv-fee-box" role="note" aria-label="상담비 안내">
+                  <div class="rsv-fee-box__icon" aria-hidden="true">$</div>
+                  <div>
+                    <p class="rsv-fee-box__title">상담비: ₩140,000</p>
+                    <p class="rsv-fee-box__desc">
+                      예약 확정을 위해 ₩140,000의 상담비가 필요합니다. 상담비는
+                      시술비용에 포함됩니다.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="rsv-summary-item">
-                <span class="rsv-summary-item__label">희망 시간</span>
-                <span class="rsv-summary-item__value" id="summaryTime">—</span>
+              <!-- /.rsv-card -->
+
+              <div class="rsv-actions rsv-actions--row">
+                <button
+                  type="button"
+                  class="btn btn--primary rsv-btn-pay"
+                  data-rsv-action="pay"
+                >
+                  예약 및 결제 ₩140,000
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary-outline rsv-btn-prev"
+                  data-rsv-action="prev"
+                  data-target="2"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                  이전
+                </button>
               </div>
             </div>
-          </div>
+            <!-- /#rsvPanel3 -->
 
-          <!-- 시술/증상 -->
-          <div class="rsv-summary-card">
-            <p class="rsv-summary-label">시술 / 증상</p>
-            <p class="rsv-summary-text" id="summarySymptom">—</p>
-          </div>
-
-          <!-- 예약자 정보 -->
-          <div class="rsv-summary-card">
-            <p class="rsv-summary-label">예약자 정보</p>
-            <div class="rsv-summary-booker">
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-                <span id="summaryName">—</span>
-              </span>
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.36 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6.05 6.05l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span id="summaryPhone">—</span>
-              </span>
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-                <span id="summaryEmail">—</span>
-              </span>
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                <span id="summaryNationality">—</span>
-              </span>
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-                <span id="summaryGender">—</span>
-              </span>
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span id="summaryBirthdate">—</span>
-              </span>
-              <span class="rsv-summary-booker-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                <span id="summaryLang">—</span>
-              </span>
-            </div>
-          </div>
-
-          <!-- 상담비 재안내 -->
-          <div class="rsv-fee-box" role="note" aria-label="상담비 안내">
-            <div class="rsv-fee-box__icon" aria-hidden="true">$</div>
-            <div>
-              <p class="rsv-fee-box__title">상담비: ₩140,000</p>
-              <p class="rsv-fee-box__desc">예약 확정을 위해 ₩140,000의 상담비가 필요합니다. 상담비는 시술비용에 포함됩니다.</p>
-            </div>
-          </div>
-
-        </div><!-- /.rsv-card -->
-
-        <div class="rsv-actions rsv-actions--row">
-          <button
-            type="button"
-            class="btn btn--primary rsv-btn-pay"
-            data-rsv-action="pay"
-          >
-            예약 및 결제 ₩140,000
-          </button>
-          <button
-            type="button"
-            class="btn btn--primary-outline rsv-btn-prev"
-            data-rsv-action="prev"
-            data-target="2"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-            이전
-          </button>
-        </div>
-
-      </div><!-- /#rsvPanel3 -->
-
-
-      <!-- ══════════════════════════════
+            <!-- ══════════════════════════════
            COMPLETE — 예약 완료
       ══════════════════════════════ -->
-      <div class="rsv-panel" id="rsvPanelComplete" aria-label="예약 완료">
-        <div class="rsv-card rsv-complete">
-          <div class="rsv-complete__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="rsv-panel" id="rsvPanelComplete" aria-label="예약 완료">
+              <div class="rsv-card rsv-complete">
+                <div class="rsv-complete__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="32"
+                    height="32"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <h2 class="rsv-complete__title">예약이 완료되었습니다</h2>
+                <p class="rsv-complete__desc">
+                  예약 확인 이메일을 발송했습니다.<br />
+                  전담 코디네이터가 24시간 이내에 연락드립니다.
+                </p>
+                <a href="index.html" class="btn btn--primary"
+                  >홈으로 돌아가기</a
+                >
+              </div>
+            </div>
+            <!-- /#rsvPanelComplete -->
           </div>
-          <h2 class="rsv-complete__title">예약이 완료되었습니다</h2>
-          <p class="rsv-complete__desc">
-            예약 확인 이메일을 발송했습니다.<br>
-            전담 코디네이터가 24시간 이내에 연락드립니다.
+          <!-- /.rsv-container -->
+        </div>
+        <!-- /.wrap -->
+      </section>
+    </main>
+
+    <!-- ============================== 결제 수단 모달 ============================== -->
+    <div class="rsv-pay-modal" id="rsvPayModal" aria-hidden="true">
+      <div class="rsv-pay-modal__backdrop" id="rsvPayBackdrop"></div>
+      <div
+        class="rsv-pay-modal__box"
+        role="dialog"
+        aria-modal="true"
+        aria-label="결제 방법 선택"
+      >
+        <div class="rsv-pay-modal__head">
+          <h2 class="rsv-pay-modal__title">결제 방법을 선택해주세요</h2>
+          <button
+            class="rsv-pay-modal__close"
+            id="rsvPayClose"
+            aria-label="닫기"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="18"
+              height="18"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="rsv-pay-modal__body">
+          <!-- 국내 신용·체크카드 -->
+          <button
+            type="button"
+            class="rsv-pay-option"
+            data-rsv-action="paymethod"
+            data-method="domestic"
+          >
+            <div class="rsv-pay-option__icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="22"
+                height="22"
+              >
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+              </svg>
+            </div>
+            <div class="rsv-pay-option__content">
+              <span class="rsv-pay-option__title">국내 신용·체크카드</span>
+              <span class="rsv-pay-option__sub">국내 발급 카드 결제</span>
+            </div>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="16"
+              height="16"
+              style="margin-left: auto; color: var(--text-gray-2)"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+
+          <!-- 해외 신용·체크카드 -->
+          <button
+            type="button"
+            class="rsv-pay-option"
+            data-rsv-action="paymethod"
+            data-method="overseas"
+          >
+            <div class="rsv-pay-option__icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="22"
+                height="22"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <div class="rsv-pay-option__content">
+              <span class="rsv-pay-option__title">해외 신용·체크카드</span>
+              <span class="rsv-pay-option__sub"
+                >Visa · Mastercard · JCB · UnionPay</span
+              >
+            </div>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="16"
+              height="16"
+              style="margin-left: auto; color: var(--text-gray-2)"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+
+          <!-- 계좌 이체 -->
+          <button
+            type="button"
+            class="rsv-pay-option"
+            data-rsv-action="paymethod"
+            data-method="transfer"
+          >
+            <div class="rsv-pay-option__icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="22"
+                height="22"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div class="rsv-pay-option__content">
+              <span class="rsv-pay-option__title">계좌 이체</span>
+              <span class="rsv-pay-option__sub"
+                >퀵계좌이체 · 은행 앱 (토스 결제창)</span
+              >
+            </div>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="16"
+              height="16"
+              style="margin-left: auto; color: var(--text-gray-2)"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+        <div class="rsv-pay-modal__foot">
+          <p class="rsv-pay-modal__hint">
+            모든 결제는 암호화 보안을 통해 안전하게 처리됩니다.
           </p>
-          <a href="index.html" class="btn btn--primary">홈으로 돌아가기</a>
-        </div>
-      </div><!-- /#rsvPanelComplete -->
-
-    </div><!-- /.rsv-container -->
-  </div><!-- /.wrap -->
-</section>
-
-</main>
-
-<!-- ============================== 결제 수단 모달 ============================== -->
-<div class="rsv-pay-modal" id="rsvPayModal" aria-hidden="true">
-  <div class="rsv-pay-modal__backdrop" id="rsvPayBackdrop"></div>
-  <div class="rsv-pay-modal__box" role="dialog" aria-modal="true" aria-label="결제 방법 선택">
-    <div class="rsv-pay-modal__head">
-      <h2 class="rsv-pay-modal__title">결제 방법을 선택해주세요</h2>
-      <button class="rsv-pay-modal__close" id="rsvPayClose" aria-label="닫기">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="rsv-pay-modal__body">
-
-      <!-- 국내 신용·체크카드 -->
-      <button type="button" class="rsv-pay-option" data-rsv-action="paymethod" data-method="domestic">
-        <div class="rsv-pay-option__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        </div>
-        <div class="rsv-pay-option__content">
-          <span class="rsv-pay-option__title">국내 신용·체크카드</span>
-          <span class="rsv-pay-option__sub">국내 발급 카드 결제</span>
-        </div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="margin-left:auto;color:var(--text-gray-2)" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-      <!-- 해외 신용·체크카드 -->
-      <button type="button" class="rsv-pay-option" data-rsv-action="paymethod" data-method="overseas">
-        <div class="rsv-pay-option__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <div class="rsv-pay-option__content">
-          <span class="rsv-pay-option__title">해외 신용·체크카드</span>
-          <span class="rsv-pay-option__sub">Visa · Mastercard · JCB · UnionPay</span>
-        </div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="margin-left:auto;color:var(--text-gray-2)" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-      <!-- 계좌 이체 -->
-      <button type="button" class="rsv-pay-option" data-rsv-action="paymethod" data-method="transfer">
-        <div class="rsv-pay-option__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="rsv-pay-option__content">
-          <span class="rsv-pay-option__title">계좌 이체</span>
-          <span class="rsv-pay-option__sub">퀵계좌이체 · 은행 앱 (토스 결제창)</span>
-        </div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="margin-left:auto;color:var(--text-gray-2)" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-    </div>
-    <div class="rsv-pay-modal__foot">
-      <p class="rsv-pay-modal__hint">모든 결제는 암호화 보안을 통해 안전하게 처리됩니다.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ============================== 문의 (CONTACT) ============================== -->
-<section class="foot-contact">
-  <div class="wrap foot-contact__inner">
-    <div class="foot-contact__text">
-      <h2 class="foot-contact__title">궁금한 점이 있으신가요?</h2>
-      <p class="foot-contact__desc">이메일을 남겨주시면 전담 코디네이터가 빠르게 답변드립니다.</p>
-    </div>
-    <form class="foot-contact__form" onsubmit="return false;">
-      <input type="email" class="foot-contact__input" placeholder="이메일 주소를 입력하세요" aria-label="이메일 주소" />
-      <button type="submit" class="btn btn--primary foot-contact__btn">문의하기</button>
-    </form>
-  </div>
-</section>
-
-<!-- ============================== FOOTER ============================== -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__top">
-      <a href="#">개인정보처리방침</a>
-      <a href="#">이용약관</a>
-      <a href="#">환불 정책</a>
-    </div>
-    <div class="footer__mid">
-      <div>
-        <a href="index.html" class="footer__brand">KMEDITOUR<small>Premium Concierge in Seoul</small></a>
-        <p class="footer__tagline">한국의 앞선 의료와 서울의 품격을 잇는 프리미엄 컨시어지. 시술부터 머무름까지, 전담 코디네이터가 당신만의 여정을 섬세하게 완성합니다.</p>
-      </div>
-      <dl>
-        <dt>대표자</dt><dd>이석재</dd>
-        <dt>주소</dt><dd>서울특별시 강남구 압구정로14길 22, 4층(신사동)</dd>
-        <dt>대표전화</dt><dd>+82-2-514-0799</dd>
-        <dt>사업자등록번호</dt><dd>558-81-03752</dd>
-      </dl>
-      <dl>
-        <dt>상담 운영</dt><dd>연중무휴 09:00 — 21:00</dd>
-        <dt>카카오 상담</dt><dd>@KMEDITOUR</dd>
-        <dt>이메일</dt><dd>contact@kmeditour.com</dd>
-        <dt>전담 케어</dt><dd>1:1 코디네이터 배정</dd>
-      </dl>
-    </div>
-    <div class="footer__top-wrap">
-      <button class="footer__top-btn" aria-label="맨 위로">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-        <span>TOP</span>
-      </button>
-    </div>
-    <div class="footer__bottom">
-      <span>© 2026 KMEDITOUR. All rights reserved.</span>
-      <div class="footer__social">
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor"/></svg></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- ════ Language Bottom Sheet ════ -->
-<div class="lang-sheet" id="langSheet" aria-hidden="true">
-  <div class="lang-sheet__backdrop"></div>
-  <div class="lang-sheet__inner">
-    <p class="lang-sheet__title">언어 선택</p>
-    <div class="lang-sheet__opts">
-      <button class="lang-sheet__opt is-active" data-lang="KR"><img src="../assets/flag/flag_south korea.svg" alt="한국" class="lang-sheet-flag-img" />한국어</button>
-      <button class="lang-sheet__opt" data-lang="EN"><img src="../assets/flag/flag_united states.svg" alt="English" class="lang-sheet-flag-img" />English</button>
-      <button class="lang-sheet__opt" data-lang="CN"><img src="../assets/flag/flag_china.svg" alt="中文" class="lang-sheet-flag-img" />中文</button>
-      <button class="lang-sheet__opt" data-lang="JP"><img src="../assets/flag/flag_japan.svg" alt="日本語" class="lang-sheet-flag-img" />日本語</button>
-      <button class="lang-sheet__opt" data-lang="VN"><img src="../assets/flag/flag_vietnam.svg" alt="Tiếng Việt" class="lang-sheet-flag-img" />Tiếng Việt</button>
-    </div>
-  </div>
-</div>
-
-<!-- ════ Login Modal ════ -->
-<div class="login-modal" id="loginModal" aria-hidden="true">
-  <div class="login-modal__backdrop" id="loginBackdrop"></div>
-  <div class="login-modal__box" role="dialog" aria-modal="true" aria-label="로그인">
-    <button class="login-modal__close" id="loginClose" aria-label="닫기">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="login-modal__brand">K<span>MEDI</span>TOUR</div>
-    <h2 class="login-modal__title">다시 오신 것을 환영합니다</h2>
-    <p class="login-modal__subtitle">KMEDITOUR 계정에 로그인하세요</p>
-    <form class="login-modal__form" onsubmit="return false;">
-      <div class="login-modal__label-group">
-        <label class="login-field-label" for="loginEmail">이메일</label>
-        <div class="login-modal__field">
-          <span class="login-field-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-          </span>
-          <input id="loginEmail" type="email" class="login-modal__input" placeholder="email@example.com" autocomplete="email" />
         </div>
       </div>
-      <div class="login-modal__label-group">
-        <label class="login-field-label" for="loginPassword">비밀번호</label>
-        <div class="login-modal__field">
-          <span class="login-field-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </span>
-          <input type="password" id="loginPassword" class="login-modal__input" placeholder="••••••••" autocomplete="current-password" />
-          <button type="button" class="login-pwd-eye" id="loginPwdToggle" aria-label="비밀번호 보기">
-            <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+    </div>
+
+    <!-- ============================== 문의 (CONTACT) ============================== -->
+    <section class="foot-contact">
+      <div class="wrap foot-contact__inner">
+        <div class="foot-contact__text">
+          <h2 class="foot-contact__title">궁금한 점이 있으신가요?</h2>
+          <p class="foot-contact__desc">
+            이메일을 남겨주시면 전담 코디네이터가 빠르게 답변드립니다.
+          </p>
+        </div>
+        <form class="foot-contact__form" onsubmit="return false;">
+          <input
+            type="email"
+            class="foot-contact__input"
+            placeholder="이메일 주소를 입력하세요"
+            aria-label="이메일 주소"
+          />
+          <button type="submit" class="btn btn--primary foot-contact__btn">
+            문의하기
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">환불 정책</a>
+        </div>
+        <div class="footer__mid">
+          <div>
+            <a href="index.html" class="footer__brand"
+              >KMEDITOUR<small>Premium Concierge in Seoul</small></a
+            >
+            <p class="footer__tagline">
+              한국의 앞선 의료와 서울의 품격을 잇는 프리미엄 컨시어지. 시술부터
+              머무름까지, 전담 코디네이터가 당신만의 여정을 섬세하게 완성합니다.
+            </p>
+          </div>
+          <dl>
+            <dt>대표자</dt>
+            <dd>이석재</dd>
+            <dt>주소</dt>
+            <dd>서울특별시 강남구 압구정로14길 22, 4층(신사동)</dd>
+            <dt>대표전화</dt>
+            <dd>+82-2-514-0799</dd>
+            <dt>사업자등록번호</dt>
+            <dd>558-81-03752</dd>
+          </dl>
+          <dl>
+            <dt>상담 운영</dt>
+            <dd>연중무휴 09:00 — 21:00</dd>
+            <dt>카카오 상담</dt>
+            <dd>@KMEDITOUR</dd>
+            <dt>이메일</dt>
+            <dd>contact@kmeditour.com</dd>
+            <dt>전담 케어</dt>
+            <dd>1:1 코디네이터 배정</dd>
+          </dl>
+        </div>
+        <div class="footer__top-wrap">
+          <button class="footer__top-btn" aria-label="맨 위로">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="19" x2="12" y2="5" />
+              <polyline points="5 12 12 5 19 12" />
+            </svg>
+            <span>TOP</span>
+          </button>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 KMEDITOUR. All rights reserved.</span>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="6" width="18" height="12" rx="3" />
+                <path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ════ Language Bottom Sheet ════ -->
+    <div class="lang-sheet" id="langSheet" aria-hidden="true">
+      <div class="lang-sheet__backdrop"></div>
+      <div class="lang-sheet__inner">
+        <p class="lang-sheet__title">언어 선택</p>
+        <div class="lang-sheet__opts">
+          <button class="lang-sheet__opt is-active" data-lang="KR">
+            <img
+              src="../assets/flag/flag_south korea.svg"
+              alt="한국"
+              class="lang-sheet-flag-img"
+            />한국어
+          </button>
+          <button class="lang-sheet__opt" data-lang="EN">
+            <img
+              src="../assets/flag/flag_united states.svg"
+              alt="English"
+              class="lang-sheet-flag-img"
+            />English
+          </button>
+          <button class="lang-sheet__opt" data-lang="CN">
+            <img
+              src="../assets/flag/flag_china.svg"
+              alt="中文"
+              class="lang-sheet-flag-img"
+            />中文
+          </button>
+          <button class="lang-sheet__opt" data-lang="JP">
+            <img
+              src="../assets/flag/flag_japan.svg"
+              alt="日本語"
+              class="lang-sheet-flag-img"
+            />日本語
+          </button>
+          <button class="lang-sheet__opt" data-lang="VN">
+            <img
+              src="../assets/flag/flag_vietnam.svg"
+              alt="Tiếng Việt"
+              class="lang-sheet-flag-img"
+            />Tiếng Việt
           </button>
         </div>
       </div>
-      <div class="login-modal__options">
-        <label class="login-remember"><input type="checkbox" />로그인 상태 유지</label>
-        <a href="#" class="login-modal__forgot">비밀번호를 잊으셨나요?</a>
-      </div>
-      <button type="submit" class="login-modal__submit">로그인</button>
-    </form>
-    <div class="login-modal__divider"><span>또는</span></div>
-    <div class="login-modal__social">
-      <button class="login-social-btn login-social-btn--google">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        Google로 가입하기
-      </button>
-      <button class="login-social-btn login-social-btn--kakao">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.76 1.69 5.19 4.25 6.63L5.1 21l4.4-2.3c.81.15 1.64.23 2.5.23 5.52 0 10-3.48 10-7.8S17.52 3 12 3z"/></svg>
-        카카오톡으로 가입하기
-      </button>
     </div>
-    <p class="login-modal__join">계정이 없으신가요? <a href="#">회원가입</a></p>
-    <div class="login-modal__admin">
-      <a href="#" class="login-admin-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        관리자 로그인
-      </a>
-    </div>
-  </div>
-</div>
 
-<script src="../js/image-slot.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/contact-popup.js"></script>
-<script src="../js/reservation.js"></script>
-<script src="../js/mobile-bar.js"></script>
-<script src="../js/lang-nav.js"></script>
-</body>
+    <!-- ════ Login Modal ════ -->
+    <div class="login-modal" id="loginModal" aria-hidden="true">
+      <div class="login-modal__backdrop" id="loginBackdrop"></div>
+      <div
+        class="login-modal__box"
+        role="dialog"
+        aria-modal="true"
+        aria-label="로그인"
+      >
+        <button class="login-modal__close" id="loginClose" aria-label="닫기">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="20"
+            height="20"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div class="login-modal__brand">K<span>MEDI</span>TOUR</div>
+        <h2 class="login-modal__title">다시 오신 것을 환영합니다</h2>
+        <p class="login-modal__subtitle">KMEDITOUR 계정에 로그인하세요</p>
+        <form class="login-modal__form" onsubmit="return false;">
+          <div class="login-modal__label-group">
+            <label class="login-field-label" for="loginEmail">이메일</label>
+            <div class="login-modal__field">
+              <span class="login-field-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="17"
+                  height="17"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <polyline points="2,4 12,13 22,4" />
+                </svg>
+              </span>
+              <input
+                id="loginEmail"
+                type="email"
+                class="login-modal__input"
+                placeholder="email@example.com"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="login-modal__label-group">
+            <label class="login-field-label" for="loginPassword"
+              >비밀번호</label
+            >
+            <div class="login-modal__field">
+              <span class="login-field-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="17"
+                  height="17"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </span>
+              <input
+                type="password"
+                id="loginPassword"
+                class="login-modal__input"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              />
+              <button
+                type="button"
+                class="login-pwd-eye"
+                id="loginPwdToggle"
+                aria-label="비밀번호 보기"
+              >
+                <svg
+                  id="eyeIcon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="17"
+                  height="17"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="login-modal__options">
+            <label class="login-remember"
+              ><input type="checkbox" />로그인 상태 유지</label
+            >
+            <a href="#" class="login-modal__forgot">비밀번호를 잊으셨나요?</a>
+          </div>
+          <button type="submit" class="login-modal__submit">로그인</button>
+        </form>
+        <div class="login-modal__divider"><span>또는</span></div>
+        <div class="login-modal__social">
+          <button class="login-social-btn login-social-btn--google">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                fill="#4285F4"
+              />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                fill="#34A853"
+              />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                fill="#EA4335"
+              />
+            </svg>
+            Google로 가입하기
+          </button>
+          <button class="login-social-btn login-social-btn--kakao">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 3C6.48 3 2 6.48 2 10.8c0 2.76 1.69 5.19 4.25 6.63L5.1 21l4.4-2.3c.81.15 1.64.23 2.5.23 5.52 0 10-3.48 10-7.8S17.52 3 12 3z"
+              />
+            </svg>
+            카카오톡으로 가입하기
+          </button>
+        </div>
+        <p class="login-modal__join">
+          계정이 없으신가요? <a href="#">회원가입</a>
+        </p>
+        <div class="login-modal__admin">
+          <a href="#" class="login-admin-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="13"
+              height="13"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            관리자 로그인
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/image-slot.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/contact-popup.js"></script>
+    <script src="../js/reservation.js"></script>
+    <script src="../js/mobile-bar.js"></script>
+    <script src="../js/lang-nav.js"></script>
+  </body>
 </html>

@@ -121,8 +121,16 @@
     border-bottom: none;
     padding: var(--space-12) 0;
     /* 우측 fade — 더 스크롤할 항목이 있음을 암시 */
-    -webkit-mask-image: linear-gradient(to right, black calc(100% - 40px), transparent 100%);
-    mask-image: linear-gradient(to right, black calc(100% - 40px), transparent 100%);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      black calc(100% - 40px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      black calc(100% - 40px),
+      transparent 100%
+    );
   }
   .mag-filter__inner {
     justify-content: flex-start;
@@ -194,7 +202,9 @@
   margin-bottom: var(--space-4);
 }
 .mag-featured__title {
-  font-family: var(--font-display); /* EN Optima / KO Pretendard (lang override) */
+  font-family: var(
+    --font-display
+  ); /* EN Optima / KO Pretendard (lang override) */
   font-size: clamp(24px, 2.8vw, 40px);
   font-weight: 600; /* ← 여기서 두께 조정 (400 · 500 · 600 · 700) */
   letter-spacing: var(--tracking-tighter);
@@ -644,7 +654,12 @@
 .art2-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
 .art2-hero__inner {
   position: relative;

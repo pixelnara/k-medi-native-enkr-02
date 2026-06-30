@@ -23,9 +23,9 @@
     treat: bp("treat", 520),
   };
   const SCROLL = {
-    headerSolid:   tok("--scroll-header-solid", 60),
+    headerSolid: tok("--scroll-header-solid", 60),
     headerCompact: tok("--scroll-header-compact", 80),
-    topBtn:        tok("--scroll-topbtn", 400),
+    topBtn: tok("--scroll-topbtn", 400),
   };
   const HERO = {
     interval: tok("--hero-interval", 6000),
@@ -39,7 +39,9 @@
 
   /* ---------- applyLang — 언어 코드/국기 동기화 헬퍼 ---------- */
   function applyLang(code, flagImg) {
-    document.querySelectorAll(".lang-code, .header-lang-code").forEach((el) => (el.textContent = code));
+    document
+      .querySelectorAll(".lang-code, .header-lang-code")
+      .forEach((el) => (el.textContent = code));
     if (flagImg) {
       document.querySelectorAll(".lang-flag img").forEach((img) => {
         img.src = flagImg.src;
@@ -58,7 +60,9 @@
   onScroll();
 
   /* ---------- Header: hide main bar on scroll-down (non-index pages) ---------- */
-  const isIndex = /(?:^|\/)(index(-ko)?\.html)?$/.test(window.location.pathname);
+  const isIndex = /(?:^|\/)(index(-ko)?\.html)?$/.test(
+    window.location.pathname,
+  );
   if (header && !isIndex) {
     let prevY = window.scrollY;
     window.addEventListener(
@@ -96,9 +100,15 @@
       overlay.classList.remove("is-open");
       overlay.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
-      document.querySelectorAll(".gnb-col.is-open").forEach((c) => c.classList.remove("is-open"));
-      document.querySelectorAll(".gnb-has-sub.is-open").forEach((s) => s.classList.remove("is-open"));
-      document.querySelectorAll(".gnb-has-sub2.is-open").forEach((s) => s.classList.remove("is-open"));
+      document
+        .querySelectorAll(".gnb-col.is-open")
+        .forEach((c) => c.classList.remove("is-open"));
+      document
+        .querySelectorAll(".gnb-has-sub.is-open")
+        .forEach((s) => s.classList.remove("is-open"));
+      document
+        .querySelectorAll(".gnb-has-sub2.is-open")
+        .forEach((s) => s.classList.remove("is-open"));
       if (gnbOpener) {
         gnbOpener.focus();
         gnbOpener = null;
@@ -114,7 +124,9 @@
       }
       if (e.key !== "Tab") return;
       var focusable = Array.from(
-        overlay.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'),
+        overlay.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
       ).filter((el) => !el.closest('[aria-hidden="true"]'));
       if (!focusable.length) return;
       var first = focusable[0],
@@ -140,7 +152,9 @@
 
   /* ★ 모바일 GNB 언어 탭 핸들러: 정적 HTML(.gnb-mobile-top)의 탭에 연결 ---------- */
   (function wireGnbMobileLangTabs() {
-    const tabs = document.querySelectorAll(".gnb-overlay .gnb-mobile-top .gnb-lang-tab");
+    const tabs = document.querySelectorAll(
+      ".gnb-overlay .gnb-mobile-top .gnb-lang-tab",
+    );
     tabs.forEach(function (btn) {
       btn.addEventListener("click", function () {
         tabs.forEach(function (b) {
@@ -160,13 +174,17 @@
       const isOpen = col.classList.contains("is-open");
       document.querySelectorAll(".gnb-col.is-open").forEach((c) => {
         c.classList.remove("is-open");
-        c.querySelectorAll(".gnb-has-sub.is-open").forEach((s) => s.classList.remove("is-open"));
+        c.querySelectorAll(".gnb-has-sub.is-open").forEach((s) =>
+          s.classList.remove("is-open"),
+        );
       });
       if (!isOpen) {
         col.classList.add("is-open");
         // 모바일: 하위 트리 전체(뷰티 컨시어지 → 시술 → 항목)를 한번에 펼친다
         if (gnbIsMobile()) {
-          col.querySelectorAll(".gnb-has-sub").forEach((s) => s.classList.add("is-open"));
+          col
+            .querySelectorAll(".gnb-has-sub")
+            .forEach((s) => s.classList.add("is-open"));
         }
       }
     });
@@ -202,7 +220,9 @@
   }
 
   /* ---------- Hero slider ---------- */
-  const slides = [...document.querySelectorAll(".hero__slide")].filter((s) => getComputedStyle(s).display !== "none");
+  const slides = [...document.querySelectorAll(".hero__slide")].filter(
+    (s) => getComputedStyle(s).display !== "none",
+  );
   const counterCur = document.querySelector(".hero__counter-cur");
   const counterTot = document.querySelector(".hero__counter-tot");
   const heroSection = document.querySelector(".hero");
@@ -228,7 +248,8 @@
     if (timer) clearInterval(timer);
   }
   if (slides.length) {
-    if (counterTot) counterTot.textContent = String(slides.length).padStart(2, "0");
+    if (counterTot)
+      counterTot.textContent = String(slides.length).padStart(2, "0");
     go(0);
     play();
   }
@@ -407,7 +428,12 @@
       // clamp drag so it can't pull past first or last slide
       const { step } = metrics();
       const maxPull = step * 0.1;
-      const clamped = fIndex === 0 ? Math.min(dx, maxPull) : fIndex === slideCount - 1 ? Math.max(dx, -maxPull) : dx;
+      const clamped =
+        fIndex === 0
+          ? Math.min(dx, maxPull)
+          : fIndex === slideCount - 1
+            ? Math.max(dx, -maxPull)
+            : dx;
       setTranslate(base + clamped, false);
     });
     function endDrag(e) {
@@ -466,7 +492,9 @@
     backdrop.addEventListener("click", closeLang);
     langSheet.querySelectorAll(".lang-sheet__opt").forEach((btn) => {
       btn.addEventListener("click", () => {
-        langSheet.querySelectorAll(".lang-sheet__opt").forEach((b) => b.classList.remove("is-active"));
+        langSheet
+          .querySelectorAll(".lang-sheet__opt")
+          .forEach((b) => b.classList.remove("is-active"));
         btn.classList.add("is-active");
         applyLang(btn.dataset.lang || "", btn.querySelector("img"));
         closeLang();
@@ -491,7 +519,9 @@
   });
   document.querySelectorAll(".lang-option").forEach((opt) => {
     opt.addEventListener("click", () => {
-      document.querySelectorAll(".lang-option").forEach((o) => o.classList.remove("is-active"));
+      document
+        .querySelectorAll(".lang-option")
+        .forEach((o) => o.classList.remove("is-active"));
       opt.classList.add("is-active");
       applyLang(opt.textContent.trim(), opt.querySelector("img"));
       const parentSel = opt.closest(".lang-select");
@@ -505,8 +535,8 @@
 
   /* ---------- Login modal: 모든 트리거 통합 (util-bar, mobile, GNB) ---------- */
   (function initLoginModal() {
-    var modal    = document.getElementById("loginModal");
-    var closeEl  = document.getElementById("loginClose");
+    var modal = document.getElementById("loginModal");
+    var closeEl = document.getElementById("loginClose");
     var backdrop = document.getElementById("loginBackdrop");
     if (!modal) return;
 
@@ -525,18 +555,27 @@
     var triggerIds = ["loginTrigger"];
     triggerIds.forEach(function (id) {
       var el = document.getElementById(id);
-      if (el) el.addEventListener("click", function (e) { e.preventDefault(); openLoginModal(); });
+      if (el)
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          openLoginModal();
+        });
     });
-    document.querySelectorAll(".header-mypage-btn, .gnb-login-btn").forEach(function (el) {
-      el.addEventListener("click", function (e) { e.preventDefault(); openLoginModal(); });
-    });
+    document
+      .querySelectorAll(".header-mypage-btn, .gnb-login-btn")
+      .forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          openLoginModal();
+        });
+      });
 
-    if (closeEl)  closeEl.addEventListener("click", closeLoginModal);
+    if (closeEl) closeEl.addEventListener("click", closeLoginModal);
     if (backdrop) backdrop.addEventListener("click", closeLoginModal);
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && modal.classList.contains("is-open")) closeLoginModal();
+      if (e.key === "Escape" && modal.classList.contains("is-open"))
+        closeLoginModal();
     });
-
   })();
 
   /* ---------- Mobile bottom bar: active state ---------- */
@@ -548,11 +587,12 @@
     });
   });
 
-
   /* ---------- Footer top button ---------- */
   const footerTopBtn = document.querySelector(".footer__top-btn");
   if (footerTopBtn) {
-    footerTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    footerTopBtn.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" }),
+    );
   }
 
   /* ---------- Top button ---------- */
@@ -565,7 +605,9 @@
       },
       { passive: true },
     );
-    topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    topBtn.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" }),
+    );
   }
 
   /* ---------- Reveal on scroll ---------- */
@@ -586,7 +628,10 @@
   const heroCta = document.querySelector(".hero__cta");
   const footer = document.querySelector(".footer");
   if (heroCta && footer) {
-    const footerIO = new IntersectionObserver(([e]) => heroCta.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0 });
+    const footerIO = new IntersectionObserver(
+      ([e]) => heroCta.classList.toggle("is-hidden", e.isIntersecting),
+      { threshold: 0 },
+    );
     footerIO.observe(footer);
   }
 })();

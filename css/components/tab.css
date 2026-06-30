@@ -16,7 +16,7 @@
   transition: color 0.2s;
 }
 .tab-line__btn::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -27,13 +27,17 @@
   transition: transform 0.25s ease;
 }
 @media (hover: hover) {
-.tab-line__btn:hover { color: var(--border-gray-4); }
+  .tab-line__btn:hover {
+    color: var(--border-gray-4);
+  }
 }
 .tab-line__btn.is-active {
   color: var(--accent-gray-1);
   font-weight: 700;
 }
-.tab-line__btn.is-active::after { transform: scaleX(1); }
+.tab-line__btn.is-active::after {
+  transform: scaleX(1);
+}
 
 /* ── Pill tab (세그먼트 알약) ── */
 .tab-pill__btn {

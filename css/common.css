@@ -183,7 +183,11 @@ body {
   position: absolute;
   inset: 0;
   /* violet glow 제거 → 미세 화이트 비네트 (블루 제거) */
-  background: radial-gradient(ellipse 70% 60% at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 80%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
   pointer-events: none;
 }
 /* -- shared children */
@@ -419,7 +423,8 @@ body {
   align-items: center;
   gap: var(--space-24);
   /* 수평 패딩: max-width 1200px 콘텐츠 좌우 엣지에 정렬 */
-  padding: clamp(36px, 4.5vw, 56px) max(clamp(16px, 2.5vw, 48px), calc((100% - 1200px) / 2 + var(--gutter)));
+  padding: clamp(36px, 4.5vw, 56px)
+    max(clamp(16px, 2.5vw, 48px), calc((100% - 1200px) / 2 + var(--gutter)));
 }
 .cta-banner__label {
   font-size: var(--text-14);
@@ -1092,7 +1097,13 @@ image-slot#cert-sgi {
     font-weight: 550;
     border-bottom: 1px solid var(--border-gray-1);
   }
-  .gnb-col.is-open ul .gnb-has-sub.is-open .gnb-sub-list .gnb-sub-list li:last-child a {
+  .gnb-col.is-open
+    ul
+    .gnb-has-sub.is-open
+    .gnb-sub-list
+    .gnb-sub-list
+    li:last-child
+    a {
     border-bottom: none;
   }
   /* ── [수정] 모바일 배너: 이메일 카드 스타일 (좌측 썸네일 + 우측 텍스트) ── */
@@ -1109,7 +1120,8 @@ image-slot#cert-sgi {
     align-items: center;
     height: auto;
     min-height: auto;
-    padding: var(--space-16) calc(var(--gutter) + var(--space-12)) var(--space-14) var(--gutter);
+    padding: var(--space-16) calc(var(--gutter) + var(--space-12))
+      var(--space-14) var(--gutter);
     background: var(--bg-white);
     gap: var(--space-14);
     color: var(--text-gray-7);
@@ -1606,7 +1618,9 @@ image-slot#cert-sgi {
     background: var(--blue-600);
     color: var(--text-white);
     /* 검정 버텀바(80px) 위쪽에 띄움 — 그림자가 바와 겹치지 않도록 여유 확보 */
-    bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-32));
+    bottom: calc(
+      var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-32)
+    );
   }
   /* 모바일 알약은 텍스트만 노출 (좌측 아이콘 숨김) */
   .chat-btn svg {
@@ -1924,6 +1938,12 @@ html {
 * {
   -webkit-tap-highlight-color: transparent;
 }
-a, button, [role="button"], input, select, textarea, label {
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+label {
   touch-action: manipulation;
 }

@@ -1,517 +1,1161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>Product Detail — KMEDITOUR Cosmetics</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://unpkg.com" />
-<link rel="stylesheet" href="../css/font.css" />
-<link rel="stylesheet" href="../css/reset.css" />
-<link rel="stylesheet" href="../css/theme.css" />
-<link rel="stylesheet" href="../css/components/button.css" />
-<link rel="stylesheet" href="../css/components/accordion.css" />
-<link rel="stylesheet" href="../css/components/modal.css" />
-<link rel="stylesheet" href="../css/components/card.css" />
-<link rel="stylesheet" href="../css/components/tab.css" />
-<link rel="stylesheet" href="../css/components/breadcrumb.css" />
-<link rel="stylesheet" href="../css/components/header.css" />
-<link rel="stylesheet" href="../css/components/footer.css" />
-<link rel="stylesheet" href="../css/common.css" />
-<link rel="stylesheet" href="../css/components/subpage.css" />
-<link rel="stylesheet" href="../css/product.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Product Detail — KMEDITOUR Cosmetics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/components/button.css" />
+    <link rel="stylesheet" href="../css/components/accordion.css" />
+    <link rel="stylesheet" href="../css/components/modal.css" />
+    <link rel="stylesheet" href="../css/components/card.css" />
+    <link rel="stylesheet" href="../css/components/tab.css" />
+    <link rel="stylesheet" href="../css/components/breadcrumb.css" />
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/components/subpage.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+  </head>
 
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ============================== HEADER ============================== -->
-<header class="header header--light">
-  <div class="header__util">
-    <div class="wrap">       <div class="util-left">
-        <div class="util-dropdown">
-          <span class="util-dropdown__trigger">Beauty
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-          <div class="util-dropdown__menu">
-            <a href="procedure.html">Treatments</a>
-            <a href="skin-sol.html">Find My Skin Solution</a>
-          </div>
-        </div>
-        <span class="util-sep" aria-hidden="true"></span>
-        <a href="travel.html">Tour</a>
-        <span class="util-sep" aria-hidden="true"></span>
-        <div class="util-dropdown">
-          <span class="util-dropdown__trigger">Shopping
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-          <div class="util-dropdown__menu">
-            <a href="cosmetic.html">Cosmetics</a>
-
-          </div>
-        </div>
-        <span class="util-sep" aria-hidden="true"></span>
-        <div class="util-dropdown">
-          <span class="util-dropdown__trigger">Hugro Center
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="10" height="10"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-          <div class="util-dropdown__menu">
-            <a href="center.html">About Hugro Center</a>
-            <a href="skin-analysis.html">Skin Analysis Service</a>
-          </div>
-        </div>
-      </div>
-      <div class="util-right">
-        <a href="about.html">About Us</a>
-        <span class="util-sep" aria-hidden="true"></span>
-        <a href="faq.html">FAQ</a>
-        <span class="util-sep" aria-hidden="true"></span>
-        <div class="lang-select">
-          <button class="lang-select__btn" aria-expanded="false" aria-haspopup="listbox" aria-label="Select language">
-            <span class="lang-flag"><img src="../assets/flag/flag_united states.svg" width="22" height="16" alt="EN" /></span>
-            <span class="lang-code">EN</span>
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <ul class="lang-dropdown">
-            <li class="lang-option"><span><img src="../assets/flag/flag_south korea.svg" width="22" height="16" alt="KR" /></span>KR</li>
-            <li class="lang-option is-active"><span><img src="../assets/flag/flag_united states.svg" width="22" height="16" alt="US" /></span>EN</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_china.svg" width="22" height="16" alt="CN" /></span>CN</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_japan.svg" width="22" height="16" alt="JP" /></span>JP</li>
-            <li class="lang-option"><span><img src="../assets/flag/flag_vietnam.svg" width="22" height="16" alt="VN" /></span>VN</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="header__main">
-    <div class="wrap">      <div class="header__left">
-        <button class="header-lang-btn mbar-lang" aria-label="Change language">
-          <svg class="header-lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span class="header-lang-code">EN</span>
-        </button>
-        <a href="center.html" class="header-center-btn" aria-label="Center">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-          <span class="header-center-label">Center</span>
-        </a>
-      </div>
-      <a href="index.html" class="brand">KMEDITOUR<small class="brand-sub-mobile">Premium Concierge in Korea</small></a>
-      <span class="header__tagline">Premium Concierge</span>
-      <nav class="gnb">
-        <a href="index.html">Home</a>
-        <a href="index.html#how">How It Works</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#whyus">Why Us</a>
-        <a href="index.html#treatments">Highlights</a>
-        <a href="index.html#why">Magazine</a>
-      </nav>
-      <div class="header__right">
-        <a href="reservation.html" class="btn btn--primary2">Book a Consultation</a>
-        <button class="header-mypage-btn header-right--v2" aria-label="My Page">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </button>
-        <button class="menu-btn header-menu-btn" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ============================== GNB OVERLAY ============================== -->
-<div class="gnb-overlay gnb-overlay--dark" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
-  <div class="wrap">
-    <div class="gnb-overlay__bar">
-      <a href="index.html" class="brand gnb-overlay__brand">KMEDITOUR<small>Premium Concierge in Korea</small></a>
-      <div class="gnb-overlay__actions">
-        <a href="#" class="gnb-login-btn">Sign In / Register</a>
-      </div>
-      <button class="gnb-overlay__close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="gnb-mobile-top">
-      <div class="gnb-contact-block">
-        <div class="gnb-contact-cta">
-          <a href="reservation.html" class="gnb-cta-btn gnb-cta-btn--book">Book a Consultation</a>
-          <a href="mailto:contact@kmeditour.com" class="gnb-cta-btn gnb-cta-btn--mail">
-            contact@kmeditour.com
-          </a>
-        </div>
-      </div>
-      <div class="gnb-lang-tabs">
-        <button class="gnb-lang-tab" data-lang="KR"><img src="../assets/flag/flag_south korea.svg" alt="KR" class="gnb-lang-flag" /><span class="gnb-lang-code">KR</span></button>
-        <button class="gnb-lang-tab is-active" data-lang="EN"><img src="../assets/flag/flag_united states.svg" alt="EN" class="gnb-lang-flag" /><span class="gnb-lang-code">EN</span></button>
-        <button class="gnb-lang-tab" data-lang="CN"><img src="../assets/flag/flag_china.svg" alt="CN" class="gnb-lang-flag" /><span class="gnb-lang-code">CN</span></button>
-        <button class="gnb-lang-tab" data-lang="JP"><img src="../assets/flag/flag_japan.svg" alt="JP" class="gnb-lang-flag" /><span class="gnb-lang-code">JP</span></button>
-        <button class="gnb-lang-tab" data-lang="VN"><img src="../assets/flag/flag_vietnam.svg" alt="VN" class="gnb-lang-flag" /><span class="gnb-lang-code">VN</span></button>
-      </div>
-    </div>
-
-    <div class="gnb-cols">
-      <div class="gnb-col gnb-col--mobile-only">
-        <h4 data-en="About">About<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="about.html" data-en="Who We Are">Who We Are</a></li>
-          <li><a href="center.html" data-en="Hugro Center">Hugro Center</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Our Services">Our Services<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li class="gnb-has-sub">
-            <div class="gnb-item-row">
-              <a href="#" data-en="Beauty Concierge">Beauty</a>
-              <button class="gnb-sub-toggle" aria-label="Beauty submenu">
-                <svg class="gnb-sub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
+    <!-- ============================== HEADER ============================== -->
+    <header class="header header--light">
+      <div class="header__util">
+        <div class="wrap">
+          <div class="util-left">
+            <div class="util-dropdown">
+              <span class="util-dropdown__trigger"
+                >Beauty
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  width="10"
+                  height="10"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+              <div class="util-dropdown__menu">
+                <a href="procedure.html">Treatments</a>
+                <a href="skin-sol.html">Find My Skin Solution</a>
+              </div>
             </div>
-            <ul class="gnb-sub-list">
-              <li><a href="skin-sol.html">Find My Skin Solution</a></li>
+            <span class="util-sep" aria-hidden="true"></span>
+            <a href="travel.html">Tour</a>
+            <span class="util-sep" aria-hidden="true"></span>
+            <div class="util-dropdown">
+              <span class="util-dropdown__trigger"
+                >Shopping
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  width="10"
+                  height="10"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+              <div class="util-dropdown__menu">
+                <a href="cosmetic.html">Cosmetics</a>
+              </div>
+            </div>
+            <span class="util-sep" aria-hidden="true"></span>
+            <div class="util-dropdown">
+              <span class="util-dropdown__trigger"
+                >Hugro Center
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  width="10"
+                  height="10"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+              <div class="util-dropdown__menu">
+                <a href="center.html">About Hugro Center</a>
+                <a href="skin-analysis.html">Skin Analysis Service</a>
+              </div>
+            </div>
+          </div>
+          <div class="util-right">
+            <a href="about.html">About Us</a>
+            <span class="util-sep" aria-hidden="true"></span>
+            <a href="faq.html">FAQ</a>
+            <span class="util-sep" aria-hidden="true"></span>
+            <div class="lang-select">
+              <button
+                class="lang-select__btn"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-label="Select language"
+              >
+                <span class="lang-flag"
+                  ><img
+                    src="../assets/flag/flag_united states.svg"
+                    width="22"
+                    height="16"
+                    alt="EN"
+                /></span>
+                <span class="lang-code">EN</span>
+                <svg
+                  class="lang-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <ul class="lang-dropdown">
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_south korea.svg"
+                      width="22"
+                      height="16"
+                      alt="KR" /></span
+                  >KR
+                </li>
+                <li class="lang-option is-active">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_united states.svg"
+                      width="22"
+                      height="16"
+                      alt="US" /></span
+                  >EN
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_china.svg"
+                      width="22"
+                      height="16"
+                      alt="CN" /></span
+                  >CN
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_japan.svg"
+                      width="22"
+                      height="16"
+                      alt="JP" /></span
+                  >JP
+                </li>
+                <li class="lang-option">
+                  <span
+                    ><img
+                      src="../assets/flag/flag_vietnam.svg"
+                      width="22"
+                      height="16"
+                      alt="VN" /></span
+                  >VN
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="wrap">
+          <div class="header__left">
+            <button
+              class="header-lang-btn mbar-lang"
+              aria-label="Change language"
+            >
+              <svg
+                class="header-lang-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              <span class="header-lang-code">EN</span>
+            </button>
+            <a href="center.html" class="header-center-btn" aria-label="Center">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="20"
+                height="20"
+              >
+                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                <path d="M10 6h4" />
+                <path d="M10 10h4" />
+                <path d="M10 14h4" />
+                <path d="M10 18h4" />
+              </svg>
+              <span class="header-center-label">Center</span>
+            </a>
+          </div>
+          <a href="index.html" class="brand"
+            >KMEDITOUR<small class="brand-sub-mobile"
+              >Premium Concierge in Korea</small
+            ></a
+          >
+          <span class="header__tagline">Premium Concierge</span>
+          <nav class="gnb">
+            <a href="index.html">Home</a>
+            <a href="index.html#how">How It Works</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#whyus">Why Us</a>
+            <a href="index.html#treatments">Highlights</a>
+            <a href="index.html#why">Magazine</a>
+          </nav>
+          <div class="header__right">
+            <a href="reservation.html" class="btn btn--primary2"
+              >Book a Consultation</a
+            >
+            <button
+              class="header-mypage-btn header-right--v2"
+              aria-label="My Page"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+              </svg>
+            </button>
+            <button class="menu-btn header-menu-btn" aria-label="Menu">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================== GNB OVERLAY ============================== -->
+    <div
+      class="gnb-overlay gnb-overlay--dark"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site navigation"
+      aria-hidden="true"
+    >
+      <div class="wrap">
+        <div class="gnb-overlay__bar">
+          <a href="index.html" class="brand gnb-overlay__brand"
+            >KMEDITOUR<small>Premium Concierge in Korea</small></a
+          >
+          <div class="gnb-overlay__actions">
+            <a href="#" class="gnb-login-btn">Sign In / Register</a>
+          </div>
+          <button class="gnb-overlay__close" aria-label="Close">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="gnb-mobile-top">
+          <div class="gnb-contact-block">
+            <div class="gnb-contact-cta">
+              <a href="reservation.html" class="gnb-cta-btn gnb-cta-btn--book"
+                >Book a Consultation</a
+              >
+              <a
+                href="mailto:contact@kmeditour.com"
+                class="gnb-cta-btn gnb-cta-btn--mail"
+              >
+                contact@kmeditour.com
+              </a>
+            </div>
+          </div>
+          <div class="gnb-lang-tabs">
+            <button class="gnb-lang-tab" data-lang="KR">
+              <img
+                src="../assets/flag/flag_south korea.svg"
+                alt="KR"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">KR</span>
+            </button>
+            <button class="gnb-lang-tab is-active" data-lang="EN">
+              <img
+                src="../assets/flag/flag_united states.svg"
+                alt="EN"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">EN</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="CN">
+              <img
+                src="../assets/flag/flag_china.svg"
+                alt="CN"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">CN</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="JP">
+              <img
+                src="../assets/flag/flag_japan.svg"
+                alt="JP"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">JP</span>
+            </button>
+            <button class="gnb-lang-tab" data-lang="VN">
+              <img
+                src="../assets/flag/flag_vietnam.svg"
+                alt="VN"
+                class="gnb-lang-flag"
+              /><span class="gnb-lang-code">VN</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="gnb-cols">
+          <div class="gnb-col gnb-col--mobile-only">
+            <h4 data-en="About">
+              About<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="about.html" data-en="Who We Are">Who We Are</a></li>
+              <li>
+                <a href="center.html" data-en="Hugro Center">Hugro Center</a>
+              </li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="Our Services">
+              Our Services<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
               <li class="gnb-has-sub">
                 <div class="gnb-item-row">
-                  <a href="procedure.html" class="gnb-proc-trigger">Procedures</a>
-                  <button class="gnb-sub-toggle" aria-label="Procedure submenu">
-                    <svg class="gnb-sub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                  <a href="#" data-en="Beauty Concierge">Beauty</a>
+                  <button class="gnb-sub-toggle" aria-label="Beauty submenu">
+                    <svg
+                      class="gnb-sub-chevron"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
                   </button>
                 </div>
                 <ul class="gnb-sub-list">
-                  <li><a href="procedure.html">All</a></li>
-                  <li><a href="#">Filler</a></li>
-                  <li><a href="#">Botox</a></li>
-                  <li><a href="#">Thread Lift</a></li>
-                  <li><a href="#">Laser</a></li>
-                  <li><a href="#">Skin Booster</a></li>
-                  <li><a href="#">Skin Care</a></li>
-                  <li><a href="#">Fat Dissolving</a></li>
+                  <li><a href="skin-sol.html">Find My Skin Solution</a></li>
+                  <li class="gnb-has-sub">
+                    <div class="gnb-item-row">
+                      <a href="procedure.html" class="gnb-proc-trigger"
+                        >Procedures</a
+                      >
+                      <button
+                        class="gnb-sub-toggle"
+                        aria-label="Procedure submenu"
+                      >
+                        <svg
+                          class="gnb-sub-chevron"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="gnb-sub-list">
+                      <li><a href="procedure.html">All</a></li>
+                      <li><a href="#">Filler</a></li>
+                      <li><a href="#">Botox</a></li>
+                      <li><a href="#">Thread Lift</a></li>
+                      <li><a href="#">Laser</a></li>
+                      <li><a href="#">Skin Booster</a></li>
+                      <li><a href="#">Skin Care</a></li>
+                      <li><a href="#">Fat Dissolving</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
+              <li><a href="travel.html" data-en="Travel Concierge">Tour</a></li>
             </ul>
-          </li>
-          <li><a href="travel.html" data-en="Travel Concierge">Tour</a></li>        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Shopping">Shopping<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="cosmetic.html">Cosmetics</a></li>
-
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Space">Space<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="center.html">About Hugro Center</a></li>
-          <li><a href="skin-analysis.html">Skin Analysis Service</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="News">News<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="#" data-en="Event" class="gnb-link--utility">Events</a></li>
-          <li><a href="magazine.html" data-en="Magazine" class="gnb-link--utility">Magazine</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col gnb-col--about-desktop">
-        <h4 data-en="About">About<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="about.html" data-en="Who We Are" class="gnb-link--utility">Who We Are</a></li>
-          <li><a href="center.html" data-en="Hugro Center">Hugro Center</a></li>
-          <li><a href="faq.html" data-en="FAQ" class="gnb-link--utility">FAQ</a></li>
-        </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="Shopping">
+              Shopping<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="cosmetic.html">Cosmetics</a></li>
+            </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="Space">
+              Space<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li><a href="center.html">About Hugro Center</a></li>
+              <li><a href="skin-analysis.html">Skin Analysis Service</a></li>
+            </ul>
+          </div>
+          <div class="gnb-col">
+            <h4 data-en="News">
+              News<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li>
+                <a href="#" data-en="Event" class="gnb-link--utility">Events</a>
+              </li>
+              <li>
+                <a
+                  href="magazine.html"
+                  data-en="Magazine"
+                  class="gnb-link--utility"
+                  >Magazine</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="gnb-col gnb-col--about-desktop">
+            <h4 data-en="About">
+              About<svg
+                class="gnb-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </h4>
+            <ul>
+              <li>
+                <a
+                  href="about.html"
+                  data-en="Who We Are"
+                  class="gnb-link--utility"
+                  >Who We Are</a
+                >
+              </li>
+              <li>
+                <a href="center.html" data-en="Hugro Center">Hugro Center</a>
+              </li>
+              <li>
+                <a href="faq.html" data-en="FAQ" class="gnb-link--utility"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="gnb-banners">
+          <a href="center.html" class="gnb-banner gnb-banner--hugro">
+            <div class="gnb-banner__inner">
+              <p class="gnb-banner__label">Premium Space</p>
+              <p class="gnb-banner__title">Hugro Center</p>
+              <p class="gnb-banner__sub">
+                Your all-in-one medical beauty retreat
+              </p>
+            </div>
+            <svg
+              class="gnb-banner__arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="skin-sol.html" class="gnb-banner gnb-banner--skin">
+            <div class="gnb-banner__inner">
+              <p class="gnb-banner__label">Skin Solution</p>
+              <p class="gnb-banner__title">Find My Skin Solution</p>
+              <p class="gnb-banner__sub">
+                Personalised care for your skin type
+              </p>
+            </div>
+            <svg
+              class="gnb-banner__arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="gnb-banners">
-      <a href="center.html" class="gnb-banner gnb-banner--hugro">
-        <div class="gnb-banner__inner">
-          <p class="gnb-banner__label">Premium Space</p>
-          <p class="gnb-banner__title">Hugro Center</p>
-          <p class="gnb-banner__sub">Your all-in-one medical beauty retreat</p>
+
+    <!-- Procedure Sheet (Mobile) -->
+    <div class="proc-sheet" id="procSheet" aria-hidden="true">
+      <div class="proc-sheet__bar">
+        <span class="proc-sheet__title">Procedures</span>
+        <button class="proc-sheet__close" aria-label="Close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
+      <ul class="proc-sheet__list">
+        <li><a href="procedure.html">All</a></li>
+        <li><a href="#">Filler</a></li>
+        <li><a href="#">Botox</a></li>
+        <li><a href="#">Thread Lift</a></li>
+        <li><a href="#">Laser</a></li>
+        <li><a href="#">Skin Booster</a></li>
+        <li><a href="#">Skin Care</a></li>
+        <li><a href="#">Fat Dissolving</a></li>
+      </ul>
+      <a href="reservation.html" class="proc-sheet__banner">
+        <div class="proc-sheet__banner-inner">
+          <p class="proc-sheet__banner-label">Premium Beauty Concierge</p>
+          <p class="proc-sheet__banner-title">Book a Consultation</p>
+          <p class="proc-sheet__banner-sub">
+            Your dedicated coordinator will guide you to the right treatment
+          </p>
         </div>
-        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
       </a>
-      <a href="skin-sol.html" class="gnb-banner gnb-banner--skin">
-        <div class="gnb-banner__inner">
-          <p class="gnb-banner__label">Skin Solution</p>
-          <p class="gnb-banner__title">Find My Skin Solution</p>
-          <p class="gnb-banner__sub">Personalised care for your skin type</p>
-        </div>
-        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
     </div>
-  </div>
-</div>
-
-<!-- Procedure Sheet (Mobile) -->
-<div class="proc-sheet" id="procSheet" aria-hidden="true">
-  <div class="proc-sheet__bar">
-    <span class="proc-sheet__title">Procedures</span>
-    <button class="proc-sheet__close" aria-label="Close">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-  </div>
-  <ul class="proc-sheet__list">
-    <li><a href="procedure.html">All</a></li>
-    <li><a href="#">Filler</a></li>
-    <li><a href="#">Botox</a></li>
-    <li><a href="#">Thread Lift</a></li>
-    <li><a href="#">Laser</a></li>
-    <li><a href="#">Skin Booster</a></li>
-    <li><a href="#">Skin Care</a></li>
-    <li><a href="#">Fat Dissolving</a></li>
-  </ul>
-  <a href="reservation.html" class="proc-sheet__banner">
-    <div class="proc-sheet__banner-inner">
-      <p class="proc-sheet__banner-label">Premium Beauty Concierge</p>
-      <p class="proc-sheet__banner-title">Book a Consultation</p>
-      <p class="proc-sheet__banner-sub">Your dedicated coordinator will guide you to the right treatment</p>
-    </div>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  </a>
-</div>
-<main id="main-content">
-<div class="pd-page">
-
-  <!-- Back -->
-  <div class="pd-back-wrap">
-    <button class="pd-back-btn" onclick="history.back()">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      Back
-    </button>
-  </div>
-
-  <!-- Product Main (Image + Info) -->
-  <section class="pd-main">
-    <div class="pd-main-inner">
-
-      <!-- Gallery outer wrapper: left recommendation panel + main gallery -->
-      <div class="pd-gallery-outer">
-
-        <!-- Left recommendation panel -->
-        <aside class="pd-rec-panel" id="pdRecPanel">
-          <p class="pd-rec-panel__label">Recommended</p>
-          <div class="pd-rec-items" id="pdRecItems"></div>
-        </aside>
-
-        <!-- Gallery -->
-        <div class="pd-gallery">
-          <div class="pd-gallery__main">
-            <img id="pdMainImg" class="pd-gallery__img" src="" alt="" />
-            <button class="pd-gallery__arrow pd-gallery__arrow--prev" id="pdPrev" aria-label="Previous image">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <button class="pd-gallery__arrow pd-gallery__arrow--next" id="pdNext" aria-label="Next image">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-            <div class="pd-gallery__counter" id="pdCounter">1 / 1</div>
-            <div class="pd-gallery__tags" id="pdGalleryTags"></div>
-            <div class="pd-gallery__thumbstrip" id="pdThumbStrip"></div>
-          </div>
-          <div class="pd-gallery__dots" id="pdGalleryDots" style="display:none"></div>
-        </div>
-
-      </div>
-
-      <!-- Product Info -->
-      <div class="pd-info">
-        <span class="pd-category-tag" id="pdCategoryTag"></span>
-        <h1 class="pd-title" id="pdTitle"></h1>
-
-        <div class="pd-rating-row">
-          <span class="pd-rating-stars" id="pdRatingStars">★</span>
-          <span id="pdRatingVal"></span>
-          <span class="pd-rating-count" id="pdRatingCount"></span>
-        </div>
-
-        <!-- Option -->
-        <div class="pd-option-section">
-          <div class="pd-option-label">Select Option</div>
-          <div class="pd-option-item is-selected">
-            <span class="pd-option-dot"></span>
-            <span class="pd-option-name">Default</span>
-            <span class="pd-option-price" id="pdOptionPrice"></span>
-          </div>
-        </div>
-
-        <!-- Price -->
-        <div class="pd-price-section">
-          <div class="pd-price-orig" id="pdPriceOrig" style="display:none"></div>
-          <div class="pd-price-row">
-            <span class="pd-discount" id="pdDiscount" style="display:none"></span>
-            <span class="pd-price" id="pdPrice"></span>
-          </div>
-        </div>
-
-        <!-- Description -->
-        <p class="pd-desc" id="pdDesc"></p>
-
-        <!-- Quantity -->
-        <div class="pd-qty-section">
-          <span class="pd-qty-label">Quantity</span>
-          <div class="pd-qty">
-            <button class="pd-qty-btn" id="pdQtyMinus">−</button>
-            <span class="pd-qty-val" id="pdQtyVal">1</span>
-            <button class="pd-qty-btn" id="pdQtyPlus">+</button>
-          </div>
-        </div>
-
-        <!-- Buttons -->
-        <div class="pd-actions">
-          <button class="pd-btn pd-btn--cart">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            Add to Cart
-          </button>
-          <button class="pd-btn pd-btn--buy">Buy Now</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Product Specifications -->
-  <section class="pd-specs-section">
-    <div class="wrap" style="max-width:1230px;margin:0 auto;padding:0 var(--gutter);">
-      <div class="pd-specs-card">
-        <h2 class="pd-specs-heading">Product Information</h2>
-        <table class="pd-specs-table" id="pdSpecsTable"></table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detailed Description -->
-  <section class="pd-detail-section">
-    <div class="wrap" style="max-width:1230px;margin:0 auto;padding:0 var(--gutter);">
-      <h2 class="pd-detail-heading">Product Details</h2>
-      <div class="pd-detail-img-wrap">
-        <img id="pdDetailImg" src="" alt="" style="display:none" />
-        <div id="pdDetailPlaceholder" class="pd-detail-placeholder"></div>
-      </div>
-    </div>
-  </section>
-
-</div>
-</main>
-
-<!-- ============================== CONTACT ============================== -->
-<section class="foot-contact">
-  <div class="wrap foot-contact__inner">
-    <div class="foot-contact__text">
-      <h2 class="foot-contact__title">Have a question?</h2>
-      <p class="foot-contact__desc">Leave your email and your dedicated coordinator will be in touch shortly.</p>
-    </div>
-    <form class="foot-contact__form" onsubmit="return false;">
-      <input type="email" class="foot-contact__input" placeholder="Enter your email address" aria-label="Email address" />
-      <button type="submit" class="btn btn--primary foot-contact__btn">Send Enquiry</button>
-    </form>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__top">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Refund Policy</a>
-    </div>
-    <div class="footer__mid">
-      <div>
-        <a href="index.html" class="footer__brand">KMEDITOUR<small>Premium Concierge in Korea</small></a>
-        <p class="footer__tagline">Bridging Korea's leading medical expertise with the refinement of Seoul — a premium concierge for every step of your journey, from treatment to stay.</p>
-      </div>
-      <dl>
-        <dt>CEO</dt><dd>Lee Seok-jae</dd>
-        <dt>Address</dt><dd>22 Apgujeong-ro 14-gil, 4F, Gangnam-gu, Seoul (Sinsa-dong)</dd>
-        <dt>Phone</dt><dd>+82-2-514-0799</dd>
-        <dt>Business Reg. No.</dt><dd>558-81-03752</dd>
-      </dl>
-      <dl>
-        <dt>Hours</dt><dd>Daily 09:00 — 21:00 (KST)</dd>
-        <dt>KakaoTalk</dt><dd>@KMEDITOUR</dd>
-        <dt>Email</dt><dd>contact@kmeditour.com</dd>
-        <dt>Dedicated Care</dt><dd>1-to-1 coordinator assigned</dd>
-      </dl>
-    </div>
-    <div class="footer__top-wrap">
-      <button class="footer__top-btn" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-        <span>TOP</span>
-      </button>
-    </div>
-    <div class="footer__bottom">
-      <span>© 2026 KMEDITOUR. All rights reserved.</span>
-      <div class="footer__social">
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor"/></svg></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Login Modal -->
-<div class="login-modal" id="loginModal" aria-hidden="true">
-  <div class="login-modal__backdrop" id="loginBackdrop"></div>
-  <div class="login-modal__box" role="dialog" aria-modal="true" aria-label="Sign in">
-    <button class="login-modal__close" id="loginClose" aria-label="Close">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="login-modal__brand">K<span>MEDI</span>TOUR</div>
-    <h2 class="login-modal__title">Welcome back</h2>
-    <p class="login-modal__subtitle">Sign in to your KMEDITOUR account</p>
-    <form class="login-modal__form" onsubmit="return false;">
-      <div class="login-modal__label-group">
-        <label class="login-field-label" for="loginEmail">Email</label>
-        <div class="login-modal__field">
-          <span class="login-field-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-          </span>
-          <input id="loginEmail" type="email" class="login-modal__input" placeholder="email@example.com" autocomplete="email" />
-        </div>
-      </div>
-      <div class="login-modal__label-group">
-        <label class="login-field-label" for="loginPassword">Password</label>
-        <div class="login-modal__field">
-          <span class="login-field-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </span>
-          <input type="password" id="loginPassword" class="login-modal__input" placeholder="••••••••" autocomplete="current-password" />
-          <button type="button" class="login-pwd-eye" id="loginPwdToggle" aria-label="Show password">
-            <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+    <main id="main-content">
+      <div class="pd-page">
+        <!-- Back -->
+        <div class="pd-back-wrap">
+          <button class="pd-back-btn" onclick="history.back()">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Back
           </button>
         </div>
-      </div>
-      <div class="login-modal__options">
-        <label class="login-remember">
-          <input type="checkbox" />
-          Keep me signed in
-        </label>
-        <a href="#" class="login-modal__forgot">Forgot your password?</a>
-      </div>
-      <button type="submit" class="login-modal__submit">Sign In</button>
-    </form>
-    <div class="login-modal__divider"><span>or</span></div>
-    <div class="login-modal__social">
-      <button class="login-social-btn login-social-btn--google">
-        <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        Continue with Google
-      </button>
-      <button class="login-social-btn login-social-btn--kakao">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.76 1.69 5.19 4.25 6.63L5.1 21l4.4-2.3c.81.15 1.64.23 2.5.23 5.52 0 10-3.48 10-7.8S17.52 3 12 3z"/></svg>
-        Continue with KakaoTalk
-      </button>
-    </div>
-    <p class="login-modal__join">Don't have an account? <a href="#">Register</a></p>
-    <div class="login-modal__admin">
-      <a href="#" class="login-admin-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        Admin Sign In
-      </a>
-    </div>
-  </div>
-</div>
 
-<script src="../js/app.js"></script>
-<script src="../js/contact-popup.js"></script>
-<script src="../js/product.js"></script>
-<script src="../js/mobile-bar-en.js"></script>
-<script src="../js/lang-nav.js"></script>
-</body>
+        <!-- Product Main (Image + Info) -->
+        <section class="pd-main">
+          <div class="pd-main-inner">
+            <!-- Gallery outer wrapper: left recommendation panel + main gallery -->
+            <div class="pd-gallery-outer">
+              <!-- Left recommendation panel -->
+              <aside class="pd-rec-panel" id="pdRecPanel">
+                <p class="pd-rec-panel__label">Recommended</p>
+                <div class="pd-rec-items" id="pdRecItems"></div>
+              </aside>
+
+              <!-- Gallery -->
+              <div class="pd-gallery">
+                <div class="pd-gallery__main">
+                  <img id="pdMainImg" class="pd-gallery__img" src="" alt="" />
+                  <button
+                    class="pd-gallery__arrow pd-gallery__arrow--prev"
+                    id="pdPrev"
+                    aria-label="Previous image"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                  </button>
+                  <button
+                    class="pd-gallery__arrow pd-gallery__arrow--next"
+                    id="pdNext"
+                    aria-label="Next image"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </button>
+                  <div class="pd-gallery__counter" id="pdCounter">1 / 1</div>
+                  <div class="pd-gallery__tags" id="pdGalleryTags"></div>
+                  <div class="pd-gallery__thumbstrip" id="pdThumbStrip"></div>
+                </div>
+                <div
+                  class="pd-gallery__dots"
+                  id="pdGalleryDots"
+                  style="display: none"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="pd-info">
+              <span class="pd-category-tag" id="pdCategoryTag"></span>
+              <h1 class="pd-title" id="pdTitle"></h1>
+
+              <div class="pd-rating-row">
+                <span class="pd-rating-stars" id="pdRatingStars">★</span>
+                <span id="pdRatingVal"></span>
+                <span class="pd-rating-count" id="pdRatingCount"></span>
+              </div>
+
+              <!-- Option -->
+              <div class="pd-option-section">
+                <div class="pd-option-label">Select Option</div>
+                <div class="pd-option-item is-selected">
+                  <span class="pd-option-dot"></span>
+                  <span class="pd-option-name">Default</span>
+                  <span class="pd-option-price" id="pdOptionPrice"></span>
+                </div>
+              </div>
+
+              <!-- Price -->
+              <div class="pd-price-section">
+                <div
+                  class="pd-price-orig"
+                  id="pdPriceOrig"
+                  style="display: none"
+                ></div>
+                <div class="pd-price-row">
+                  <span
+                    class="pd-discount"
+                    id="pdDiscount"
+                    style="display: none"
+                  ></span>
+                  <span class="pd-price" id="pdPrice"></span>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <p class="pd-desc" id="pdDesc"></p>
+
+              <!-- Quantity -->
+              <div class="pd-qty-section">
+                <span class="pd-qty-label">Quantity</span>
+                <div class="pd-qty">
+                  <button class="pd-qty-btn" id="pdQtyMinus">−</button>
+                  <span class="pd-qty-val" id="pdQtyVal">1</span>
+                  <button class="pd-qty-btn" id="pdQtyPlus">+</button>
+                </div>
+              </div>
+
+              <!-- Buttons -->
+              <div class="pd-actions">
+                <button class="pd-btn pd-btn--cart">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="vertical-align: -3px; margin-right: 6px"
+                  >
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path
+                      d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                    />
+                  </svg>
+                  Add to Cart
+                </button>
+                <button class="pd-btn pd-btn--buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Specifications -->
+        <section class="pd-specs-section">
+          <div
+            class="wrap"
+            style="max-width: 1230px; margin: 0 auto; padding: 0 var(--gutter)"
+          >
+            <div class="pd-specs-card">
+              <h2 class="pd-specs-heading">Product Information</h2>
+              <table class="pd-specs-table" id="pdSpecsTable"></table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Detailed Description -->
+        <section class="pd-detail-section">
+          <div
+            class="wrap"
+            style="max-width: 1230px; margin: 0 auto; padding: 0 var(--gutter)"
+          >
+            <h2 class="pd-detail-heading">Product Details</h2>
+            <div class="pd-detail-img-wrap">
+              <img id="pdDetailImg" src="" alt="" style="display: none" />
+              <div id="pdDetailPlaceholder" class="pd-detail-placeholder"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="foot-contact">
+      <div class="wrap foot-contact__inner">
+        <div class="foot-contact__text">
+          <h2 class="foot-contact__title">Have a question?</h2>
+          <p class="foot-contact__desc">
+            Leave your email and your dedicated coordinator will be in touch
+            shortly.
+          </p>
+        </div>
+        <form class="foot-contact__form" onsubmit="return false;">
+          <input
+            type="email"
+            class="foot-contact__input"
+            placeholder="Enter your email address"
+            aria-label="Email address"
+          />
+          <button type="submit" class="btn btn--primary foot-contact__btn">
+            Send Enquiry
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+        <div class="footer__mid">
+          <div>
+            <a href="index.html" class="footer__brand"
+              >KMEDITOUR<small>Premium Concierge in Korea</small></a
+            >
+            <p class="footer__tagline">
+              Bridging Korea's leading medical expertise with the refinement of
+              Seoul — a premium concierge for every step of your journey, from
+              treatment to stay.
+            </p>
+          </div>
+          <dl>
+            <dt>CEO</dt>
+            <dd>Lee Seok-jae</dd>
+            <dt>Address</dt>
+            <dd>22 Apgujeong-ro 14-gil, 4F, Gangnam-gu, Seoul (Sinsa-dong)</dd>
+            <dt>Phone</dt>
+            <dd>+82-2-514-0799</dd>
+            <dt>Business Reg. No.</dt>
+            <dd>558-81-03752</dd>
+          </dl>
+          <dl>
+            <dt>Hours</dt>
+            <dd>Daily 09:00 — 21:00 (KST)</dd>
+            <dt>KakaoTalk</dt>
+            <dd>@KMEDITOUR</dd>
+            <dt>Email</dt>
+            <dd>contact@kmeditour.com</dd>
+            <dt>Dedicated Care</dt>
+            <dd>1-to-1 coordinator assigned</dd>
+          </dl>
+        </div>
+        <div class="footer__top-wrap">
+          <button class="footer__top-btn" aria-label="Back to top">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="19" x2="12" y2="5" />
+              <polyline points="5 12 12 5 19 12" />
+            </svg>
+            <span>TOP</span>
+          </button>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 KMEDITOUR. All rights reserved.</span>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="6" width="18" height="12" rx="3" />
+                <path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal" aria-hidden="true">
+      <div class="login-modal__backdrop" id="loginBackdrop"></div>
+      <div
+        class="login-modal__box"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Sign in"
+      >
+        <button class="login-modal__close" id="loginClose" aria-label="Close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="20"
+            height="20"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div class="login-modal__brand">K<span>MEDI</span>TOUR</div>
+        <h2 class="login-modal__title">Welcome back</h2>
+        <p class="login-modal__subtitle">Sign in to your KMEDITOUR account</p>
+        <form class="login-modal__form" onsubmit="return false;">
+          <div class="login-modal__label-group">
+            <label class="login-field-label" for="loginEmail">Email</label>
+            <div class="login-modal__field">
+              <span class="login-field-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="17"
+                  height="17"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <polyline points="2,4 12,13 22,4" />
+                </svg>
+              </span>
+              <input
+                id="loginEmail"
+                type="email"
+                class="login-modal__input"
+                placeholder="email@example.com"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="login-modal__label-group">
+            <label class="login-field-label" for="loginPassword"
+              >Password</label
+            >
+            <div class="login-modal__field">
+              <span class="login-field-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="17"
+                  height="17"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </span>
+              <input
+                type="password"
+                id="loginPassword"
+                class="login-modal__input"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              />
+              <button
+                type="button"
+                class="login-pwd-eye"
+                id="loginPwdToggle"
+                aria-label="Show password"
+              >
+                <svg
+                  id="eyeIcon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="17"
+                  height="17"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="login-modal__options">
+            <label class="login-remember">
+              <input type="checkbox" />
+              Keep me signed in
+            </label>
+            <a href="#" class="login-modal__forgot">Forgot your password?</a>
+          </div>
+          <button type="submit" class="login-modal__submit">Sign In</button>
+        </form>
+        <div class="login-modal__divider"><span>or</span></div>
+        <div class="login-modal__social">
+          <button class="login-social-btn login-social-btn--google">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                fill="#4285F4"
+              />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                fill="#34A853"
+              />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                fill="#EA4335"
+              />
+            </svg>
+            Continue with Google
+          </button>
+          <button class="login-social-btn login-social-btn--kakao">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 3C6.48 3 2 6.48 2 10.8c0 2.76 1.69 5.19 4.25 6.63L5.1 21l4.4-2.3c.81.15 1.64.23 2.5.23 5.52 0 10-3.48 10-7.8S17.52 3 12 3z"
+              />
+            </svg>
+            Continue with KakaoTalk
+          </button>
+        </div>
+        <p class="login-modal__join">
+          Don't have an account? <a href="#">Register</a>
+        </p>
+        <div class="login-modal__admin">
+          <a href="#" class="login-admin-link">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="13"
+              height="13"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            Admin Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/contact-popup.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/mobile-bar-en.js"></script>
+    <script src="../js/lang-nav.js"></script>
+  </body>
 </html>

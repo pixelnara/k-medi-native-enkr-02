@@ -870,7 +870,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.12) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.68) 0%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
 }
 .gnb-banner--hugro::before {
   background-image: url("../../assets/img/1-page-home/06_others/img-building.png");

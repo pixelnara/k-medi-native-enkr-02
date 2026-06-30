@@ -56,7 +56,9 @@
 
 /* 1번째(featured) 카드 타이틀과 동일 스타일 — 크기만 카드 규격(h5) 유지 */
 .mag-card__title {
-  font-family: var(--font-display); /* EN Optima / KO Pretendard (lang override) */
+  font-family: var(
+    --font-display
+  ); /* EN Optima / KO Pretendard (lang override) */
   font-size: var(--h5-size);
   font-weight: 600; /* .mag-featured__title 과 동일하게 맞춤 */
   color: var(--gray-950);

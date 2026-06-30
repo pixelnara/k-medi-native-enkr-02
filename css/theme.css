@@ -174,7 +174,13 @@
   --accent-gray-1: var(--gray-900);
   --accent-gray-2: var(--gray-950);
   --accent-blue: var(--blue-500);
-  --accent-gradient: linear-gradient(135deg, var(--gray-950) 0%, var(--gray-950) 35%, var(--gray-900) 70%, var(--gray-900) 100%);
+  --accent-gradient: linear-gradient(
+    135deg,
+    var(--gray-950) 0%,
+    var(--gray-950) 35%,
+    var(--gray-900) 70%,
+    var(--gray-900) 100%
+  );
 
   /* ─── 2-I. Category ─── */
   --cat-offer: var(--accent-blue);
@@ -331,5 +337,7 @@
    var(--font-display)를 사용하는 모든 요소에 자동 반영.
    ════════════════════════════════════════════════════════════ */
 [lang="ko"] {
-  --font-display: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-display:
+    "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", sans-serif;
 }

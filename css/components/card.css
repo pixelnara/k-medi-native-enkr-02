@@ -30,9 +30,9 @@
   transition: transform 0.4s ease;
 }
 @media (hover: hover) {
-.prod-card:hover .prod-card__img {
-  transform: scale(1.04);
-}
+  .prod-card:hover .prod-card__img {
+    transform: scale(1.04);
+  }
 }
 .prod-card__img-tags {
   position: absolute;
@@ -110,10 +110,10 @@
     transform 0.22s ease;
 }
 @media (hover: hover) {
-.prod-card:hover .prod-card__hover-bar {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .prod-card:hover .prod-card__hover-bar {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 480px) {

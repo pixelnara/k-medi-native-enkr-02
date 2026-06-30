@@ -4,17 +4,20 @@
    추천 제품 섹션이 그대로 유지되도록 합니다.
    ================================================================ */
 window.pssState = (function () {
-  var KEY = 'pss_quiz_result';
+  var KEY = "pss_quiz_result";
 
   return {
     save: function (sel) {
       try {
-        sessionStorage.setItem(KEY, JSON.stringify({
-          moisture:  sel.moisture,
-          pigment:   sel.pigment,
-          elastic:   sel.elastic,
-          sensitive: sel.sensitive
-        }));
+        sessionStorage.setItem(
+          KEY,
+          JSON.stringify({
+            moisture: sel.moisture,
+            pigment: sel.pigment,
+            elastic: sel.elastic,
+            sensitive: sel.sensitive,
+          }),
+        );
       } catch (e) {}
     },
 
@@ -23,25 +26,34 @@ window.pssState = (function () {
         var raw = sessionStorage.getItem(KEY);
         if (!raw) return null;
         var data = JSON.parse(raw);
-        if (data.moisture && data.pigment && data.elastic && data.sensitive) return data;
+        if (data.moisture && data.pigment && data.elastic && data.sensitive)
+          return data;
         return null;
-      } catch (e) { return null; }
+      } catch (e) {
+        return null;
+      }
     },
 
     clear: function () {
-      try { sessionStorage.removeItem(KEY); } catch (e) {}
+      try {
+        sessionStorage.removeItem(KEY);
+      } catch (e) {}
     },
 
     markNavToProduct: function () {
-      try { sessionStorage.setItem('pss_nav_to_product', '1'); } catch (e) {}
+      try {
+        sessionStorage.setItem("pss_nav_to_product", "1");
+      } catch (e) {}
     },
 
     isFromProduct: function () {
       try {
-        var flag = sessionStorage.getItem('pss_nav_to_product');
-        sessionStorage.removeItem('pss_nav_to_product');
-        return flag === '1';
-      } catch (e) { return false; }
-    }
+        var flag = sessionStorage.getItem("pss_nav_to_product");
+        sessionStorage.removeItem("pss_nav_to_product");
+        return flag === "1";
+      } catch (e) {
+        return false;
+      }
+    },
   };
 })();

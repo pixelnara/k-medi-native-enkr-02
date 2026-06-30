@@ -1,18 +1,28 @@
 (function () {
-  var isEN = document.documentElement.lang === 'en' || location.pathname.indexOf('/en/') !== -1;
-  var chatLabel = isEN ? 'Contact' : '문의하기';
+  var isEN =
+    document.documentElement.lang === "en" ||
+    location.pathname.indexOf("/en/") !== -1;
+  var chatLabel = isEN ? "Contact" : "문의하기";
   // 예약 페이지 경로 (현재 폴더 깊이에 맞춰 계산)
-  var inLangFolder = location.pathname.indexOf('/ko/') !== -1 || location.pathname.indexOf('/en/') !== -1;
-  var reservationHref = inLangFolder ? 'reservation.html' : (isEN ? 'en/reservation.html' : 'ko/reservation.html');
+  var inLangFolder =
+    location.pathname.indexOf("/ko/") !== -1 ||
+    location.pathname.indexOf("/en/") !== -1;
+  var reservationHref = inLangFolder
+    ? "reservation.html"
+    : isEN
+      ? "en/reservation.html"
+      : "ko/reservation.html";
   var html = [
-    '<button class="chat-btn" id="chatBtn" aria-label="' + chatLabel + '" aria-expanded="false">',
+    '<button class="chat-btn" id="chatBtn" aria-label="' +
+      chatLabel +
+      '" aria-expanded="false">',
     '  <svg class="chat-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
     '    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
     "  </svg>",
     '  <svg class="chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">',
     '    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
     "  </svg>",
-    '  <span class="chat-btn__label">' + chatLabel + '</span>',
+    '  <span class="chat-btn__label">' + chatLabel + "</span>",
     "</button>",
 
     '<div class="contact-popup" id="contactPopup" aria-hidden="true" role="dialog" aria-modal="true" aria-label="문의하기">',
@@ -27,7 +37,9 @@
     "      </button>",
     "    </div>",
     '    <hr class="contact-popup__divider">',
-    '    <a href="' + reservationHref + '" class="contact-popup__item contact-popup__item--feature">',
+    '    <a href="' +
+      reservationHref +
+      '" class="contact-popup__item contact-popup__item--feature">',
     '      <span class="contact-popup__icon contact-popup__icon--meet">',
     '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
     "      </span>",
@@ -118,7 +130,12 @@
     if (e.key === "Escape") closePopup();
   });
   document.addEventListener("click", function (e) {
-    if (popup.classList.contains("is-open") && !popup.contains(e.target) && e.target !== chatBtn && !chatBtn.contains(e.target)) {
+    if (
+      popup.classList.contains("is-open") &&
+      !popup.contains(e.target) &&
+      e.target !== chatBtn &&
+      !chatBtn.contains(e.target)
+    ) {
       closePopup();
     }
   });
@@ -127,14 +144,16 @@
     copyBtn.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      navigator.clipboard.writeText("contact@kmeditour.co.kr").then(function () {
-        copyBtn.textContent = "복사됨!";
-        copyBtn.classList.add("is-copied");
-        setTimeout(function () {
-          copyBtn.textContent = "복사";
-          copyBtn.classList.remove("is-copied");
-        }, 2000);
-      });
+      navigator.clipboard
+        .writeText("contact@kmeditour.co.kr")
+        .then(function () {
+          copyBtn.textContent = "복사됨!";
+          copyBtn.classList.add("is-copied");
+          setTimeout(function () {
+            copyBtn.textContent = "복사";
+            copyBtn.classList.remove("is-copied");
+          }, 2000);
+        });
     });
   }
 

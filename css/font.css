@@ -12,5 +12,7 @@
   /* Display: 장식·브랜드·히어로 제목 (Optima 계열) */
   --font-display: Optima, Marcellus, Candara, "Pretendard Variable", serif;
   /* Body: 본문·UI·버튼·폼·내비게이션 (Pretendard 계열) */
-  --font-body: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-body:
+    "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", sans-serif;
 }

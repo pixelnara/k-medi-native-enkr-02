@@ -31,9 +31,9 @@
   transition: transform 0.4s ease;
 }
 @media (hover: hover) {
-.link-arrow:hover .ar {
-  transform: translateX(5px);
-}
+  .link-arrow:hover .ar {
+    transform: translateX(5px);
+  }
 }
 
 /* Outline button */
@@ -55,10 +55,10 @@
     color 0.4s ease;
 }
 @media (hover: hover) {
-.btn:hover {
-  background: var(--text-gray-6);
-  color: var(--bg-white);
-}
+  .btn:hover {
+    background: var(--text-gray-6);
+    color: var(--bg-white);
+  }
 }
 .btn--primary {
   background: var(--btn-primary);
@@ -71,15 +71,15 @@
   border-color: transparent;
 }
 @media (hover: hover) {
-.btn--primary:hover {
-  background: var(--btn-secondary);
-  color: var(--text-white);
-}
+  .btn--primary:hover {
+    background: var(--btn-secondary);
+    color: var(--text-white);
+  }
 }
 @media (hover: hover) {
-.btn--primary2:hover {
-  background: var(--blue-600);
-}
+  .btn--primary2:hover {
+    background: var(--blue-600);
+  }
 }
 /* Primary Outline — 명시적 outline 변형 (base .btn 외형과 동일) */
 .btn--primary-outline {
@@ -88,10 +88,10 @@
   background: transparent;
 }
 @media (hover: hover) {
-.btn--primary-outline:hover {
-  background: var(--text-gray-6);
-  color: var(--bg-white);
-}
+  .btn--primary-outline:hover {
+    background: var(--text-gray-6);
+    color: var(--bg-white);
+  }
 }
 
 /* ── Filter Chip ─────────────────────────────────────────────────
@@ -119,14 +119,14 @@
     border-color 0.2s;
 }
 @media (hover: hover) {
-.chip:hover,
-.filter:hover,
-.faq-tab:hover,
-.tv-chip:hover,
-.ihc__tab:hover {
-  border-color: var(--text-gray-6);
-  color: var(--text-gray-6);
-}
+  .chip:hover,
+  .filter:hover,
+  .faq-tab:hover,
+  .tv-chip:hover,
+  .ihc__tab:hover {
+    border-color: var(--text-gray-6);
+    color: var(--text-gray-6);
+  }
 }
 .chip.is-active,
 .filter.is-active,
@@ -156,7 +156,10 @@
 /* ── Active / Press states — tactile feedback ─────────────── */
 .btn:active {
   transform: scale(0.96);
-  transition: transform 0.07s ease, background 0.07s ease, color 0.07s ease;
+  transition:
+    transform 0.07s ease,
+    background 0.07s ease,
+    color 0.07s ease;
 }
 .chip:active,
 .filter:active,
