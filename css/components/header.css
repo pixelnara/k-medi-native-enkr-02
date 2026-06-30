@@ -1044,43 +1044,26 @@ ul.gnb-sub-list.gnb-sub-list--flat {
 .header__left {
   display: none;
 }
+/* 휴그로센터 버튼: 데스크탑 숨김 (모바일 우측에서만 노출) */
+.header-center-btn {
+  display: none;
+}
 @media (max-width: 860px) {
+  /* header__left 래퍼 해제 → 자식을 헤더 wrap의 flex 아이템으로 승격 */
   .header__left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
+    display: contents;
   }
-  .header__left .header-lang-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    width: auto;
-    height: auto;
-    color: var(--text-gray-7);
+  /* 모바일 상단바: 언어 변경 버튼 제거 */
+  .header-lang-btn,
+  .mbar-lang {
+    display: none !important;
   }
-  .header__left .header-lang-code {
-    font-size: 9px;
-    font-weight: 600;
-    line-height: 1;
+  /* 브랜드 좌측 · 햄버거 우측 정렬 */
+  .header__main .brand {
+    order: 0;
+    margin-right: auto;
   }
-  .header-center-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    text-decoration: none;
-    color: var(--text-gray-7);
-  }
-  .header-center-btn svg {
-    width: 20px;
-    height: 20px;
-  }
-  .header-center-label {
-    font-size: 9px;
-    font-weight: 600;
-    white-space: nowrap;
-    line-height: 1;
+  .header__right {
+    order: 2;
   }
 }
