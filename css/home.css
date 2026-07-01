@@ -1497,7 +1497,7 @@
 }
 @media (max-width: 860px) {
   .hero__overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 70%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0) 70%);
   }
   /* HIW: 860px 이하에서 모바일 레이아웃으로 전환 */
   .hiw-desktop {
