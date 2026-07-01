@@ -45,11 +45,11 @@
   }
 }
 .hero__slide--hanbok {
-  background-image: url("../assets/img/1-page-home/01_main_banner/wm-hanbok-pc.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/test-forest.png");
 }
 @media (max-width: 860px) {
   .hero__slide--hanbok {
-    background-image: url("../assets/img/1-page-home/01_main_banner/wm-hanbok-mo.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/test-forest.png");
   }
 }
 .hero__slide--hero23 {
