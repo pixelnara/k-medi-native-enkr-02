@@ -223,8 +223,7 @@
   const slides = [...document.querySelectorAll(".hero__slide")].filter(
     (s) => getComputedStyle(s).display !== "none",
   );
-  const counterCur = document.querySelector(".hero__counter-cur");
-  const counterTot = document.querySelector(".hero__counter-tot");
+  const heroDotsCt = document.querySelector(".hero__dots");
   const heroSection = document.querySelector(".hero");
   const heroTitle = document.querySelector(".hero__title");
   const heroDesc = document.querySelector(".hero__desc");
@@ -235,7 +234,7 @@
   function go(i) {
     cur = (i + slides.length) % slides.length;
     slides.forEach((s, k) => s.classList.toggle("is-active", k === cur));
-    if (counterCur) counterCur.textContent = String(cur + 1).padStart(2, "0");
+    if (heroDotsCt) [...heroDotsCt.querySelectorAll(".hero__dot")].forEach((d, k) => d.classList.toggle("is-active", k === cur));
     const slide = slides[cur];
     if (heroTitle) heroTitle.innerHTML = slide.dataset.title || defaultTitle;
     if (heroDesc) heroDesc.innerHTML = slide.dataset.desc || defaultDesc;
@@ -248,8 +247,7 @@
     if (timer) clearInterval(timer);
   }
   if (slides.length) {
-    if (counterTot)
-      counterTot.textContent = String(slides.length).padStart(2, "0");
+    if (heroDotsCt) heroDotsCt.innerHTML = slides.map((_, i) => `<span class="hero__dot${i === 0 ? " is-active" : ""}"></span>`).join("");
     go(0);
     play();
   }
