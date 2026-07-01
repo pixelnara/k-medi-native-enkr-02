@@ -44,11 +44,11 @@
     display: block;
   }
 }
-.hero__slide--hanbok {
+.hero__slide--first {
   background-image: url("../assets/img/1-page-home/01_main_banner/test-forest.png");
 }
 @media (max-width: 860px) {
-  .hero__slide--hanbok {
+  .hero__slide--first {
     background-image: url("../assets/img/1-page-home/01_main_banner/test-forest.png");
   }
 }
@@ -59,6 +59,27 @@
   .hero__slide--hero23 {
     background-image: url("../assets/img/1-page-home/01_main_banner/hero-23-mo.png");
   }
+}
+.hero__slide--intro {
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-8.png");
+}
+.hero__slide--beauty {
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-8.png");
+}
+.hero__slide--solution {
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-17.png");
+}
+.hero__slide--event {
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-5.png");
+}
+.hero__slide--seoul {
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-15.png");
+}
+.hero__slide--heritage {
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-20.jpeg");
+}
+.hero__slide--hotel {
+  background-image: url("../assets/img/1-page-home/06_others/hero-man-hotel.png");
 }
 .hero__slide::after {
   content: none;
