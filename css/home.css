@@ -67,7 +67,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 75%);
 }
 .hero__inner {
   position: relative;
@@ -291,11 +291,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.45) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.45) 100%);
 }
 @media (hover: hover) {
   .mag-card:hover .mag-card__bg {
@@ -1101,12 +1097,7 @@
 .treat-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.22) 55%,
-    rgba(0, 0, 0, 0.04) 100%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.22) 55%, rgba(0, 0, 0, 0.04) 100%);
   transition: opacity 0.42s ease;
 }
 @media (hover: hover) and (min-width: 761px) {
@@ -1513,13 +1504,7 @@
 }
 @media (max-width: 860px) {
   .hero__overlay {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.88) 0%,
-      rgba(0, 0, 0, 0.55) 38%,
-      rgba(0, 0, 0, 0.1) 62%,
-      rgba(0, 0, 0, 0) 75%
-    );
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.18) 45%, rgba(0, 0, 0, 0) 70%);
   }
   /* HIW: 860px 이하에서 모바일 레이아웃으로 전환 */
   .hiw-desktop {
@@ -2134,11 +2119,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.05) 30%,
-      rgba(0, 0, 0, 0.72) 100%
-    );
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 30%, rgba(0, 0, 0, 0.72) 100%);
   }
   /* 캡션: 이미지 위 정상 흐름(하단 정렬) */
   .feature__caption {
