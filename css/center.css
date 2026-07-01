@@ -720,7 +720,7 @@ figure.art-img--center img {
    ───────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .center-hero__title {
-    font-size: clamp(26px, 8vw, 40px);
+    font-size: clamp(24px, 7vw, 40px);
     line-height: 1.3;
   }
   .article-body {
