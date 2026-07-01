@@ -67,7 +67,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 75%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 75%);
 }
 .hero__inner {
   position: relative;
@@ -1504,7 +1504,7 @@
 }
 @media (max-width: 860px) {
   .hero__overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.18) 45%, rgba(0, 0, 0, 0) 70%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0) 70%);
   }
   /* HIW: 860px 이하에서 모바일 레이아웃으로 전환 */
   .hiw-desktop {
