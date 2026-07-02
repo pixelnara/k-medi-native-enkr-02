@@ -11,7 +11,7 @@
 
   function playPanelVideo(panel) {
     if (!panel) return;
-    var video = panel.querySelector(".pd-area-panel__video");
+    var video = panel.querySelector("video.pd-area-panel__video");
     if (video) {
       video.currentTime = 0;
       var playPromise = video.play();
@@ -20,7 +20,7 @@
   }
 
   areaPanels.forEach(function (p) {
-    var video = p.querySelector(".pd-area-panel__video");
+    var video = p.querySelector("video.pd-area-panel__video");
     if (video) video.pause();
   });
   playPanelVideo(document.querySelector(".pd-area-panel.is-active"));
@@ -33,7 +33,7 @@
       });
       areaPanels.forEach(function (p) {
         p.classList.remove("is-active");
-        var video = p.querySelector(".pd-area-panel__video");
+        var video = p.querySelector("video.pd-area-panel__video");
         if (video) video.pause();
       });
       tab.classList.add("is-active");
