@@ -231,7 +231,11 @@
 }
 
 .hero__dots {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--space-16);
 }
 .hero__dot {
   display: inline-block;
@@ -239,9 +243,14 @@
   height: 6px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.45);
-  transition: background 0.3s;
+  transition:
+    background 0.3s,
+    width 0.3s,
+    height 0.3s;
 }
 .hero__dot.is-active {
+  width: 9px;
+  height: 9px;
   background: #fff;
 }
 
